@@ -5,36 +5,66 @@ abstract class GameEngine {
   val height: Int
   val width: Int
 
-  var table:Array[Array[Cell]] = Array.ofDim[Cell](height, width)
+  val mementoNumber: Int
 
-  for (h <- 0 until height) {
-    for (w <- 0 until width) {
+  var currentGeneration = new Table(height, width)
+  currentGeneration.clean()
 
-      table(h)(w).alive = false
-
-    }
-  }
+  var pastGenerations: List[Table] = List()
 
   def shouldRevive(cell: Cell): Boolean
   def shouldKeepAlive(cell: Cell): Boolean
 
   def nextGeneration(): Unit = {
 
-    val newTable:Array[Array[Cell]] = Array.ofDim[Cell](height, width)
+    val newGeneration = new Table(height, width)
 
     for (h <- 0 until height) {
       for (w <- 0 until width) {
 
-        if (!table(h)(w).alive)
-          newTable(h)(w).alive = shouldRevive(table(h)(w))
+        if (!currentGeneration.elements(h)(w).alive)
+          newGeneration.elements(h)(w).alive = shouldRevive(currentGeneration.elements(h)(w))
 
-        if (table(h)(w).alive)
-          newTable(h)(w).alive = shouldKeepAlive(table(h)(w))
+        if (currentGeneration.elements(h)(w).alive)
+          newGeneration.elements(h)(w).alive = shouldKeepAlive(currentGeneration.elements(h)(w))
 
       }
     }
 
-    this.table = newTable
+    storeGeneration(currentGeneration)
+
+    this.currentGeneration = newGeneration
+
+  }
+
+  def storeGeneration (generation: Table): Unit = {
+
+    val length: Int = pastGenerations.length
+
+    if (length >= mementoNumber) {
+
+      pastGenerations = pastGenerations.dropRight(length + 1 - mementoNumber)
+
+    }
+
+    pastGenerations = generation :: pastGenerations
+
+  }
+
+  def undo (): Unit = {
+
+    if (pastGenerations.isEmpty) {
+
+      throw RuntimeException
+
+    }
+
+    else {
+
+      this.currentGeneration = pastGenerations.head
+      pastGenerations = pastGenerations.drop(1)
+
+    }
 
   }
 
