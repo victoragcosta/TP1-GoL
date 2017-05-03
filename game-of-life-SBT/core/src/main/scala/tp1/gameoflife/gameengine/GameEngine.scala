@@ -8,25 +8,26 @@ abstract class GameEngine {
   val mementoNumber: Int
 
   var currentGeneration = new Table(height, width)
-  currentGeneration.clean()
+  this.currentGeneration.create()
 
   var pastGenerations: List[Table] = List()
 
-  def shouldRevive(cell: Cell): Boolean
-  def shouldKeepAlive(cell: Cell): Boolean
+  def shouldRevive(cell: Cell, cellHeight: Int, cellWidth: Int): Boolean
+  def shouldKeepAlive(cell: Cell, cellHeight: Int, cellWidth: Int): Boolean
 
   def nextGeneration(): Unit = {
 
     val newGeneration = new Table(height, width)
+    newGeneration.create()
 
     for (h <- 0 until height) {
       for (w <- 0 until width) {
 
-        if (!currentGeneration.elements(h)(w).alive)
-          newGeneration.elements(h)(w).alive = shouldRevive(currentGeneration.elements(h)(w))
+        if (!this.currentGeneration.elements(h)(w).alive)
+          newGeneration.elements(h)(w).alive = shouldRevive(this.currentGeneration.elements(h)(w), h, w)
 
-        if (currentGeneration.elements(h)(w).alive)
-          newGeneration.elements(h)(w).alive = shouldKeepAlive(currentGeneration.elements(h)(w))
+        if (this.currentGeneration.elements(h)(w).alive)
+          newGeneration.elements(h)(w).alive = shouldKeepAlive(this.currentGeneration.elements(h)(w), h, w)
 
       }
     }
@@ -34,6 +35,23 @@ abstract class GameEngine {
     storeGeneration(currentGeneration)
 
     this.currentGeneration = newGeneration
+
+  }
+
+  def printBoard (): Unit = {
+
+    for (column <- this.currentGeneration.elements) {
+      println()
+      for (cell <- column) {
+
+        if (cell.alive)
+          print(1)
+
+        else
+          print(0)
+
+      }
+    }
 
   }
 
@@ -55,7 +73,7 @@ abstract class GameEngine {
 
     if (pastGenerations.isEmpty) {
 
-      throw RuntimeException
+      throw new RuntimeException
 
     }
 
