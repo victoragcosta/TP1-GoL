@@ -4,5 +4,5 @@ object GameView{
   def update() = {
 
   }
-  val screen = new DemoScreen
+  val screen = new GameScreen
 }

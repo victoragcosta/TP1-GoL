@@ -1,9 +1,10 @@
 package tp1.gameoflife.view
 
 import com.badlogic.gdx.{Gdx, Screen}
-import com.badlogic.gdx.graphics.OrthographicCamera
+import com.badlogic.gdx.graphics.{GL20, OrthographicCamera}
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType
 
 class GameScreen extends Screen{
 
@@ -17,11 +18,17 @@ class GameScreen extends Screen{
   shapeRenderer.setProjectionMatrix(camera.combined)
 
   override def render(delta: Float): Unit = {
-    Gdx.gl.glClearColor(1,1,1,0)
+    Gdx.gl.glClearColor(0.5f,0.5f,0.5f,1)
+    Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT)
     Gdx.gl.glLineWidth(1.5f)
 
     batch.begin
+    shapeRenderer.begin(ShapeType.Line)
 
+    //Fazer a exibição básica
+    ???
+
+    shapeRenderer.end()
     batch.end
   }
 
