@@ -55,7 +55,7 @@ abstract class GameEngine {
 
     if (pastGenerations.isEmpty) {
 
-      throw RuntimeException
+      throw new RuntimeException
 
     }
 
