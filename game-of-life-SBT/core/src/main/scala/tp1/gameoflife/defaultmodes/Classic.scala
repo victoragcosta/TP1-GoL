@@ -6,20 +6,20 @@ class Classic (override val height: Int, override val width: Int) extends GameEn
 
   override val mementoNumber = 10
 
-  override def shouldKeepAlive(cell: Cell, cellHeight: Int, cellWidth: Int): Boolean = {
+  override def shouldKeepAlive(cellHeight: Int, cellWidth: Int): Boolean = {
 
     var aliveCount: Int = -1
 
     for (i <- -1 to 1) {
       for (j <- -1 to 1) {
 
-        if (this.currentGeneration.elements(adjustHeight(cellHeight + i))(adjustWidth(cellWidth + i)).alive)
+        if (this.currentGeneration.elements(adjustHeight(cellHeight + i))(adjustWidth(cellWidth + j)).alive)
           aliveCount += 1
 
       }
     }
 
-    if (aliveCount > 2 && aliveCount < 4)
+    if (aliveCount == 2 || aliveCount == 3)
       true
 
     else
@@ -27,14 +27,14 @@ class Classic (override val height: Int, override val width: Int) extends GameEn
 
   }
 
-  override def shouldRevive(cell: Cell, cellHeight: Int, cellWidth: Int): Boolean = {
+  override def shouldRevive(cellHeight: Int, cellWidth: Int): Boolean = {
 
     var aliveCount: Int = 0
 
     for (i <- -1 to 1) {
       for (j <- -1 to 1) {
 
-        if(this.currentGeneration.elements(adjustHeight(cellHeight + i))(adjustWidth(cellWidth + i)).alive)
+        if(this.currentGeneration.elements(adjustHeight(cellHeight + i))(adjustWidth(cellWidth + j)).alive)
           aliveCount += 1
 
       }

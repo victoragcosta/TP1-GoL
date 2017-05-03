@@ -2,21 +2,20 @@ package tp1.gameoflife.defaultmodes
 
 object TestEnvironment extends App{
 
-  val Board = new Classic(10, 10)
+  val Board = new Classic(7, 7)
 
-  println()
-  Board.printBoard()
-  println()
-
-  Board.currentGeneration.elements(4)(3).alive = true
-  Board.currentGeneration.elements(4)(4).alive = true
-  Board.currentGeneration.elements(4)(5).alive = true
+  Board.currentGeneration.elements(1)(2).alive = true
+  Board.currentGeneration.elements(2)(2).alive = true
+  Board.currentGeneration.elements(3)(2).alive = true
+  Board.currentGeneration.elements(3)(1).alive = true
+  Board.currentGeneration.elements(2)(0).alive = true
 
   println()
   Board.printBoard()
   println()
 
   Board.nextGeneration()
+  Board.undo()
 
   println()
   Board.printBoard()

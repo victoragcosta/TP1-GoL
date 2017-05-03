@@ -10,10 +10,10 @@ abstract class GameEngine {
   var currentGeneration = new Table(height, width)
   this.currentGeneration.create()
 
-  var pastGenerations: List[Table] = List()
+  private var pastGenerations: List[Table] = List()
 
-  def shouldRevive(cell: Cell, cellHeight: Int, cellWidth: Int): Boolean
-  def shouldKeepAlive(cell: Cell, cellHeight: Int, cellWidth: Int): Boolean
+  def shouldRevive(cellHeight: Int, cellWidth: Int): Boolean
+  def shouldKeepAlive(cellHeight: Int, cellWidth: Int): Boolean
 
   def nextGeneration(): Unit = {
 
@@ -24,21 +24,21 @@ abstract class GameEngine {
       for (w <- 0 until width) {
 
         if (!this.currentGeneration.elements(h)(w).alive)
-          newGeneration.elements(h)(w).alive = shouldRevive(this.currentGeneration.elements(h)(w), h, w)
+          newGeneration.elements(h)(w).alive = shouldRevive(h, w)
 
         if (this.currentGeneration.elements(h)(w).alive)
-          newGeneration.elements(h)(w).alive = shouldKeepAlive(this.currentGeneration.elements(h)(w), h, w)
+          newGeneration.elements(h)(w).alive = shouldKeepAlive(h, w)
 
       }
     }
 
-    storeGeneration(currentGeneration)
+    storeGeneration(this.currentGeneration)
 
     this.currentGeneration = newGeneration
 
   }
 
-  def printBoard (): Unit = {
+  def printBoard(): Unit = {
 
     for (column <- this.currentGeneration.elements) {
       println()
@@ -55,7 +55,7 @@ abstract class GameEngine {
 
   }
 
-  def storeGeneration (generation: Table): Unit = {
+  private def storeGeneration(generation: Table): Unit = {
 
     val length: Int = pastGenerations.length
 
@@ -69,7 +69,7 @@ abstract class GameEngine {
 
   }
 
-  def undo (): Unit = {
+  def undo(): Unit = {
 
     if (pastGenerations.isEmpty) {
 
