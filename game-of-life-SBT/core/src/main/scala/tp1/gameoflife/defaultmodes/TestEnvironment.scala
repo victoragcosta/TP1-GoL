@@ -4,6 +4,8 @@ object TestEnvironment extends App{
 
   val Board = new HighLife(30, 30)
 
+  print(Board.description)
+
   Board.currentGeneration.elements(11)(13).switchState()
   Board.currentGeneration.elements(11)(14).switchState()
   Board.currentGeneration.elements(11)(15).switchState()

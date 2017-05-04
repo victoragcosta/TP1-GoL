@@ -4,6 +4,9 @@ import tp1.gameoflife.gameengine.GameEngine
 
 class Classic (override val height: Int, override val width: Int) extends GameEngine {
 
+  override val description: String = "The original rules. A cell must be near 2 or 3 cells to stay alive." +
+    "A dead cell revives if there are exactly 3 cells alive near it."
+
   override val mementoNumber = 10
 
   override def shouldKeepAlive(cellHeight: Int, cellWidth: Int): Boolean = {

@@ -2,6 +2,8 @@ package tp1.gameoflife.gameengine
 
 abstract class GameEngine {
 
+  val description: String
+
   val height: Int
   val width: Int
 
