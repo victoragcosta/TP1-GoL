@@ -2,42 +2,62 @@ package tp1.gameoflife.gameengine
 
 abstract class GameEngine {
 
+  val description: String
+
   val height: Int
   val width: Int
 
   val mementoNumber: Int
 
   var currentGeneration = new Table(height, width)
-  currentGeneration.clean()
+  this.currentGeneration.create()
 
-  var pastGenerations: List[Table] = List()
+  private var pastGenerations: List[Table] = List()
 
-  def shouldRevive(cell: Cell): Boolean
-  def shouldKeepAlive(cell: Cell): Boolean
+  def shouldRevive(cellHeight: Int, cellWidth: Int): Boolean
+  def shouldKeepAlive(cellHeight: Int, cellWidth: Int): Boolean
 
   def nextGeneration(): Unit = {
 
     val newGeneration = new Table(height, width)
+    newGeneration.create()
 
     for (h <- 0 until height) {
       for (w <- 0 until width) {
 
-        if (!currentGeneration.elements(h)(w).alive)
-          newGeneration.elements(h)(w).alive = shouldRevive(currentGeneration.elements(h)(w))
+        if (!this.currentGeneration.elements(h)(w).alive)
+          newGeneration.elements(h)(w).alive = shouldRevive(h, w)
 
-        if (currentGeneration.elements(h)(w).alive)
-          newGeneration.elements(h)(w).alive = shouldKeepAlive(currentGeneration.elements(h)(w))
+        if (this.currentGeneration.elements(h)(w).alive)
+          newGeneration.elements(h)(w).alive = shouldKeepAlive(h, w)
 
       }
     }
 
-    storeGeneration(currentGeneration)
+    storeGeneration(this.currentGeneration)
 
     this.currentGeneration = newGeneration
 
   }
 
-  def storeGeneration (generation: Table): Unit = {
+  def printBoard(): Unit = {
+
+    for (column <- this.currentGeneration.elements) {
+      println()
+      for (cell <- column) {
+
+        if (cell.alive)
+          print(1)
+
+        else
+          print(0)
+
+      }
+    }
+
+  }
+
+  private def storeGeneration(generation: Table): Unit = {
 
     val length: Int = pastGenerations.length
 
@@ -51,7 +71,7 @@ abstract class GameEngine {
 
   }
 
-  def undo (): Unit = {
+  def undo(): Unit = {
 
     if (pastGenerations.isEmpty) {
 

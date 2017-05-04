@@ -6,11 +6,19 @@ class Table (height: Int, width: Int) {
 
   def clean(): Unit = {
 
+    for (column <- this.elements) {
+      for (cell <- column) {
+        cell.alive = false
+      }
+    }
+
+  }
+
+  def create(): Unit = {
+
     for (h <- 0 until height) {
       for (w <- 0 until width) {
-
-        elements(h)(w).alive = false
-
+        this.elements(h)(w) = new Cell(false)
       }
     }
 
