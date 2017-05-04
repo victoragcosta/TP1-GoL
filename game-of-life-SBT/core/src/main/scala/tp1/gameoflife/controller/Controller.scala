@@ -7,6 +7,6 @@ object Controller extends Game {
 
   override def create() {
     this.setScreen(GameView.screen)
-    GameView.update()
+    GameView.update(???)
   }
 }

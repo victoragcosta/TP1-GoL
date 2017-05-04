@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.{GL20, OrthographicCamera}
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType
+import com.badlogic.gdx.math.Vector3
 
 class GameScreen extends Screen{
 
@@ -23,12 +24,7 @@ class GameScreen extends Screen{
     Gdx.gl.glLineWidth(1.5f)
 
     batch.begin
-    shapeRenderer.begin(ShapeType.Line)
-
-    //Fazer a exibição básica
-    ???
-
-    shapeRenderer.end()
+    GameView.vivas.map(c => drawSquare(c, GameView.squareSide))
     batch.end
   }
 
@@ -38,4 +34,11 @@ class GameScreen extends Screen{
   override def hide(): Unit = {}
   override def resize(width: Int, height: Int): Unit = {}
   override def dispose(): Unit = {}
+
+  private def drawSquare(v: Vector3, side: Float) = {
+    shapeRenderer.begin(ShapeType.Filled)
+    shapeRenderer.rect(v.x, v.y, side, side)
+    shapeRenderer.end()
+  }
+
 }
