@@ -4,7 +4,7 @@ import tp1.gameoflife.gameengine.GameEngine
 
 class HighLife (override val height: Int, override val width: Int) extends GameEngine {
 
-  override val description: String = "A modified set of rules. Good for creating replicating patterns." +
+  override val description: String = "Good for creating replicating patterns." +
     " A cell must be near 2 or 3 cells to stay alive. A dead cell revives if there are 3 or 6 cells alive near it."
 
   override val mementoNumber = 10
