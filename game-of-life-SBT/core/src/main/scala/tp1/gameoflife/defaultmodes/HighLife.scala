@@ -2,7 +2,7 @@ package tp1.gameoflife.defaultmodes
 
 import tp1.gameoflife.gameengine.GameEngine
 
-class Classic (override val height: Int, override val width: Int) extends GameEngine {
+class HighLife (override val height: Int, override val width: Int) extends GameEngine {
 
   override val mementoNumber = 10
 
@@ -40,7 +40,7 @@ class Classic (override val height: Int, override val width: Int) extends GameEn
       }
     }
 
-    if (aliveCount == 3)
+    if (aliveCount == 3 || aliveCount == 6)
       true
 
     else
