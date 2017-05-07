@@ -2,11 +2,13 @@ package tp1.gameoflife.controller
 
 import com.badlogic.gdx.{Game, Gdx}
 import tp1.gameoflife.defaultmodes.{Classic, HighLife}
+import tp1.gameoflife.gameengine.GameEngine
 import tp1.gameoflife.view.{DemoScreen, GameView}
 
 object GameController extends Game {
 
-  var gameMode = new Classic(53,80)
+  private var ruleNumber: Int = 0
+  private var gameMode: GameEngine = RulesVault.list(ruleNumber).getRule
 
   override def create() {
     this.setScreen(GameView.screen)
@@ -54,4 +56,29 @@ object GameController extends Game {
   def endGame(): Unit ={
     Gdx.app.exit()
   }
+
+  def changeState(): Unit = {
+    GameView.changeState()
+  }
+
+  def changeRule(name: String): Unit ={
+    val newRule = RulesVault.find(name)
+    newRule match {
+      case Some(rule) =>
+        rule.currentGeneration = gameMode.currentGeneration
+        gameMode = rule
+      case None => println("Num existe mano")
+    }
+  }
+
+  def changeRule(): Unit = {
+    ruleNumber+=1
+    if(ruleNumber >= RulesVault.list.length){
+      ruleNumber = 0
+    }
+    RulesVault.list(ruleNumber).getRule.currentGeneration = gameMode.currentGeneration
+    gameMode = RulesVault.list(ruleNumber).getRule
+    println(gameMode)
+  }
+
 }
