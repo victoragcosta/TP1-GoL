@@ -88,4 +88,11 @@ abstract class GameEngine {
 
   }
 
+  def makeAlive(x: Int, y: Int): Unit ={
+    this.currentGeneration.elements(y)(x) = new Cell(true)
+  }
+  def killCell(x: Int, y: Int): Unit ={
+    this.currentGeneration.elements(y)(x) = new Cell(false)
+  }
+
 }
