@@ -1,9 +1,7 @@
 package tp1.gameoflife.view
 
-import java.sql.Time
 import java.util.Calendar
 
-import com.badlogic.gdx.Input.Keys
 import com.badlogic.gdx.{Gdx, Screen}
 import com.badlogic.gdx.graphics.{GL20, OrthographicCamera}
 import com.badlogic.gdx.graphics.g2d.{BitmapFont, SpriteBatch}
@@ -18,7 +16,7 @@ class GameScreen extends Screen {
   private val height: Int = Gdx.graphics.getHeight
 
   private val camera = new OrthographicCamera(width, height)
-  camera.position.set(width/2, height/2, 0)
+  camera.position.set(width/2, height/2, 10)
   camera.update()
   private val batch = new SpriteBatch
   private val shapeRenderer = new ShapeRenderer
@@ -53,7 +51,7 @@ class GameScreen extends Screen {
   private def drawAliveCells(): Unit ={
     shapeRenderer. translate(GameView.paddingW, GameView.paddingH + GameView.menuH, 0)
     if(GameView.vivas != null)
-    GameView.vivas.foreach(c => drawSquare(c, GameView.squareSide))
+      GameView.vivas.foreach(c => drawSquare(c, GameView.squareSide))
     shapeRenderer. translate(-GameView.paddingW, -GameView.paddingH - GameView.menuH, 0)
   }
 
@@ -68,6 +66,17 @@ class GameScreen extends Screen {
           shapeRenderer.setColor(b.color)
         }
         shapeRenderer.rect(b.pos.x, b.pos.y, GameView.buttonW, GameView.buttonH)
+
+        b match {
+          case p: PlayButton =>
+            if(b.highlight) shapeRenderer.setColor(p.colorFontHighlighted)
+            else shapeRenderer.setColor(p.colorFont)
+            val padW = (GameView.buttonW - p.width)/2
+            val padH = (GameView.buttonH - p.height)/2
+            p.generateImage(shapeRenderer, b.pos.x.toInt + padW, b.pos.y.toInt + padH)
+          case _ =>
+        }
+
       })
       shapeRenderer.end()
     }
@@ -77,14 +86,18 @@ class GameScreen extends Screen {
     val buttons = GameView.buttons
     if(buttons != null){
       buttons.foreach(b => {
-        if(b.highlight){
-          font.setColor(b.colorFontHighlighted)
-        } else {
-          font.setColor(b.colorFont)
+        b match {
+          case _: PlayButton =>
+          case _ =>
+            if(b.highlight){
+              font.setColor(b.colorFontHighlighted)
+            } else {
+              font.setColor(b.colorFont)
+            }
+            val padW = (GameView.buttonW - font.getBounds(b.name).width)/2
+            val padH = (GameView.buttonH - font.getBounds(b.name).height)/2
+            font.draw(fontBatch, b.name, b.pos.x + padW, b.pos.y + GameView.buttonH - padH)
         }
-        val padW = (GameView.buttonW - font.getBounds(b.name).width)/2
-        val padH = (GameView.buttonH - font.getBounds(b.name).height)/2
-        font.draw(fontBatch, b.name, b.pos.x + padW, b.pos.y + GameView.buttonH - padH)
       })
     }
   }

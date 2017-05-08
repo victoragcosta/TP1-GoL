@@ -1,14 +1,15 @@
 package tp1.gameoflife.controller
 
 import com.badlogic.gdx.{Game, Gdx}
-import tp1.gameoflife.defaultmodes.{Classic, HighLife}
 import tp1.gameoflife.gameengine.GameEngine
-import tp1.gameoflife.view.{DemoScreen, GameView}
+import tp1.gameoflife.view.GameView
 
 object GameController extends Game {
 
   private var ruleNumber: Int = 0
-  private var gameMode: GameEngine = RulesVault.list(ruleNumber).getRule
+  private var gameMode: GameEngine = RulesVault.list(ruleNumber)
+
+  def getGameModeName = gameMode.toString
 
   override def create() {
     this.setScreen(GameView.screen)
@@ -61,7 +62,7 @@ object GameController extends Game {
     GameView.changeState()
   }
 
-  def changeRule(name: String): Unit ={
+  def changeRule(name: String): Unit = {
     val newRule = RulesVault.find(name)
     newRule match {
       case Some(rule) =>
@@ -76,8 +77,8 @@ object GameController extends Game {
     if(ruleNumber >= RulesVault.list.length){
       ruleNumber = 0
     }
-    RulesVault.list(ruleNumber).getRule.currentGeneration = gameMode.currentGeneration
-    gameMode = RulesVault.list(ruleNumber).getRule
+    RulesVault.list(ruleNumber).currentGeneration = gameMode.currentGeneration
+    gameMode = RulesVault.list(ruleNumber)
     println(gameMode)
   }
 

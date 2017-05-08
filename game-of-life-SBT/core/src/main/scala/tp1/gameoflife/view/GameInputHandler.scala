@@ -1,12 +1,12 @@
 package tp1.gameoflife.view
 
-import com.badlogic.gdx.Input.{Buttons, Keys}
+import com.badlogic.gdx.Input.Buttons
 import com.badlogic.gdx.{Gdx, InputProcessor}
 import com.badlogic.gdx.math.Vector2
 import tp1.gameoflife.controller.GameController
 
 class GameInputHandler extends InputProcessor {
-  var lastClicked: Int = _
+  private var lastClicked: Int = _
 
   override def touchUp(screenX: Int, screenY: Int, pointer: Int, button: Int): Boolean = {false}
 
@@ -24,7 +24,7 @@ class GameInputHandler extends InputProcessor {
 
   override def keyTyped(character: Char): Boolean = {
     character match {
-      //case ' ' => GameController.nextGeneration()
+      case ' ' => GameController.changeState()
       case 'b' => GameController.previousGeneration()
       case 'B' => GameController.previousGeneration()
       case 'n' => GameController.nextGeneration()
@@ -44,6 +44,8 @@ class GameInputHandler extends InputProcessor {
     overButton(screenX, screenY)
     true
   }
+
+
 
   private def interactCell(screenX: Int, screenY: Int, button: Int) = {
     val deslocX = GameView.paddingW

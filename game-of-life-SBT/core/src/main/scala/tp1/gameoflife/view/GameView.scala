@@ -26,7 +26,7 @@ object GameView{
   val buttons: List[GameButton] = createButtons;arrangeButtons()
 
   var paused = false
-  val delay = 1000
+  val delay = 10
 
   def update(gameEngine: GameEngine): Unit = {
     calculatePadding(gameEngine)
@@ -36,10 +36,16 @@ object GameView{
   private def createButtons: List[GameButton] = {
     var list: List[GameButton] = Nil
     list = new GameButton("Exit", _ => GameController.endGame())::list
-    list = new GameButton("Change Rule", _ => GameController.changeRule())::list
+    list = new GameButton(GameController.getGameModeName, b => {
+      GameController.changeRule()
+      b.setName(GameController.getGameModeName)
+    })::list
     list = new GameButton("Clear", _ => GameController.killAll())::list
     list = new GameButton("Next Gen", _ => GameController.nextGeneration())::list
-    list = new GameButton("Start/Pause", _ => GameController.changeState())::list
+    list = new PlayButton("Start/Pause", b => {
+      GameController.changeState()
+      b match {case p: PlayButton => p.changeState()}
+    })::list
     list = new GameButton("Prev Gen", _ => GameController.previousGeneration())::list
     list
   }
