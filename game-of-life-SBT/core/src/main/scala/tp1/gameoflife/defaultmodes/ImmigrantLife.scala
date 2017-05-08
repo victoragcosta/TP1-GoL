@@ -19,6 +19,8 @@ class ImmigrantLife (override val height: Int, override val width: Int) extends 
 
   override val mementoNumber = 10
 
+  override val defaultColor = new Color(1, 0, 0, 0.9f)
+
   override def shouldKeepAlive(cellHeight: Int, cellWidth: Int): Boolean = {
 
     var aliveCount: Int = -1
@@ -102,7 +104,7 @@ class ImmigrantLife (override val height: Int, override val width: Int) extends 
 
   }
 
-  def changeCellColor (cellHeight: Int, cellWidth: Int): Unit = {
+  def switchColor (cellHeight: Int, cellWidth: Int): Unit = {
 
     if (this.currentGeneration.elements(cellHeight)(cellWidth).alive) {
 

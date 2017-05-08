@@ -16,11 +16,27 @@ abstract class GameEngine {
 
   private var pastGenerations: List[Table] = List()
 
+  val defaultColor: Color
+
   def toString: String
 
   def shouldRevive(cellHeight: Int, cellWidth: Int): Boolean
   def shouldKeepAlive(cellHeight: Int, cellWidth: Int): Boolean
   def determineCellColor(cellHeight: Int, cellWidth: Int): Color
+
+  def reviveCell(cellHeight: Int, cellWidth: Int): Unit = {
+
+    this.currentGeneration.elements(cellHeight)(cellWidth).alive = true
+    this.currentGeneration.elements(cellHeight)(cellWidth).color = defaultColor
+
+  }
+
+  def killCell(cellHeight: Int, cellWidth: Int): Unit = {
+
+    this.currentGeneration.elements(cellHeight)(cellWidth).alive = false
+    this.currentGeneration.elements(cellHeight)(cellWidth).color = new Color(0.2f, 0.2f, 0.2f, 1)
+
+  }
 
   def nextGeneration(): Unit = {
 

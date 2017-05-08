@@ -12,6 +12,8 @@ class Classic (override val height: Int, override val width: Int) extends GameEn
 
   override val mementoNumber = 10
 
+  override val defaultColor = new Color(0.5f, 0.5f, 0.5f, 1)
+
   override def shouldKeepAlive(cellHeight: Int, cellWidth: Int): Boolean = {
 
     var aliveCount: Int = -1
@@ -54,7 +56,7 @@ class Classic (override val height: Int, override val width: Int) extends GameEn
 
   }
 
-  override def determineCellColor(cellHeight: Int, cellWidth: Int): Color = new Color(0.5f, 0.5f, 0.5f, 1)
+  override def determineCellColor(cellHeight: Int, cellWidth: Int): Color = defaultColor
 
   private def adjustHeight (value: Int): Int = {
 
