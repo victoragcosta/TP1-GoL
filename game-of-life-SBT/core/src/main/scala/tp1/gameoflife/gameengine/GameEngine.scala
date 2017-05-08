@@ -1,5 +1,7 @@
 package tp1.gameoflife.gameengine
 
+import com.badlogic.gdx.graphics.Color
+
 abstract class GameEngine {
 
   val description: String
@@ -14,8 +16,11 @@ abstract class GameEngine {
 
   private var pastGenerations: List[Table] = List()
 
+  def toString: String
+
   def shouldRevive(cellHeight: Int, cellWidth: Int): Boolean
   def shouldKeepAlive(cellHeight: Int, cellWidth: Int): Boolean
+  def determineCellColor(cellHeight: Int, cellWidth: Int): Color
 
   def nextGeneration(): Unit = {
 
@@ -25,11 +30,29 @@ abstract class GameEngine {
     for (h <- 0 until height) {
       for (w <- 0 until width) {
 
-        if (!this.currentGeneration.elements(h)(w).alive)
+        if (!this.currentGeneration.elements(h)(w).alive) {
+
           newGeneration.elements(h)(w).alive = shouldRevive(h, w)
 
-        if (this.currentGeneration.elements(h)(w).alive)
+          if (shouldRevive(h, w))
+            newGeneration.elements(h)(w).color = determineCellColor(h, w)
+
+          else
+            newGeneration.elements(h)(w).color = new Color(0.2f, 0.2f, 0.2f, 1)
+
+        }
+
+        if (this.currentGeneration.elements(h)(w).alive) {
+
           newGeneration.elements(h)(w).alive = shouldKeepAlive(h, w)
+
+          if (shouldKeepAlive(h, w))
+            newGeneration.elements(h)(w).color = this.currentGeneration.elements(h)(w).color
+
+          else
+            newGeneration.elements(h)(w).color = new Color(0.2f, 0.2f, 0.2f, 1)
+
+        }
 
       }
     }
@@ -46,8 +69,24 @@ abstract class GameEngine {
       println()
       for (cell <- column) {
 
-        if (cell.alive)
-          print(1)
+        if (cell.alive) {
+
+          if(cell.color == new Color(0.5f, 0.5f, 0.5f, 1))
+            print(1)
+
+          else if(cell.color == new Color(1, 0, 0, 0.9f))
+            print(2)
+
+          else if(cell.color == new Color(0, 1, 0, 0.9f))
+            print(3)
+
+          else if(cell.color == new Color(0, 0, 1, 0.9f))
+            print(4)
+
+          else
+            print(5)
+
+        }
 
         else
           print(0)

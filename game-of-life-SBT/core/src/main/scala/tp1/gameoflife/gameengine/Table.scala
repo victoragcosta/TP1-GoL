@@ -1,5 +1,7 @@
 package tp1.gameoflife.gameengine
 
+import com.badlogic.gdx.graphics.Color
+
 class Table (height: Int, width: Int) {
 
   var elements:Array[Array[Cell]] = Array.ofDim[Cell](height, width)
@@ -18,7 +20,7 @@ class Table (height: Int, width: Int) {
 
     for (h <- 0 until height) {
       for (w <- 0 until width) {
-        this.elements(h)(w) = new Cell(false)
+        this.elements(h)(w) = new Cell(false, new Color(0.2f, 0.2f, 0.2f, 1))
       }
     }
 
