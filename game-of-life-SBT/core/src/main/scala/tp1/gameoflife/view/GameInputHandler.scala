@@ -1,6 +1,6 @@
 package tp1.gameoflife.view
 
-import com.badlogic.gdx.Input.Buttons
+import com.badlogic.gdx.Input.{Buttons, Keys}
 import com.badlogic.gdx.{Gdx, InputProcessor}
 import com.badlogic.gdx.math.Vector2
 import tp1.gameoflife.controller.GameController
@@ -26,9 +26,9 @@ class GameInputHandler extends InputProcessor {
     character match {
       case ' ' => GameController.changeState()
       case 'b' => GameController.previousGeneration()
-      case 'B' => GameController.previousGeneration()
       case 'n' => GameController.nextGeneration()
-      case 'N' => GameController.nextGeneration()
+      case 'c' => GameController.killAll()
+      case 'r' => GameController.changeRule()
       case _ =>
     }
     true
@@ -38,7 +38,13 @@ class GameInputHandler extends InputProcessor {
     touchDown(screenX, screenY, pointer, lastClicked)
   }
 
-  override def keyDown(keycode: Int): Boolean = {false}
+  override def keyDown(keycode: Int): Boolean = {
+    keycode match {
+      case Keys.ESCAPE => GameController.endGame()
+      case _ =>
+    }
+    true
+  }
 
   override def mouseMoved(screenX: Int, screenY: Int): Boolean = {
     overButton(screenX, screenY)

@@ -42,10 +42,7 @@ object GameView{
     })::list
     list = new GameButton("Clear", _ => GameController.killAll())::list
     list = new GameButton("Next Gen", _ => GameController.nextGeneration())::list
-    list = new PlayButton("Start/Pause", b => {
-      GameController.changeState()
-      b match {case p: PlayButton => p.changeState()}
-    })::list
+    list = new PlayButton("Start/Pause", _ => {GameController.changeState()})::list
     list = new GameButton("Prev Gen", _ => GameController.previousGeneration())::list
     list
   }
@@ -92,6 +89,7 @@ object GameView{
 
   def changeState(): Unit ={
     paused = !paused
+    buttons.foreach(b => b match {case p: PlayButton => p.changeState();case _ =>})
   }
 
 }
