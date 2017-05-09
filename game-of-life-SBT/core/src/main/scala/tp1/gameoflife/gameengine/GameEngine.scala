@@ -24,6 +24,7 @@ abstract class GameEngine {
   def shouldKeepAlive(cellHeight: Int, cellWidth: Int): Boolean
   def determineCellColor(cellHeight: Int, cellWidth: Int): Color = this.defaultColor
   def switchColor (cellHeight: Int, cellWidth: Int): Unit = {}
+  def updateColors (): Unit = {}
 
   def reviveCell(cellHeight: Int, cellWidth: Int): Unit = {
 
@@ -132,14 +133,13 @@ abstract class GameEngine {
 
           newGeneration.elements(h)(w).alive = shouldKeepAlive(h, w)
 
-          if (shouldKeepAlive(h, w)) {
+          if (shouldKeepAlive(h, w))
             newGeneration.elements(h)(w).color = this.currentGeneration.elements(h)(w).color
+
+          else {
+            newGeneration.elements(h)(w).color = new Color(0.2f, 0.2f, 0.2f, 1)
             Statistics.addDeath()
           }
-
-          else
-            newGeneration.elements(h)(w).color = new Color(0.2f, 0.2f, 0.2f, 1)
-
         }
 
       }
@@ -148,6 +148,8 @@ abstract class GameEngine {
     storeGeneration(this.currentGeneration)
 
     this.currentGeneration = newGeneration
+
+    updateColors()
 
   }
 
@@ -171,8 +173,11 @@ abstract class GameEngine {
           else if(cell.color == new Color(0, 0, 1, 0.9f))
             print(4)
 
-          else
+          else if(cell.color == new Color(1, 1, 0, 0.9f))
             print(5)
+
+          else
+            print(7)
 
         }
 
