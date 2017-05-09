@@ -104,7 +104,7 @@ class ImmigrantLife (override val height: Int, override val width: Int) extends 
 
   }
 
-  def switchColor (cellHeight: Int, cellWidth: Int): Unit = {
+  override def switchColor (cellHeight: Int, cellWidth: Int): Unit = {
 
     if (this.currentGeneration.elements(cellHeight)(cellWidth).alive) {
 
@@ -143,6 +143,5 @@ class ImmigrantLife (override val height: Int, override val width: Int) extends 
       value
 
   }
-
 
 }

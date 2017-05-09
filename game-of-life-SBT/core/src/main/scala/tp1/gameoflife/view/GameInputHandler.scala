@@ -58,7 +58,12 @@ class GameInputHandler extends InputProcessor {
     val deslocY = GameView.paddingH + GameView.menuH
     val pos = calculateCell(screenX - deslocX, Gdx.graphics.getHeight - (screenY + deslocY))
     button match {
-      case Buttons.LEFT => GameController.makeAlive(pos.x.toInt, pos.y.toInt)
+      case Buttons.LEFT =>
+        if(GameController.cellIsAlive(pos.x.toInt, pos.y.toInt)){
+          GameController.switchColor(pos.x.toInt, pos.y.toInt)
+        } else {
+          GameController.makeAlive(pos.x.toInt, pos.y.toInt)
+        }
       case Buttons.RIGHT => GameController.killCell(pos.x.toInt, pos.y.toInt)
       case _ =>
     }
@@ -96,4 +101,5 @@ class GameInputHandler extends InputProcessor {
     val y = Math.floor(mouseY/GameView.squareSide)
     new Vector2(x.toFloat,y.toFloat)
   }
+
 }

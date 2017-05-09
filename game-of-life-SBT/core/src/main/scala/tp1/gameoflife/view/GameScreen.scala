@@ -41,10 +41,11 @@ class GameScreen extends Screen {
     shapeRenderer.end()
   }
 
-  private def drawSquare(v: Vector3, side: Float) = {
+  private def drawSquare(c: LiveCell, side: Float) = {
     shapeRenderer.begin(ShapeType.Filled)
-    shapeRenderer.setColor(0.5f,0.5f,0.5f,1)
-    shapeRenderer.rect(v.x, v.y, side, side)
+    //shapeRenderer.setColor(0.5f,0.5f,0.5f,1)
+    shapeRenderer.setColor(c.color)
+    shapeRenderer.rect(c.x, c.y, side, side)
     shapeRenderer.end()
   }
 

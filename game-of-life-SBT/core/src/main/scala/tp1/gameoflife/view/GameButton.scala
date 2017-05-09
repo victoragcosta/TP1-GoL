@@ -6,8 +6,8 @@ import com.badlogic.gdx.math.Vector2
 class GameButton(
                   var _name: String,
                   _action: (GameButton) => Unit,
-                  _color: Color = new Color(0,0,0.5f,1),
-                  _colorHighlighted: Color = new Color(0,0,0.9f,1),
+                  var _color: Color = new Color(0,0,0.5f,1),
+                  var _colorHighlighted: Color = new Color(0,0,0.9f,1),
                   _colorFont: Color = Color.WHITE,
                   _colorFontHighlighted: Color = Color.BLACK
                 ){
@@ -29,6 +29,11 @@ class GameButton(
 
   def setHighlight(state: Boolean): Unit ={
     highlight = state
+  }
+
+  def setColor(color: Color): Unit ={
+    this._color = color
+    this._colorHighlighted = new Color(color.r+0.4f, color.g+0.4f, color.b+0.4f, 1)
   }
 
   def action(): Unit = _action.apply(this)

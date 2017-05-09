@@ -10,7 +10,7 @@ object GameView{
 
   final val minSquareSide: Float = 10
   var squareSide: Float = 10
-  var vivas: List[Vector3] = _
+  var vivas: List[LiveCell] = _
   val screen = new GameScreen
 
   val scrW: Int = Gdx.graphics.getWidth
@@ -81,8 +81,9 @@ object GameView{
     vivas = Nil
     for(h <- 0 until gameEngine.height){
       for(w <- 0 until gameEngine.width){
-        if(gameEngine.currentGeneration.elements(h)(w).alive)
-          vivas = new Vector3(w*squareSide,h*squareSide,0)::vivas
+        val cell = gameEngine.currentGeneration.elements(h)(w)
+        if(cell.alive)
+          vivas = new LiveCell(new Vector3(w*squareSide,h*squareSide,0), cell)::vivas
       }
     }
   }

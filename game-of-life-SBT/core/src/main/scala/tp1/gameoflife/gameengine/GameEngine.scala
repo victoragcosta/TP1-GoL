@@ -143,11 +143,8 @@ abstract class GameEngine {
 
   }
 
-  def makeAlive(x: Int, y: Int): Unit ={
-    this.currentGeneration.elements(y)(x) = new Cell(true)
-  }
-  def killCell(x: Int, y: Int): Unit ={
-    this.currentGeneration.elements(y)(x) = new Cell(false)
-  }
+  def switchColor (cellHeight: Int, cellWidth: Int): Unit = {}
+
+  def isAlive(cellHeight: Int, cellWidth: Int): Boolean = this.currentGeneration.elements(cellHeight)(cellWidth).alive
 
 }
