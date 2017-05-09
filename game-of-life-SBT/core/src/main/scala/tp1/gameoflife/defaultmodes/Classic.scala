@@ -58,30 +58,4 @@ class Classic (override val height: Int, override val width: Int) extends GameEn
 
   override def determineCellColor(cellHeight: Int, cellWidth: Int): Color = defaultColor
 
-  private def adjustHeight (value: Int): Int = {
-
-    if (value < 0)
-      value + height
-
-    else if (value >= height)
-      value - height
-
-    else
-      value
-
-  }
-
-  private def adjustWidth (value: Int): Int = {
-
-    if (value < 0)
-      value + width
-
-    else if (value >= width)
-      value - width
-
-    else
-      value
-
-  }
-
 }

@@ -26,15 +26,43 @@ abstract class GameEngine {
 
   def reviveCell(cellHeight: Int, cellWidth: Int): Unit = {
 
-    this.currentGeneration.elements(cellHeight)(cellWidth).alive = true
-    this.currentGeneration.elements(cellHeight)(cellWidth).color = defaultColor
+    this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).alive = true
+    this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).color = defaultColor
 
   }
 
   def killCell(cellHeight: Int, cellWidth: Int): Unit = {
 
-    this.currentGeneration.elements(cellHeight)(cellWidth).alive = false
-    this.currentGeneration.elements(cellHeight)(cellWidth).color = new Color(0.2f, 0.2f, 0.2f, 1)
+    this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).alive = false
+    this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).color = new Color(0.2f, 0.2f, 0.2f, 1)
+
+  }
+
+  def adjustHeight (value: Int): Int = {
+
+    var newValue = value
+
+    while (newValue < 0)
+      newValue += this.height
+
+    while (newValue >= this.height)
+      newValue -= this.height
+
+    newValue
+
+  }
+
+  def adjustWidth (value: Int): Int = {
+
+    var newValue = value
+
+    while (newValue < 0)
+      newValue += this.width
+
+    while (newValue >= this.width)
+      newValue -= this.width
+
+    newValue
 
   }
 
@@ -50,8 +78,10 @@ abstract class GameEngine {
 
           newGeneration.elements(h)(w).alive = shouldRevive(h, w)
 
-          if (shouldRevive(h, w))
+          if (shouldRevive(h, w)) {
             newGeneration.elements(h)(w).color = determineCellColor(h, w)
+            Statistics.addRevive()
+          }
 
           else
             newGeneration.elements(h)(w).color = new Color(0.2f, 0.2f, 0.2f, 1)
@@ -62,8 +92,10 @@ abstract class GameEngine {
 
           newGeneration.elements(h)(w).alive = shouldKeepAlive(h, w)
 
-          if (shouldKeepAlive(h, w))
+          if (shouldKeepAlive(h, w)) {
             newGeneration.elements(h)(w).color = this.currentGeneration.elements(h)(w).color
+            Statistics.addDeath()
+          }
 
           else
             newGeneration.elements(h)(w).color = new Color(0.2f, 0.2f, 0.2f, 1)
@@ -76,6 +108,23 @@ abstract class GameEngine {
     storeGeneration(this.currentGeneration)
 
     this.currentGeneration = newGeneration
+
+  }
+
+  def numberOfCellsAlive(): Int = {
+
+    var cellsAlive = 0
+
+    for(h <- 0 until height) {
+      for(w <- 0 until width) {
+
+        if(this.currentGeneration.elements(h)(w).alive)
+          cellsAlive += 1
+
+      }
+    }
+
+    cellsAlive
 
   }
 

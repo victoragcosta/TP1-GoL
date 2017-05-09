@@ -118,31 +118,4 @@ class ImmigrantLife (override val height: Int, override val width: Int) extends 
 
   }
 
-  private def adjustHeight (value: Int): Int = {
-
-    if (value < 0)
-      value + height
-
-    else if (value >= height)
-      value - height
-
-    else
-      value
-
-  }
-
-  private def adjustWidth (value: Int): Int = {
-
-    if (value < 0)
-      value + width
-
-    else if (value >= width)
-      value - width
-
-    else
-      value
-
-  }
-
-
 }
