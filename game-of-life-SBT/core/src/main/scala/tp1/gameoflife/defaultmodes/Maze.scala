@@ -3,12 +3,13 @@ package tp1.gameoflife.defaultmodes
 import com.badlogic.gdx.graphics.Color
 import tp1.gameoflife.gameengine.GameEngine
 
-class HighLife (override val height: Int, override val width: Int) extends GameEngine {
+class Maze (override val height: Int, override val width: Int) extends GameEngine {
 
-  override def toString: String = "HighLife"
+  override def toString: String = "Maze"
 
-  override val description: String = "Good for creating replicating patterns." +
-    " A cell must be near 2 or 3 cells to stay alive. A dead cell revives if there are 3 or 6 cells alive near it."
+  override val description: String = "More durable cells, perfect for mazes." +
+    "A cell must be near 1, 2, 3, 4 or 5 cells to stay alive." +
+    "A dead cell revives if there are exactly 3 cells alive near it."
 
   override val mementoNumber = 10
 
@@ -27,7 +28,7 @@ class HighLife (override val height: Int, override val width: Int) extends GameE
       }
     }
 
-    if (aliveCount == 2 || aliveCount == 3)
+    if (aliveCount >= 1 && aliveCount <= 5)
       true
 
     else
@@ -48,7 +49,7 @@ class HighLife (override val height: Int, override val width: Int) extends GameE
       }
     }
 
-    if (aliveCount == 3 || aliveCount == 6)
+    if (aliveCount == 3)
       true
 
     else

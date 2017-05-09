@@ -1,5 +1,6 @@
 package tp1.gameoflife.defaultmodes
 
+import com.badlogic.gdx.graphics.Color
 import tp1.gameoflife.gameengine.GameEngine
 
 class Classic (override val height: Int, override val width: Int) extends GameEngine {
@@ -10,6 +11,8 @@ class Classic (override val height: Int, override val width: Int) extends GameEn
     "A dead cell revives if there are exactly 3 cells alive near it."
 
   override val mementoNumber = 10
+
+  override val defaultColor = new Color(0.5f, 0.5f, 0.5f, 1)
 
   override def shouldKeepAlive(cellHeight: Int, cellWidth: Int): Boolean = {
 
@@ -52,6 +55,8 @@ class Classic (override val height: Int, override val width: Int) extends GameEn
       false
 
   }
+
+  override def determineCellColor(cellHeight: Int, cellWidth: Int): Color = defaultColor
 
   private def adjustHeight (value: Int): Int = {
 
