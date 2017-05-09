@@ -5,7 +5,7 @@ import tp1.gameoflife.gameengine.Statistics
 
 object TestEnvironment extends App{
 
-  val Board = new Maze(10, 10)
+  val Board = new Classic(15, 15)
 
   println(Board.toString)
 
@@ -40,7 +40,7 @@ object TestEnvironment extends App{
     println()
     Board.printBoard()
     println()
-    println(Board.numberOfCellsAlive())
+    println(Board.cellsAlive())
     println()
 
   }

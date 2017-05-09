@@ -23,16 +23,7 @@ class ImmigrantLife (override val height: Int, override val width: Int) extends 
 
   override def shouldKeepAlive(cellHeight: Int, cellWidth: Int): Boolean = {
 
-    var aliveCount: Int = -1
-
-    for (i <- -1 to 1) {
-      for (j <- -1 to 1) {
-
-        if (this.currentGeneration.elements(adjustHeight(cellHeight + i))(adjustWidth(cellWidth + j)).alive)
-          aliveCount += 1
-
-      }
-    }
+    var aliveCount: Int = neighborsAlive(cellHeight, cellWidth)
 
     if (aliveCount == 2 || aliveCount == 3)
       true
@@ -44,16 +35,7 @@ class ImmigrantLife (override val height: Int, override val width: Int) extends 
 
   override def shouldRevive(cellHeight: Int, cellWidth: Int): Boolean = {
 
-    var aliveCount: Int = 0
-
-    for (i <- -1 to 1) {
-      for (j <- -1 to 1) {
-
-        if(this.currentGeneration.elements(adjustHeight(cellHeight + i))(adjustWidth(cellWidth + j)).alive)
-          aliveCount += 1
-
-      }
-    }
+    var aliveCount: Int = neighborsAlive(cellHeight, cellWidth)
 
     if (aliveCount == 3)
       true
@@ -104,7 +86,7 @@ class ImmigrantLife (override val height: Int, override val width: Int) extends 
 
   }
 
-  def switchColor (cellHeight: Int, cellWidth: Int): Unit = {
+  override def switchColor (cellHeight: Int, cellWidth: Int): Unit = {
 
     if (this.currentGeneration.elements(cellHeight)(cellWidth).alive) {
 

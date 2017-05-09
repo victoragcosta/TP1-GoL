@@ -10,22 +10,11 @@ class Classic (override val height: Int, override val width: Int) extends GameEn
   override val description: String = "The original rules. A cell must be near 2 or 3 cells to stay alive." +
     "A dead cell revives if there are exactly 3 cells alive near it."
 
-  override val mementoNumber = 10
-
   override val defaultColor = new Color(0.5f, 0.5f, 0.5f, 1)
 
   override def shouldKeepAlive(cellHeight: Int, cellWidth: Int): Boolean = {
 
-    var aliveCount: Int = -1
-
-    for (i <- -1 to 1) {
-      for (j <- -1 to 1) {
-
-        if (this.currentGeneration.elements(adjustHeight(cellHeight + i))(adjustWidth(cellWidth + j)).alive)
-          aliveCount += 1
-
-      }
-    }
+    var aliveCount: Int = neighborsAlive(cellHeight, cellWidth)
 
     if (aliveCount == 2 || aliveCount == 3)
       true
@@ -37,16 +26,7 @@ class Classic (override val height: Int, override val width: Int) extends GameEn
 
   override def shouldRevive(cellHeight: Int, cellWidth: Int): Boolean = {
 
-    var aliveCount: Int = 0
-
-    for (i <- -1 to 1) {
-      for (j <- -1 to 1) {
-
-        if(this.currentGeneration.elements(adjustHeight(cellHeight + i))(adjustWidth(cellWidth + j)).alive)
-          aliveCount += 1
-
-      }
-    }
+    var aliveCount: Int = neighborsAlive(cellHeight, cellWidth)
 
     if (aliveCount == 3)
       true
@@ -55,7 +35,5 @@ class Classic (override val height: Int, override val width: Int) extends GameEn
       false
 
   }
-
-  override def determineCellColor(cellHeight: Int, cellWidth: Int): Color = defaultColor
 
 }

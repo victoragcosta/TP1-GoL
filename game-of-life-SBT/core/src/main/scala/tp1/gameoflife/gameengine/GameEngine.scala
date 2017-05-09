@@ -9,7 +9,7 @@ abstract class GameEngine {
   val height: Int
   val width: Int
 
-  val mementoNumber: Int
+  val mementoNumber: Int = 10
 
   var currentGeneration = new Table(height, width)
   this.currentGeneration.create()
@@ -22,7 +22,8 @@ abstract class GameEngine {
 
   def shouldRevive(cellHeight: Int, cellWidth: Int): Boolean
   def shouldKeepAlive(cellHeight: Int, cellWidth: Int): Boolean
-  def determineCellColor(cellHeight: Int, cellWidth: Int): Color
+  def determineCellColor(cellHeight: Int, cellWidth: Int): Color = this.defaultColor
+  def switchColor (cellHeight: Int, cellWidth: Int): Unit = {}
 
   def reviveCell(cellHeight: Int, cellWidth: Int): Unit = {
 
@@ -63,6 +64,43 @@ abstract class GameEngine {
       newValue -= this.width
 
     newValue
+
+  }
+
+  def cellsAlive(): Int = {
+
+    var cellsAlive = 0
+
+    for(h <- 0 until height) {
+      for(w <- 0 until width) {
+
+        if(this.currentGeneration.elements(h)(w).alive)
+          cellsAlive += 1
+
+      }
+    }
+
+    cellsAlive
+
+  }
+
+  def neighborsAlive(cellHeight: Int, cellWidth: Int): Int = {
+
+    var aliveCount = 0
+
+    for (i <- -1 to 1) {
+      for (j <- -1 to 1) {
+
+        if (this.currentGeneration.elements(adjustHeight(cellHeight + i))(adjustWidth(cellWidth + j)).alive)
+          aliveCount += 1
+
+      }
+    }
+
+    if (this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).alive)
+      aliveCount -= 1
+
+    aliveCount
 
   }
 
@@ -108,23 +146,6 @@ abstract class GameEngine {
     storeGeneration(this.currentGeneration)
 
     this.currentGeneration = newGeneration
-
-  }
-
-  def numberOfCellsAlive(): Int = {
-
-    var cellsAlive = 0
-
-    for(h <- 0 until height) {
-      for(w <- 0 until width) {
-
-        if(this.currentGeneration.elements(h)(w).alive)
-          cellsAlive += 1
-
-      }
-    }
-
-    cellsAlive
 
   }
 
