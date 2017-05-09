@@ -11,10 +11,10 @@ class ImmigrantLife (override val height: Int, override val width: Int) extends 
 
   override def toString: String = "ImmigrantLife"
 
-  override val description: String = "The original rules, but with a twist: 2 colors." +
-    "A cell must be near 2 or 3 cells to stay alive." +
-    "A dead cell revives if there are exactly 3 cells alive near it." +
-    "The color of the revived cell is determined by the color of the majority of cells around it." +
+  override val description: String = "The original rules, but with a twist: 2 colors. " +
+    "A cell must be near 2 or 3 cells to stay alive. " +
+    "A dead cell revives if there are exactly 3 cells alive near it. " +
+    "The color of the revived cell is determined by the color of the majority of cells around it. " +
     "If there is a tie, the color is determined randomly."
 
   override val mementoNumber = 10
@@ -23,7 +23,7 @@ class ImmigrantLife (override val height: Int, override val width: Int) extends 
 
   override def shouldKeepAlive(cellHeight: Int, cellWidth: Int): Boolean = {
 
-    var aliveCount: Int = neighborsAlive(cellHeight, cellWidth)
+    val aliveCount: Int = neighborsAlive(cellHeight, cellWidth)
 
     if (aliveCount == 2 || aliveCount == 3)
       true
@@ -35,7 +35,7 @@ class ImmigrantLife (override val height: Int, override val width: Int) extends 
 
   override def shouldRevive(cellHeight: Int, cellWidth: Int): Boolean = {
 
-    var aliveCount: Int = neighborsAlive(cellHeight, cellWidth)
+    val aliveCount: Int = neighborsAlive(cellHeight, cellWidth)
 
     if (aliveCount == 3)
       true

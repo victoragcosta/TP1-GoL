@@ -5,7 +5,7 @@ import tp1.gameoflife.gameengine.Statistics
 
 object TestEnvironment extends App{
 
-  val Board = new Classic(15, 15)
+  val Board = new Replicator(15, 15)
 
   println(Board.toString)
 

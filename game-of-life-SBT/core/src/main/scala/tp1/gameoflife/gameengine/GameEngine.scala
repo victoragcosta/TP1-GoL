@@ -39,6 +39,8 @@ abstract class GameEngine {
 
   }
 
+  def isCellAlive(cellHeight: Int, cellWidth: Int): Boolean = this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).alive
+
   def adjustHeight (value: Int): Int = {
 
     var newValue = value

@@ -39,8 +39,20 @@
       <file leaf-file-name="TestEnvironment.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/TestEnvironment.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+            <state relative-caret-position="306">
+              <caret line="30" column="24" lean-forward="false" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+              <folding>
+                <element signature="e#37#75#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Replicator.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Replicator.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="59" lean-forward="false" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
               <folding>
                 <element signature="e#37#75#0" expanded="true" />
               </folding>
@@ -51,8 +63,8 @@
       <file leaf-file-name="WalledCities.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/WalledCities.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-13">
-              <caret line="24" column="11" lean-forward="true" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+            <state relative-caret-position="187">
+              <caret line="11" column="62" lean-forward="false" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
               <folding>
                 <element signature="e#37#75#0" expanded="true" />
               </folding>
@@ -63,8 +75,8 @@
       <file leaf-file-name="Maze.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Maze.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="187">
+              <caret line="11" column="69" lean-forward="false" selection-start-line="11" selection-start-column="69" selection-end-line="11" selection-end-column="69" />
               <folding>
                 <element signature="e#37#75#0" expanded="true" />
               </folding>
@@ -75,8 +87,8 @@
       <file leaf-file-name="ImmigrantLife.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/ImmigrantLife.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="25" column="63" lean-forward="false" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
+            <state relative-caret-position="170">
+              <caret line="16" column="98" lean-forward="false" selection-start-line="16" selection-start-column="98" selection-end-line="16" selection-end-column="98" />
               <folding>
                 <element signature="e#37#62#0" expanded="true" />
               </folding>
@@ -87,8 +99,8 @@
       <file leaf-file-name="HighLife.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/HighLife.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="31" column="10" lean-forward="true" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+            <state relative-caret-position="153">
+              <caret line="9" column="78" lean-forward="false" selection-start-line="9" selection-start-column="78" selection-end-line="9" selection-end-column="78" />
               <folding>
                 <element signature="e#37#75#0" expanded="true" />
               </folding>
@@ -99,8 +111,8 @@
       <file leaf-file-name="Classic.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Classic.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="16" column="63" lean-forward="false" selection-start-line="16" selection-start-column="63" selection-end-line="16" selection-end-column="63" />
+            <state relative-caret-position="187">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding>
                 <element signature="e#37#75#0" expanded="true" />
               </folding>
@@ -111,8 +123,8 @@
       <file leaf-file-name="GameEngine.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/GameEngine.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="102" column="14" lean-forward="true" selection-start-line="102" selection-start-column="14" selection-end-line="102" selection-end-column="14" />
+            <state relative-caret-position="-374">
+              <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -165,13 +177,14 @@
         <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/Cell.scala" />
         <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/Table.scala" />
         <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/Statistics.scala" />
-        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/TestEnvironment.scala" />
-        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Maze.scala" />
+        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Replicator.scala" />
         <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/WalledCities.scala" />
-        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/HighLife.scala" />
+        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Maze.scala" />
         <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/ImmigrantLife.scala" />
+        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/HighLife.scala" />
         <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Classic.scala" />
         <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/GameEngine.scala" />
+        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/TestEnvironment.scala" />
       </list>
     </option>
   </component>
@@ -822,7 +835,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -856,16 +869,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/TestEnvironment.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <element signature="e#37#75#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Classic.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1203,18 +1206,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/GameEngine.scala">
+    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/HighLife.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="102" column="14" lean-forward="true" selection-start-line="102" selection-start-column="14" selection-end-line="102" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Classic.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="16" column="63" lean-forward="false" selection-start-line="16" selection-start-column="63" selection-end-line="16" selection-end-column="63" />
+        <state relative-caret-position="153">
+          <caret line="9" column="78" lean-forward="false" selection-start-line="9" selection-start-column="78" selection-end-line="9" selection-end-column="78" />
           <folding>
             <element signature="e#37#75#0" expanded="true" />
           </folding>
@@ -1223,8 +1218,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/ImmigrantLife.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="25" column="63" lean-forward="false" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
+        <state relative-caret-position="170">
+          <caret line="16" column="98" lean-forward="false" selection-start-line="16" selection-start-column="98" selection-end-line="16" selection-end-column="98" />
           <folding>
             <element signature="e#37#62#0" expanded="true" />
           </folding>
@@ -1233,8 +1228,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Maze.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="187">
+          <caret line="11" column="69" lean-forward="false" selection-start-line="11" selection-start-column="69" selection-end-line="11" selection-end-column="69" />
           <folding>
             <element signature="e#37#75#0" expanded="true" />
           </folding>
@@ -1243,28 +1238,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/WalledCities.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13">
-          <caret line="24" column="11" lean-forward="true" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+        <state relative-caret-position="187">
+          <caret line="11" column="62" lean-forward="false" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
           <folding>
             <element signature="e#37#75#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/HighLife.scala">
+    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Classic.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="31" column="10" lean-forward="true" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
             <element signature="e#37#75#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Replicator.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="59" lean-forward="false" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
+          <folding>
+            <element signature="e#37#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/GameEngine.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-374">
+          <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/TestEnvironment.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+        <state relative-caret-position="306">
+          <caret line="30" column="24" lean-forward="false" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
           <folding>
             <element signature="e#37#75#0" expanded="true" />
           </folding>
