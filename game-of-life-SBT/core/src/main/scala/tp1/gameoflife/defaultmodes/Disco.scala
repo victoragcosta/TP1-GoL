@@ -63,10 +63,11 @@ class Disco (override val height: Int, override val width: Int) extends GameEngi
     }
 
   }
-
+  
+  Random.setSeed(System.nanoTime())
+  
+  Random.setSeed(Calendar.getInstance.getTimeInMillis)
   private def randomColor(): Color = {
-
-    Random.setSeed(System.nanoTime())
 
     new Color(Random.nextFloat(), Random.nextFloat(), Random.nextFloat(), 0.9f)
 

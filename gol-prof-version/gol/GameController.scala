@@ -1,4 +1,4 @@
-package br.unb.cic.poo.gol
+package gol
 
 /**
  * Relaciona o componente View com o componente Model. 

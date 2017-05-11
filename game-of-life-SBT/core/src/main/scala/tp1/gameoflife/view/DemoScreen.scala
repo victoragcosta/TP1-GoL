@@ -1,15 +1,16 @@
-package tp1.gameoflife.pkg
+package tp1.gameoflife.view
 
-import com.badlogic.gdx.{Gdx, Screen}
-import com.badlogic.gdx.graphics.OrthographicCamera
+import com.badlogic.gdx.graphics.{GL20, OrthographicCamera}
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType
-import com.badlogic.gdx.graphics.GL20
+import com.badlogic.gdx.{Gdx, Screen}
 
 class DemoScreen extends Screen{
-  val camera = new OrthographicCamera(Gdx.graphics.getWidth, Gdx.graphics.getHeight)
-  camera.position.set(Gdx.graphics.getWidth/2, Gdx.graphics.getHeight/2, 0)
+  var width = Gdx.graphics.getWidth
+  var height = Gdx.graphics.getHeight
+  val camera = new OrthographicCamera(width, height)
+  camera.position.set(width/2, height/2, 0)
   camera.update()
   val mainBatch = new SpriteBatch
   val shapeRenderer = new ShapeRenderer
@@ -33,7 +34,7 @@ class DemoScreen extends Screen{
     mainBatch.end()
   }
 
-  def resize(width: Int, height: Int) = {}
+  def resize(width: Int, height: Int) = {this.width = width; this.height = height}
   def show() = {}
   def hide() = {}
   def pause() = {}

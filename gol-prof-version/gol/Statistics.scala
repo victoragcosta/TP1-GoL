@@ -1,4 +1,4 @@
-package br.unb.cic.poo.gol
+package gol
 
 /**
  * Classe usada para computar as estatisticas 
