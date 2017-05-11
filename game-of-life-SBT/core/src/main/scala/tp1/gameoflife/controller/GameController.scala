@@ -99,9 +99,7 @@ object GameController extends Game {
 
   def cellIsAlive(x: Int, y: Int): Boolean = {
     try {
-      if(inBounds(x,y))
-        gameMode.isCellAlive(y,x)
-      false
+      inBounds(x,y) && gameMode.isCellAlive(y,x)
     } catch {
       case e: Exception =>
         println(e.getMessage)
@@ -109,11 +107,6 @@ object GameController extends Game {
     }
   }
 
-  private def inBounds(x: Int,y: Int): Boolean ={
-    if(0 <= x && x < gameMode.width && 0 < y && y < gameMode.height)
-      true
-    else
-      false
-  }
+  private def inBounds(x: Int,y: Int): Boolean = 0 <= x && x < gameMode.width && 0 <= y && y < gameMode.height
 
 }
