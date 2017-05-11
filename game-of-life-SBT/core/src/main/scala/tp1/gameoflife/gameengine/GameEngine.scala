@@ -1,43 +1,195 @@
 package tp1.gameoflife.gameengine
 
+import com.badlogic.gdx.graphics.Color
+
 abstract class GameEngine {
+
+  val description: String
 
   val height: Int
   val width: Int
 
-  val mementoNumber: Int
+  val mementoNumber: Int = 10
 
   var currentGeneration = new Table(height, width)
-  currentGeneration.clean()
+  this.currentGeneration.create()
 
-  var pastGenerations: List[Table] = List()
+  private var pastGenerations: List[Table] = List()
 
-  def shouldRevive(cell: Cell): Boolean
-  def shouldKeepAlive(cell: Cell): Boolean
+  val defaultColor: Color
 
-  def nextGeneration(): Unit = {
+  def toString: String
 
-    val newGeneration = new Table(height, width)
+  def shouldRevive(cellHeight: Int, cellWidth: Int): Boolean
+  def shouldKeepAlive(cellHeight: Int, cellWidth: Int): Boolean
+  def determineCellColor(cellHeight: Int, cellWidth: Int): Color = this.defaultColor
+  def switchColor (cellHeight: Int, cellWidth: Int): Unit = {}
+  def updateColors (): Unit = {}
 
-    for (h <- 0 until height) {
-      for (w <- 0 until width) {
+  def reviveCell(cellHeight: Int, cellWidth: Int): Unit = {
 
-        if (!currentGeneration.elements(h)(w).alive)
-          newGeneration.elements(h)(w).alive = shouldRevive(currentGeneration.elements(h)(w))
+    this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).alive = true
+    this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).color = defaultColor
 
-        if (currentGeneration.elements(h)(w).alive)
-          newGeneration.elements(h)(w).alive = shouldKeepAlive(currentGeneration.elements(h)(w))
+  }
+
+  def killCell(cellHeight: Int, cellWidth: Int): Unit = {
+
+    this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).alive = false
+    this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).color = new Color(0.2f, 0.2f, 0.2f, 1)
+
+  }
+
+  def isCellAlive(cellHeight: Int, cellWidth: Int): Boolean = this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).alive
+
+  def adjustHeight (value: Int): Int = {
+
+    var newValue = value
+
+    while (newValue < 0)
+      newValue += this.height
+
+    while (newValue >= this.height)
+      newValue -= this.height
+
+    newValue
+
+  }
+
+  def adjustWidth (value: Int): Int = {
+
+    var newValue = value
+
+    while (newValue < 0)
+      newValue += this.width
+
+    while (newValue >= this.width)
+      newValue -= this.width
+
+    newValue
+
+  }
+
+  def cellsAlive(): Int = {
+
+    var cellsAlive = 0
+
+    for(h <- 0 until height) {
+      for(w <- 0 until width) {
+
+        if(this.currentGeneration.elements(h)(w).alive)
+          cellsAlive += 1
 
       }
     }
 
-    storeGeneration(currentGeneration)
-
-    this.currentGeneration = newGeneration
+    cellsAlive
 
   }
 
-  def storeGeneration (generation: Table): Unit = {
+  def neighborsAlive(cellHeight: Int, cellWidth: Int): Int = {
+
+    var aliveCount = 0
+
+    for (i <- -1 to 1) {
+      for (j <- -1 to 1) {
+
+        if (this.currentGeneration.elements(adjustHeight(cellHeight + i))(adjustWidth(cellWidth + j)).alive)
+          aliveCount += 1
+
+      }
+    }
+
+    if (this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).alive)
+      aliveCount -= 1
+
+    aliveCount
+
+  }
+
+  def nextGeneration(): Unit = {
+
+    val newGeneration = new Table(height, width)
+    newGeneration.create()
+
+    for (h <- 0 until height) {
+      for (w <- 0 until width) {
+
+        if (!this.currentGeneration.elements(h)(w).alive) {
+
+          newGeneration.elements(h)(w).alive = shouldRevive(h, w)
+
+          if (shouldRevive(h, w)) {
+            newGeneration.elements(h)(w).color = determineCellColor(h, w)
+            Statistics.addRevive()
+          }
+
+          else
+            newGeneration.elements(h)(w).color = new Color(0.2f, 0.2f, 0.2f, 1)
+
+        }
+
+        if (this.currentGeneration.elements(h)(w).alive) {
+
+          newGeneration.elements(h)(w).alive = shouldKeepAlive(h, w)
+
+          if (shouldKeepAlive(h, w))
+            newGeneration.elements(h)(w).color = this.currentGeneration.elements(h)(w).color
+
+          else {
+            newGeneration.elements(h)(w).color = new Color(0.2f, 0.2f, 0.2f, 1)
+            Statistics.addDeath()
+          }
+        }
+
+      }
+    }
+
+    storeGeneration(this.currentGeneration)
+
+    this.currentGeneration = newGeneration
+
+    updateColors()
+
+  }
+
+  def printBoard(): Unit = {
+
+    for (column <- this.currentGeneration.elements) {
+      println()
+      for (cell <- column) {
+
+        if (cell.alive) {
+
+          if(cell.color == new Color(0.5f, 0.5f, 0.5f, 1))
+            print(1)
+
+          else if(cell.color == new Color(1, 0, 0, 0.9f))
+            print(2)
+
+          else if(cell.color == new Color(0, 1, 0, 0.9f))
+            print(3)
+
+          else if(cell.color == new Color(0, 0, 1, 0.9f))
+            print(4)
+
+          else if(cell.color == new Color(1, 1, 0, 0.9f))
+            print(5)
+
+          else
+            print(7)
+
+        }
+
+        else
+          print(0)
+
+      }
+    }
+
+  }
+
+  private def storeGeneration(generation: Table): Unit = {
 
     val length: Int = pastGenerations.length
 
@@ -51,7 +203,7 @@ abstract class GameEngine {
 
   }
 
-  def undo (): Unit = {
+  def undo(): Unit = {
 
     if (pastGenerations.isEmpty) {
 

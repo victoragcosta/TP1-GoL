@@ -1,15 +1,13 @@
-package tp1.gameoflife.pkg
-
 import com.badlogic.gdx.backends.lwjgl._
-import tp1.gameoflife.controller.Controller
+import tp1.gameoflife.controller.GameController
 
 object Main{
   def main(args: Array[String]): Unit = {
     val cfg = new LwjglApplicationConfiguration
     cfg.title = "Game Of Life"
-    cfg.height = 480
+    cfg.height = 580
     cfg.width = 800
     cfg.forceExit = false
-    new LwjglApplication(Controller, cfg)
+    new LwjglApplication(GameController, cfg)
   }
 }
