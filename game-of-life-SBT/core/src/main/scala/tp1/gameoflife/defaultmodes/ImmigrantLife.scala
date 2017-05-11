@@ -17,8 +17,6 @@ class ImmigrantLife (override val height: Int, override val width: Int) extends 
     "The color of the revived cell is determined by the color of the majority of cells around it. " +
     "If there is a tie, the color is determined randomly."
 
-  override val mementoNumber = 10
-
   override val defaultColor = new Color(1, 0, 0, 0.9f)
 
   override def shouldKeepAlive(cellHeight: Int, cellWidth: Int): Boolean = {
@@ -94,7 +92,7 @@ class ImmigrantLife (override val height: Int, override val width: Int) extends 
        this.currentGeneration.elements(cellHeight)(cellWidth).color = new Color(0, 0, 1, 0.9f)
 
      else
-       this.currentGeneration.elements(cellHeight)(cellWidth).color = new Color(1, 0, 0, 0.9f)
+       this.currentGeneration.elements(cellHeight)(cellWidth).color = defaultColor
 
     }
 
