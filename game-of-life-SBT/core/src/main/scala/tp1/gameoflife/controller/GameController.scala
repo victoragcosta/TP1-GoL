@@ -4,11 +4,12 @@ import com.badlogic.gdx.graphics.Color
 import com.badlogic.gdx.{Game, Gdx}
 import tp1.gameoflife.gameengine.GameEngine
 import tp1.gameoflife.view.GameView
+import tp1.gameoflife.main.Main
 
 object GameController extends Game {
 
   private var ruleNumber: Int = 0
-  private var gameMode: GameEngine = RulesVault.list(ruleNumber)
+  private var gameMode: GameEngine = Main.getRule(0)
 
   def getGameModeName = gameMode.toString
 
@@ -65,23 +66,13 @@ object GameController extends Game {
     GameView.changeState()
   }
 
-  def changeRule(name: String): Unit = {
-    val newRule = RulesVault.find(name)
-    newRule match {
-      case Some(rule) =>
-        rule.currentGeneration = gameMode.currentGeneration
-        gameMode = rule
-      case None => println("Num existe mano")
-    }
-  }
-
   def changeRule(): Unit = {
     ruleNumber+=1
-    if(ruleNumber >= RulesVault.list.length){
+    if(ruleNumber >= Main.classes.length){
       ruleNumber = 0
     }
-    RulesVault.list(ruleNumber).currentGeneration = gameMode.currentGeneration
-    gameMode = RulesVault.list(ruleNumber)
+    Main.getRule(ruleNumber).currentGeneration = gameMode.currentGeneration
+    gameMode = Main.getRule(ruleNumber)
     println(gameMode)
   }
 
