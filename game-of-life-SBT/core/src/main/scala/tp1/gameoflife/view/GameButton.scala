@@ -1,6 +1,7 @@
 package tp1.gameoflife.view
 
 import com.badlogic.gdx.graphics.Color
+import com.badlogic.gdx.graphics.g2d.BitmapFont
 import com.badlogic.gdx.math.Vector2
 
 class GameButton(
@@ -19,11 +20,19 @@ class GameButton(
   def colorFont: Color = _colorFont
   def colorFontHighlighted: Color = _colorFontHighlighted
 
-  var pos: Vector2 = _
+  var pos1: Vector2 = _
+  var pos2: Vector2 = _
 
-  def setPosition(x: Int, y: Int): Unit ={
-    pos = new Vector2(x,y)
+  def setPosition1(x: Int, y: Int): Unit ={
+    pos1 = new Vector2(x,y)
   }
+
+  def setPosition2(x: Int, y: Int): Unit ={
+    pos2 = new Vector2(x,y)
+  }
+
+  def width = (pos2.x - pos1.x).toInt
+  def height = (pos2.y - pos1.y).toInt
 
   var highlight: Boolean = false
 
@@ -37,4 +46,8 @@ class GameButton(
   }
 
   def action(): Unit = _action.apply(this)
+
+  def padW(font: BitmapFont): Int = ((this.width - font.getBounds(this.name).width)/2).toInt
+  def padH(font: BitmapFont): Int = ((this.height - font.getBounds(this.name).height)/2).toInt
+
 }

@@ -22,22 +22,23 @@ class PlayButton(
 
   var paused = false
 
-  override def height: Int = 12
+  override def heightImage: Int = 12
 
-  override def width: Int = if(paused) 12 else 9
+  override def widthImage: Int = if(paused) 12 else 9
 
   def changeState(): Unit = paused = !paused
 
   override def generateImage(shapeRenderer: ShapeRenderer, x: Int, y: Int): Unit = {
 
     paused match{
+        //play
       case true =>
         val p1 = new Vector2(x,y)
         val p2 = new Vector2(x,y+12)
         val p3 = new Vector2(x+12,y+6)
 
         shapeRenderer.triangle(p1.x, p1.y, p2.x, p2.y, p3.x, p3.y)
-
+        //pause
       case _ =>
         shapeRenderer.rect(x, y, 3, 12)
         shapeRenderer.translate(6,0,0)
@@ -46,5 +47,8 @@ class PlayButton(
     }
 
   }
+
+  def padW:Int = (this.width - this.widthImage)/2
+  def padH:Int = (this.height - this.heightImage)/2
 
 }

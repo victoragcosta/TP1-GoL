@@ -33,7 +33,8 @@ object GameController extends Game {
 
   def makeAlive(x: Int, y: Int): Unit ={
     try{
-      gameMode.reviveCell(y,x)
+      if(inBounds(x,y))
+        gameMode.reviveCell(y,x)
       GameView.update(gameMode)
     } catch {
       case e: Exception => println(e.getLocalizedMessage)
@@ -42,7 +43,8 @@ object GameController extends Game {
 
   def killCell(x: Int, y: Int): Unit ={
     try{
-      gameMode.killCell(y,x)
+      if(inBounds(x,y))
+        gameMode.killCell(y,x)
       GameView.update(gameMode)
     } catch {
       case e: Exception => println(e.getLocalizedMessage)
@@ -85,7 +87,8 @@ object GameController extends Game {
 
   def switchColor(x: Int, y: Int): Color = {
     try{
-      gameMode.switchColor(y,x)
+      if(inBounds(x,y))
+        gameMode.switchColor(y,x)
       gameMode.defaultColor
     } catch {
       case e: Exception =>
@@ -96,12 +99,21 @@ object GameController extends Game {
 
   def cellIsAlive(x: Int, y: Int): Boolean = {
     try {
-      gameMode.isAlive(y,x)
+      if(inBounds(x,y))
+        gameMode.isCellAlive(y,x)
+      false
     } catch {
       case e: Exception =>
         println(e.getMessage)
         false
     }
+  }
+
+  private def inBounds(x: Int,y: Int): Boolean ={
+    if(0 <= x && x < gameMode.width && 0 < y && y < gameMode.height)
+      true
+    else
+      false
   }
 
 }

@@ -220,8 +220,4 @@ abstract class GameEngine {
 
   }
 
-  def switchColor (cellHeight: Int, cellWidth: Int): Unit = {}
-
-  def isAlive(cellHeight: Int, cellWidth: Int): Boolean = this.currentGeneration.elements(cellHeight)(cellWidth).alive
-
 }

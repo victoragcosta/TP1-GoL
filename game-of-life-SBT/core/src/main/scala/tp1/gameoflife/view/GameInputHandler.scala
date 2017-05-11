@@ -1,5 +1,7 @@
 package tp1.gameoflife.view
 
+import java.util.Calendar
+
 import com.badlogic.gdx.Input.{Buttons, Keys}
 import com.badlogic.gdx.{Gdx, InputProcessor}
 import com.badlogic.gdx.math.Vector2
@@ -7,6 +9,9 @@ import tp1.gameoflife.controller.GameController
 
 class GameInputHandler extends InputProcessor {
   private var lastClicked: Int = _
+  private var lastCell: Vector2 = _
+  private var lastTime: Long = Calendar.getInstance().getTimeInMillis
+  private val clickDelay: Long = 500
 
   override def touchUp(screenX: Int, screenY: Int, pointer: Int, button: Int): Boolean = {false}
 
@@ -59,8 +64,11 @@ class GameInputHandler extends InputProcessor {
     val pos = calculateCell(screenX - deslocX, Gdx.graphics.getHeight - (screenY + deslocY))
     button match {
       case Buttons.LEFT =>
-        if(GameController.cellIsAlive(pos.x.toInt, pos.y.toInt)){
+        val now = Calendar.getInstance().getTimeInMillis
+        if((pos != lastCell || now >= lastTime + clickDelay) && GameController.cellIsAlive(pos.x.toInt, pos.y.toInt)){
           GameController.switchColor(pos.x.toInt, pos.y.toInt)
+          lastTime = now
+          lastCell = pos
         } else {
           GameController.makeAlive(pos.x.toInt, pos.y.toInt)
         }
@@ -75,8 +83,7 @@ class GameInputHandler extends InputProcessor {
     val buttons = GameView.buttons
     for(i <- buttons.indices){
       val b = buttons(i)
-      if (b.pos.x < screenX && screenX < b.pos.x + GameView.buttonW &&
-        b.pos.y < h - screenY && h - screenY < b.pos.y + GameView.buttonH) {
+      if (b.pos1.x < screenX && screenX < b.pos2.x && b.pos1.y < h - screenY && h - screenY < b.pos2.y) {
         return i
       }
     }
@@ -87,8 +94,8 @@ class GameInputHandler extends InputProcessor {
     val h = Gdx.graphics.getHeight
     val buttons = GameView.buttons
     buttons.foreach(b => {
-      if (b.pos.x < screenX && screenX < b.pos.x + GameView.buttonW &&
-        b.pos.y < h - screenY && h - screenY < b.pos.y + GameView.buttonH) {
+      if (b.pos1.x < screenX && screenX < b.pos1.x + GameView.buttonW &&
+        b.pos1.y < h - screenY && h - screenY < b.pos1.y + GameView.buttonH) {
         b.setHighlight(true)
       } else {
         b.setHighlight(false)

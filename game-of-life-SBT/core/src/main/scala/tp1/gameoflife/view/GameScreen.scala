@@ -66,15 +66,15 @@ class GameScreen extends Screen {
         } else {
           shapeRenderer.setColor(b.color)
         }
-        shapeRenderer.rect(b.pos.x, b.pos.y, GameView.buttonW, GameView.buttonH)
+        shapeRenderer.rect(b.pos1.x, b.pos1.y, b.width, b.height)
 
         b match {
-          case p: PlayButton =>
+          case p: Image =>
             if(b.highlight) shapeRenderer.setColor(p.colorFontHighlighted)
             else shapeRenderer.setColor(p.colorFont)
-            val padW = (GameView.buttonW - p.width)/2
-            val padH = (GameView.buttonH - p.height)/2
-            p.generateImage(shapeRenderer, b.pos.x.toInt + padW, b.pos.y.toInt + padH)
+            val padW = (p.width - p.widthImage)/2
+            val padH = (p.height - p.heightImage)/2
+            p.generateImage(shapeRenderer, b.pos1.x.toInt + padW, b.pos1.y.toInt + padH)
           case _ =>
         }
 
@@ -95,9 +95,7 @@ class GameScreen extends Screen {
             } else {
               font.setColor(b.colorFont)
             }
-            val padW = (GameView.buttonW - font.getBounds(b.name).width)/2
-            val padH = (GameView.buttonH - font.getBounds(b.name).height)/2
-            font.draw(fontBatch, b.name, b.pos.x + padW, b.pos.y + GameView.buttonH - padH)
+            font.draw(fontBatch, b.name, b.pos1.x + b.padW(font), b.pos2.y - b.padH(font))
         }
       })
     }

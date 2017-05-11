@@ -1,7 +1,6 @@
 package tp1.gameoflife.view
 
 import com.badlogic.gdx.Gdx
-import com.badlogic.gdx.graphics.Color
 import com.badlogic.gdx.math.Vector3
 import tp1.gameoflife.controller.GameController
 import tp1.gameoflife.gameengine.GameEngine
@@ -26,7 +25,7 @@ object GameView{
   val buttons: List[GameButton] = createButtons;arrangeButtons()
 
   var paused = false
-  val delay = 10
+  val delay = 100
 
   def update(gameEngine: GameEngine): Unit = {
     calculatePadding(gameEngine)
@@ -52,7 +51,8 @@ object GameView{
     val buttonPadTopBot = (menuH - buttonH)/2
     for(i <- buttons.indices){
       val gameButton = buttons(i)
-      gameButton.setPosition(buttonPadSides + i*(buttonW+buttonPad), buttonPadTopBot)
+      gameButton.setPosition1(buttonPadSides + i*(buttonW+buttonPad), buttonPadTopBot)
+      gameButton.setPosition2(buttonPadSides + i*(buttonW+buttonPad)+buttonW, buttonPadTopBot+buttonH)
     }
   }
 
