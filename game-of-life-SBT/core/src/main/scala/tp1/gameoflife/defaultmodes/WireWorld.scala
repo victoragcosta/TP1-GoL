@@ -42,21 +42,15 @@ class WireWorld (override val height: Int, override val width: Int) extends Game
 
   }
 
-  override def updateColors(): Unit = {
+  override def updateColors(board: Table): Unit = {
 
-    val newCircuit: Table = new Table(height, width)
-    newCircuit.create()
+    for (h <- 0 until board.getHeight) {
+      for (w <- 0 until board.getWidth) {
 
-    for (h <- 0 until height) {
-      for (w <- 0 until width) {
-
-        newCircuit.elements(h)(w).alive = this.currentGeneration.elements(h)(w).alive
-        newCircuit.elements(h)(w).color = circuitUpdate(h, w)
+        board.elements(h)(w).color = circuitUpdate(h, w)
 
       }
     }
-
-    this.currentGeneration = newCircuit
 
   }
 
