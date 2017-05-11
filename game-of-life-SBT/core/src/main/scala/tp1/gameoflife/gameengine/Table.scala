@@ -26,4 +26,7 @@ class Table (height: Int, width: Int) {
 
   }
 
+  def getHeight: Int = this.height
+  def getWidth: Int = this.width
+
 }

@@ -36,11 +36,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TestEnvironment.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TestEnvironment.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/TestEnvironment.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="323">
+              <caret line="25" column="11" lean-forward="true" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
               <folding>
                 <element signature="e#37#75#0" expanded="true" />
               </folding>
@@ -48,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WireWorld.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WireWorld.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/WireWorld.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+            <state relative-caret-position="-141">
+              <caret line="46" column="40" lean-forward="true" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
               <folding>
                 <element signature="e#37#62#0" expanded="true" />
               </folding>
@@ -64,7 +64,7 @@
         <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Disco.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="284">
-              <caret line="43" column="3" lean-forward="true" selection-start-line="43" selection-start-column="3" selection-end-line="43" selection-end-column="3" />
+              <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
               <folding>
                 <element signature="e#37#62#0" expanded="true" />
               </folding>
@@ -75,11 +75,9 @@
       <file leaf-file-name="ImmigrantLife.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/ImmigrantLife.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1139">
+            <state relative-caret-position="1513">
               <caret line="94" column="82" lean-forward="false" selection-start-line="94" selection-start-column="82" selection-end-line="94" selection-end-column="82" />
-              <folding>
-                <element signature="e#37#62#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -89,7 +87,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
               <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="e#37#75#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -97,12 +97,12 @@
       <file leaf-file-name="GameEngine.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/GameEngine.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="195" column="34" lean-forward="true" selection-start-line="195" selection-start-column="34" selection-end-line="195" selection-end-column="34" />
+            <state relative-caret-position="935">
+              <caret line="149" column="31" lean-forward="true" selection-start-line="149" selection-start-column="31" selection-end-line="149" selection-end-column="31" />
               <folding>
-                <element signature="e#1411#1617#0" expanded="false" />
-                <element signature="e#1621#1823#0" expanded="false" />
-                <element signature="e#1827#2059#0" expanded="false" />
+                <element signature="e#1428#1634#0" expanded="false" />
+                <element signature="e#1638#1840#0" expanded="false" />
+                <element signature="e#1844#2076#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -111,8 +111,8 @@
       <file leaf-file-name="Table.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/Table.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+            <state relative-caret-position="454">
+              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -153,18 +153,18 @@
         <option value="$PROJECT_DIR$/core/src/main/scala/DemoScreen.scala" />
         <option value="$PROJECT_DIR$/project/plugins.sbt" />
         <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/Cell.scala" />
-        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/Table.scala" />
         <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/Statistics.scala" />
         <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Replicator.scala" />
         <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/WalledCities.scala" />
         <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Maze.scala" />
         <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/HighLife.scala" />
         <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Classic.scala" />
-        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Disco.scala" />
         <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/ImmigrantLife.scala" />
-        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/TestEnvironment.scala" />
         <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/GameEngine.scala" />
+        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/Table.scala" />
         <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/WireWorld.scala" />
+        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Disco.scala" />
+        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/TestEnvironment.scala" />
       </list>
     </option>
   </component>
@@ -188,7 +188,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -382,7 +382,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -869,9 +869,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-          <folding>
-            <element signature="e#37#75#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -889,7 +886,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#37#75#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -898,9 +897,9 @@
         <state relative-caret-position="119">
           <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
           <folding>
-            <element signature="e#1411#1617#0" expanded="false" />
-            <element signature="e#1621#1823#0" expanded="false" />
-            <element signature="e#1827#2059#0" expanded="false" />
+            <element signature="e#1428#1634#0" expanded="false" />
+            <element signature="e#1638#1840#0" expanded="false" />
+            <element signature="e#1844#2076#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -935,7 +934,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#37#75#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -944,9 +945,9 @@
         <state relative-caret-position="119">
           <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
           <folding>
-            <element signature="e#1411#1617#0" expanded="false" />
-            <element signature="e#1621#1823#0" expanded="false" />
-            <element signature="e#1827#2059#0" expanded="false" />
+            <element signature="e#1428#1634#0" expanded="false" />
+            <element signature="e#1638#1840#0" expanded="false" />
+            <element signature="e#1844#2076#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -982,9 +983,9 @@
         <state relative-caret-position="357">
           <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
-            <element signature="e#1411#1617#0" expanded="false" />
-            <element signature="e#1621#1823#0" expanded="false" />
-            <element signature="e#1827#2059#0" expanded="false" />
+            <element signature="e#1428#1634#0" expanded="false" />
+            <element signature="e#1638#1840#0" expanded="false" />
+            <element signature="e#1844#2076#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1009,7 +1010,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="41" lean-forward="true" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
-          <folding />
+          <folding>
+            <element signature="e#37#75#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1018,9 +1021,9 @@
         <state relative-caret-position="544">
           <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
-            <element signature="e#1411#1617#0" expanded="false" />
-            <element signature="e#1621#1823#0" expanded="false" />
-            <element signature="e#1827#2059#0" expanded="false" />
+            <element signature="e#1428#1634#0" expanded="false" />
+            <element signature="e#1638#1840#0" expanded="false" />
+            <element signature="e#1844#2076#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1173,7 +1176,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#37#75#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1181,9 +1186,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="69" lean-forward="false" selection-start-line="11" selection-start-column="69" selection-end-line="11" selection-end-column="69" />
-          <folding>
-            <element signature="e#37#75#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1191,9 +1193,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="62" lean-forward="false" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
-          <folding>
-            <element signature="e#37#75#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1201,9 +1200,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="10" column="59" lean-forward="false" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
-          <folding>
-            <element signature="e#37#75#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1211,16 +1207,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="60" />
-          <folding>
-            <element signature="e#37#75#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/ImmigrantLife.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
+        <state relative-caret-position="1513">
           <caret line="94" column="82" lean-forward="false" selection-start-line="94" selection-start-column="82" selection-end-line="94" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/GameEngine.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="149" column="31" lean-forward="true" selection-start-line="149" selection-start-column="31" selection-end-line="149" selection-end-column="31" />
+          <folding>
+            <element signature="e#1428#1634#0" expanded="false" />
+            <element signature="e#1638#1840#0" expanded="false" />
+            <element signature="e#1844#2076#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/Table.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/WireWorld.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-141">
+          <caret line="46" column="40" lean-forward="true" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
           <folding>
             <element signature="e#37#62#0" expanded="true" />
           </folding>
@@ -1230,7 +1251,7 @@
     <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Disco.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="284">
-          <caret line="43" column="3" lean-forward="true" selection-start-line="43" selection-start-column="3" selection-end-line="43" selection-end-column="3" />
+          <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding>
             <element signature="e#37#62#0" expanded="true" />
           </folding>
@@ -1239,40 +1260,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/TestEnvironment.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="323">
+          <caret line="25" column="11" lean-forward="true" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
           <folding>
             <element signature="e#37#75#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/Table.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/GameEngine.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="195" column="34" lean-forward="true" selection-start-line="195" selection-start-column="34" selection-end-line="195" selection-end-column="34" />
-          <folding>
-            <element signature="e#1411#1617#0" expanded="false" />
-            <element signature="e#1621#1823#0" expanded="false" />
-            <element signature="e#1827#2059#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/WireWorld.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding>
-            <element signature="e#37#62#0" expanded="true" />
           </folding>
         </state>
       </provider>

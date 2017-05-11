@@ -24,7 +24,7 @@ abstract class GameEngine {
   def shouldKeepAlive(cellHeight: Int, cellWidth: Int): Boolean
   def determineCellColor(cellHeight: Int, cellWidth: Int): Color = this.defaultColor
   def switchColor (cellHeight: Int, cellWidth: Int): Unit = {}
-  def updateColors (): Unit = {}
+  def updateColors (generation: Table): Unit = {}
 
   def reviveCell(cellHeight: Int, cellWidth: Int): Unit = {
 
@@ -147,9 +147,9 @@ abstract class GameEngine {
 
     storeGeneration(this.currentGeneration)
 
-    this.currentGeneration = newGeneration
+    updateColors(newGeneration)
 
-    updateColors()
+    this.currentGeneration = newGeneration
 
   }
 
