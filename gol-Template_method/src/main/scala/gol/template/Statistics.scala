@@ -12,21 +12,21 @@ object Statistics {
 	private var killedCells = 0
   
 	
-	def getRevivedCells = revivedCells
+	def getRevivedCells : Int = revivedCells
 
-	def recordRevive = revivedCells += 1
+	def recordRevive  = revivedCells += 1
 
   def getKilledCells = killedCells
 	
   def recordKill = killedCells += 1 
 
 	def display = {
-		println("=================================");
-		println("           Statistics            ");
-		println("=================================");
-		println("Revived cells: " + revivedCells);
-		println("Killed cells: " + killedCells);
-		println("=================================");
+		println("=================================")
+		println("           Statistics            ")
+		println("=================================")
+		println("Revived cells: " + revivedCells)
+		println("Killed cells: " + killedCells)
+		println("=================================")
 	}
   
 }
