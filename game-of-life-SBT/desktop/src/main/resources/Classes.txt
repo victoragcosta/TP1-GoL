@@ -6,3 +6,5 @@ tp1.gameoflife.defaultmodes.Disco
 tp1.gameoflife.defaultmodes.ImmigrantLife
 tp1.gameoflife.defaultmodes.Maze
 tp1.gameoflife.defaultmodes.WireWorld
+tp1.gameoflife.defaultmodes.Fireworks
+tp1.gameoflife.defaultmodes.GeometryWars
