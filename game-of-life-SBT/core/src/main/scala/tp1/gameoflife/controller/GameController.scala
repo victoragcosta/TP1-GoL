@@ -2,7 +2,7 @@ package tp1.gameoflife.controller
 
 import com.badlogic.gdx.graphics.Color
 import com.badlogic.gdx.{Game, Gdx}
-import tp1.gameoflife.gameengine.GameEngine
+import tp1.gameoflife.gameengine.{GameEngine, Statistics}
 import tp1.gameoflife.view.GameView
 import tp1.gameoflife.main.Main
 
@@ -34,8 +34,10 @@ object GameController extends Game {
 
   def makeAlive(x: Int, y: Int): Unit ={
     try{
-      if(inBounds(x,y))
+      if(inBounds(x,y)){
         gameMode.reviveCell(y,x)
+
+      }
       GameView.update(gameMode)
     } catch {
       case e: Exception => println(e.getLocalizedMessage)
@@ -44,8 +46,10 @@ object GameController extends Game {
 
   def killCell(x: Int, y: Int): Unit ={
     try{
-      if(inBounds(x,y))
+      if(inBounds(x,y)){
         gameMode.killCell(y,x)
+        Statistics.addDeath()
+      }
       GameView.update(gameMode)
     } catch {
       case e: Exception => println(e.getLocalizedMessage)

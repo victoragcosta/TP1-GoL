@@ -94,8 +94,8 @@ class GameInputHandler extends InputProcessor {
     val h = Gdx.graphics.getHeight
     val buttons = GameView.buttons
     buttons.foreach(b => {
-      if (b.pos1.x < screenX && screenX < b.pos1.x + GameView.buttonW &&
-        b.pos1.y < h - screenY && h - screenY < b.pos1.y + GameView.buttonH) {
+      if (b.pos1.x < screenX && screenX < b.pos2.x &&
+        b.pos1.y < h - screenY && h - screenY < b.pos2.y) {
         b.setHighlight(true)
       } else {
         b.setHighlight(false)

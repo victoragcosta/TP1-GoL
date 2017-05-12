@@ -1,0 +1,8 @@
+tp1.gameoflife.defaultmodes.Classic
+tp1.gameoflife.defaultmodes.HighLife
+tp1.gameoflife.defaultmodes.Replicator
+tp1.gameoflife.defaultmodes.WalledCities
+tp1.gameoflife.defaultmodes.Disco
+tp1.gameoflife.defaultmodes.ImmigrantLife
+tp1.gameoflife.defaultmodes.Maze
+tp1.gameoflife.defaultmodes.WireWorld

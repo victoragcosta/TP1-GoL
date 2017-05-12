@@ -19,9 +19,9 @@ object GameView{
   var paddingW: Int = 0
   var paddingH: Int = 0
 
-  val buttonH: Int = 30
-  val buttonW: Int = 100
-  val buttonPad: Int = 10
+  private val buttonH: Int = 30
+  private val buttonW: Int = 100
+  private val buttonPad: Int = 10
   val buttons: List[GameButton] = createButtons;arrangeButtons()
 
   var paused = false
