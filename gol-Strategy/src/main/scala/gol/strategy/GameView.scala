@@ -1,3 +1,5 @@
+package gol.strategy
+
 import scala.io.StdIn.{readInt, readLine}
 
 /**
@@ -15,52 +17,52 @@ object GameView {
   private final val MAKE_CELL_ALIVE = 1
   private final val NEXT_GENERATION = 2
   private final val HALT = 3
-  
-  
-  
-  
+  private final val CHANGE_GAME_MODE = 4
+
   /**
    * Atualiza o componente view (representado pela classe GameBoard),
    * possivelmente como uma resposta a uma atualiza��o do jogo.
    */
-  def update {
+  def update() {
     printFirstRow
-    printLine
+    printLine()
     
-    for(i <- (0 until GameEngine.height)) {
-      for(j <- (0 until GameEngine.width)) {
-        print(if (GameEngine.isCellAlive(i, j))  ALIVE_CELL else DEAD_CELL);
+    for(i <- 0 until GameEngine.height) {
+      for(j <- 0 until GameEngine.width) {
+        print(if (GameEngine.isCellAlive(i, j))  ALIVE_CELL else DEAD_CELL)
       }
       println("   " + i)
-      printLine
+      printLine()
     }
-    printOptions
+    printOptions()
   }
   
-  private def printOptions {
+  private def printOptions() {
 
     var option = 0
     println("\n\n")
     
     do{
-      println("Select one of the options: \n \n"); 
-      println("[1] Make a cell alive");
-      println("[2] Next generation");
-      println("[3] Halt");
+      println("Select one of the options: \n \n")
+      println("[1] Make a cell alive")
+      println("[2] Next generation")
+      println("[3] Halt")
+      println("[4] Change game mode")
     
-      print("\n \n Option: ");
+      print("\n \n Option: ")
       
       option = parseOption(readLine)
     }while(option == 0)
     
     option match {
-      case MAKE_CELL_ALIVE => makeCellAlive
-      case NEXT_GENERATION => nextGeneration
-      case HALT => halt
+      case MAKE_CELL_ALIVE => makeCellAlive()
+      case NEXT_GENERATION => nextGeneration()
+      case HALT => halt()
+      case CHANGE_GAME_MODE => GameEngine.changeRule()
     }
   }
   
-  private def makeCellAlive {
+  private def makeCellAlive (){
     
     var i = 0
     var j = 0
@@ -77,12 +79,12 @@ object GameView {
     GameController.makeCellAlive(i, j)
   }
 
-  private def nextGeneration = GameController.nextGeneration
-  private def halt = GameController.halt
+  private def nextGeneration() = GameController.nextGeneration()
+  private def halt() = GameController.halt()
   
   private def validPosition(i: Int, j: Int): Boolean = {
-    println(i);
-    println(j);
+    println(i)
+    println(j)
     i >= 0 && i < GameEngine.height && j >= 0 && j < GameEngine.width
   }
   
@@ -90,13 +92,14 @@ object GameView {
     case "1" => MAKE_CELL_ALIVE
     case "2" => NEXT_GENERATION
     case "3" => HALT
+    case "4" => CHANGE_GAME_MODE
     case _ => INVALID_OPTION
   }
   
   
   /* Imprime uma linha usada como separador das linhas do tabuleiro */
   private def printLine() {
-    for(j <- (0 until GameEngine.width)) {
+    for(j <- 0 until GameEngine.width) {
       print(LINE)
     }
     println()
@@ -105,10 +108,10 @@ object GameView {
   /*
    * Imprime os identificadores das colunas na primeira linha do tabuleiro
    */
-  private def printFirstRow {
-    println("\n \n");
+  private def printFirstRow (){
+    println("\n \n")
     
-    for(j <- (0 until GameEngine.width)) {
+    for(j <- 0 until GameEngine.width) {
       print("   " + j + "   ")
     }
     println()

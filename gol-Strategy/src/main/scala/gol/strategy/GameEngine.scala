@@ -1,4 +1,11 @@
+package gol.strategy
+
+import java.security.InvalidParameterException
+
+
+import scala.collection.mutable.MutableList
 import scala.collection.mutable.ListBuffer
+
 
 /**
  * Representa a Game Engine do GoL 
@@ -7,29 +14,55 @@ import scala.collection.mutable.ListBuffer
   */
 object GameEngine {
 
+  private final val CLASSIC = 0
+  private final val HIGHLIFE = 1
+
+  var Modes : MutableList[DerivationStrategy] = new MutableList[DerivationStrategy]
+  loadRules(Modes)
+  var currentMode : Int = 0
+
   val height = Main.height
   val width = Main.width
 
   val cells = Array.ofDim[Cell](height, width)
 
 
-  for(i <- (0 until height)) {
-    for(j <- (0 until width)) {
+  for(i <- 0 until height) {
+    for(j <- 0 until width) {
       cells(i)(j) = new Cell
     }
   }
 
-  /* verifica se uma celula deve ser mantida viva */
-  private def shouldKeepAlive(i: Int, j: Int): Boolean = {
-    (cells(i)(j).isAlive) &&
-      (numberOfNeighborhoodAliveCells(i, j) == 2 || numberOfNeighborhoodAliveCells(i, j) == 3)
+  def loadRules(gameModes: MutableList[DerivationStrategy]) : Unit = {
+    gameModes += new(Classic)
+    gameModes += new(HighLife)
   }
 
+  def getRule(currentRule: Int) : DerivationStrategy = Modes(currentRule)
+
+  def changeRule() : Unit = {
+    if(currentMode != HIGHLIFE){
+      currentMode += 1
+    }
+    else{
+      currentMode = 0
+    }
+    print("New Rules: "+getRule(currentMode).toString)
+    GameView.update()
+  }
+
+
+  /* verifica se uma celula deve ser mantida viva */
+  /*private def shouldKeepAlive(i: Int, j: Int): Boolean = {
+    (cells(i)(j).isAlive) &&
+      (numberOfNeighborhoodAliveCells(i, j) == 2 || numberOfNeighborhoodAliveCells(i, j) == 3)
+  }*/
+
   /* verifica se uma celula deve (re)nascer */
-  private def shouldRevive(i: Int, j: Int): Boolean = {
+  /*private def shouldRevive(i: Int, j: Int): Boolean = {
     (!cells(i)(j).isAlive) &&
       (numberOfNeighborhoodAliveCells(i, j) == 3)
-  }
+  }*/
 
   /**
     * Calcula uma nova geracao do ambiente. Essa implementacao utiliza o
@@ -44,23 +77,22 @@ object GameEngine {
     * c) em todos os outros casos a celula morre ou continua morta.
     */
 
-  def nextGeneration {
+  def nextGeneration() : Unit = {
 
     val mustRevive = new ListBuffer[Cell]
     val mustKill = new ListBuffer[Cell]
 
 
-    for(i <- (0 until height)) {
-      for(j <- (0 until width)) {
-        if(shouldRevive(i, j)) {
+    for(i <- 0 until height) {
+      for(j <- 0 until width) {
+        if(getRule(currentMode).shouldRevive(i, j)) {
           mustRevive += cells(i)(j)
         }
-        else if((!shouldKeepAlive(i, j)) && cells(i)(j).isAlive) {
+        else if((!getRule(currentMode).shouldKeepAlive(i, j)) && cells(i)(j).isAlive) {
           mustKill += cells(i)(j)
         }
       }
     }
-
 
     for(cell <- mustRevive) {
       cell.revive
@@ -72,14 +104,13 @@ object GameEngine {
       Statistics.recordKill
     }
 
-
   }
 
   /*
 	 * Verifica se uma posicao (a, b) referencia uma celula valida no tabuleiro.
 	 */
   private def validPosition(i: Int, j: Int) =
-  i >= 0 && i < height && j >= 0 && j < width;
+  i >= 0 && i < height && j >= 0 && j < width
 
 
   /**
@@ -126,26 +157,23 @@ object GameEngine {
     *
     * @return  numero de celulas vivas.
     */
-  def numberOfAliveCells {
+  def numberOfAliveCells (){
     var aliveCells = 0
-    for(i <- (0 until height)) {
-      for(j <- (0 until width)) {
+    for(i <- 0 until height) {
+      for(j <- 0 until width) {
         if(isCellAlive(i, j)) aliveCells += 1
       }
     }
   }
 
-
-
-  
   /*
 	 * Computa o numero de celulas vizinhas vivas, dada uma posicao no ambiente
 	 * de referencia identificada pelos argumentos (i,j).
 	 */
-  private def numberOfNeighborhoodAliveCells(i: Int, j: Int): Int = {
+  def numberOfNeighborhoodAliveCells(i: Int, j: Int): Int = {
     var alive = 0
-    for(a <- (i - 1 to i + 1)) {
-      for(b <- (j - 1 to j + 1)) {
+    for(a <- i - 1 to i + 1) {
+      for(b <- j - 1 to j + 1) {
         if (validPosition(a, b)  && (!(a==i && b == j)) && cells(a)(b).isAlive) {
 					alive += 1
 				}

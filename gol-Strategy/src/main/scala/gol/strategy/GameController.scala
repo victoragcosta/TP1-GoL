@@ -1,3 +1,5 @@
+package gol.strategy
+
 /**
  * Relaciona o componente View com o componente Model. 
  * 
@@ -5,12 +7,11 @@
  */
 object GameController {
   
-  def start {
+  def start() {
     GameView.update
   }
   
   def halt() {
-    //oops, nao muito legal fazer sysout na classe Controller
     println("\n \n")
     Statistics.display
     System.exit(0)
@@ -22,14 +23,13 @@ object GameController {
 			GameView.update
 		}
 		catch {
-		  case ex: IllegalArgumentException => {
+		  case ex: IllegalArgumentException =>
 		    println(ex.getMessage)
-		  }
 		}
   }
   
-  def nextGeneration {
-    GameEngine.nextGeneration
+  def nextGeneration() {
+    GameEngine.nextGeneration()
     GameView.update
   }
   

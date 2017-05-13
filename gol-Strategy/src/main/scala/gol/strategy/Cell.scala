@@ -1,3 +1,5 @@
+package gol.strategy
+
 /**
  * Rerepsentacao de uma celula do GoL 
  * 

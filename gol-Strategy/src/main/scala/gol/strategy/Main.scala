@@ -1,3 +1,5 @@
+package gol.strategy
+
 /**
   * Programa principal do GoL.
  *
@@ -9,6 +11,6 @@ object Main{
   val width = 10
   
   def main(args: Array[String]){
-    GameController.start
+    GameController.start()
   }
 }
