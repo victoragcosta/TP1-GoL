@@ -1,7 +1,10 @@
 package tp1.gameoflife.view
 
+import java.util.Calendar
+
 import com.badlogic.gdx.graphics.Color
-import com.badlogic.gdx.graphics.g2d.BitmapFont
+import com.badlogic.gdx.graphics.g2d.{BitmapFont, SpriteBatch}
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer
 import com.badlogic.gdx.math.Vector2
 
 class GameButton(
@@ -14,7 +17,7 @@ class GameButton(
                 ){
 
   def name: String = _name
-  def setName(namey: String) = _name = namey
+  def setName(namey: String): Unit = _name = namey
   def color: Color = _color
   def colorHighlighted: Color = _colorHighlighted
   def colorFont: Color = _colorFont
@@ -31,8 +34,8 @@ class GameButton(
     pos2 = new Vector2(x,y)
   }
 
-  def width = (pos2.x - pos1.x).toInt
-  def height = (pos2.y - pos1.y).toInt
+  def width: Int = (pos2.x - pos1.x).toInt
+  def height: Int = (pos2.y - pos1.y).toInt
 
   var highlight: Boolean = false
 
@@ -45,9 +48,38 @@ class GameButton(
     this._colorHighlighted = new Color(color.r+0.4f, color.g+0.4f, color.b+0.4f, 1)
   }
 
-  def action(): Unit = _action.apply(this)
+  private var debounce = false
+  private var lastTime = Calendar.getInstance().getTimeInMillis
+  private val delay = 150
+  def action(): Unit = {
+    val now = Calendar.getInstance().getTimeInMillis
+    if(now > lastTime + delay){
+      debounce = false
+      lastTime = now
+    }
+
+    if(!debounce){
+      _action.apply(this)
+      debounce = true
+    }
+  }
 
   def padW(font: BitmapFont): Int = ((this.width - font.getBounds(this.name).width)/2).toInt
   def padH(font: BitmapFont): Int = ((this.height - font.getBounds(this.name).height)/2).toInt
+
+  def drawName(font: BitmapFont, fontBatch: SpriteBatch): Unit ={
+    if(highlight){
+      font.setColor(colorFontHighlighted)
+    } else {
+      font.setColor(colorFont)
+    }
+    font.draw(fontBatch, name, pos1.x + padW(font), pos2.y - padH(font))
+  }
+
+  def drawButton(shapeRenderer: ShapeRenderer): Unit ={
+    if(highlight) shapeRenderer.setColor(colorHighlighted)
+    else shapeRenderer.setColor(color)
+    shapeRenderer.rect(pos1.x, pos1.y, width, height)
+  }
 
 }
