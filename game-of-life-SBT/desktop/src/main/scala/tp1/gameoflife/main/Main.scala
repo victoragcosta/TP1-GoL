@@ -11,15 +11,15 @@ object Main{
   val stream : InputStream = getClass.getResourceAsStream("/Classes.txt")
   private val classNames = scala.io.Source.fromInputStream( stream ).getLines
   var classes : MutableList[GameEngine] = _
-  private val height : Int = 53
-  private val width : Int = 80
+  private val height : Int = 80
+  private val width : Int = 160
   def main(args: Array[String]): Unit = {
     classes = loadRules(classNames)
 
     val cfg = new LwjglApplicationConfiguration
     cfg.title = "Game Of Life"
-    cfg.height = 580
-    cfg.width = 800
+    cfg.height = 900
+    cfg.width = 1600
     cfg.forceExit = false
     new LwjglApplication(GameController, cfg)
   }
