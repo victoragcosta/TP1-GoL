@@ -13,13 +13,16 @@ class GameInputHandler extends InputProcessor {
   private var lastTime: Long = Calendar.getInstance().getTimeInMillis
   private val clickDelay: Long = 500
 
+  private val h = Gdx.graphics.getHeight
+
   override def touchUp(screenX: Int, screenY: Int, pointer: Int, button: Int): Boolean = {false}
 
   override def touchDown(screenX: Int, screenY: Int, pointer: Int, button: Int): Boolean = {
-    interactCell(screenX, screenY, button)
-    val but = getButtonNumber(screenX, screenY)
-    if(but != -1)
-      GameView.buttons(but).action()
+    val but = getButton(screenX, screenY)
+    if(but != null)
+      but.action()
+    else if(!GameView.lockedTable)
+      interactCell(screenX, screenY, button)
     true
   }
 
@@ -29,7 +32,7 @@ class GameInputHandler extends InputProcessor {
 
   override def keyTyped(character: Char): Boolean = {
     character match {
-      case ' ' => GameController.changeState()
+      case ' ' => GameController.changeAutoGenState()
       case 'b' => GameController.previousGeneration()
       case 'n' => GameController.nextGeneration()
       case 'c' => GameController.killAll()
@@ -41,6 +44,8 @@ class GameInputHandler extends InputProcessor {
 
   override def touchDragged(screenX: Int, screenY: Int, pointer: Int): Boolean = {
     touchDown(screenX, screenY, pointer, lastClicked)
+    overButton(screenX, screenY)
+    true
   }
 
   override def keyDown(keycode: Int): Boolean = {
@@ -51,12 +56,12 @@ class GameInputHandler extends InputProcessor {
     true
   }
 
+
+
   override def mouseMoved(screenX: Int, screenY: Int): Boolean = {
     overButton(screenX, screenY)
     true
   }
-
-
 
   private def interactCell(screenX: Int, screenY: Int, button: Int) = {
     val deslocX = GameView.paddingW
@@ -78,27 +83,42 @@ class GameInputHandler extends InputProcessor {
     lastClicked = button
   }
 
-  private def getButtonNumber(screenX: Int, screenY: Int): Int = {
-    val h = Gdx.graphics.getHeight
+  private def getButton(screenX: Int, screenY: Int): GameButton = {
     val buttons = GameView.buttons
-    for(i <- buttons.indices){
-      val b = buttons(i)
-      if (b.pos1.x < screenX && screenX < b.pos2.x && b.pos1.y < h - screenY && h - screenY < b.pos2.y) {
-        return i
+    buttons.foreach(b => {
+      if (inBounds(b, screenX, screenY)) return b
+
+      b match{
+        case m: Menu =>
+          if(m.activated)
+            m.buttons.foreach(bt => if (inBounds(bt, screenX, screenY)) return bt)
+        case _ =>
       }
-    }
-    -1
+    })
+    null
+  }
+
+  private def inBounds(bt: GameButton, screenX: Int, screenY: Int) = {
+    bt.pos1.x < screenX && screenX < bt.pos2.x && bt.pos1.y < h - screenY && h - screenY < bt.pos2.y
   }
 
   private def overButton(screenX: Int, screenY: Int) = {
-    val h = Gdx.graphics.getHeight
     val buttons = GameView.buttons
     buttons.foreach(b => {
-      if (b.pos1.x < screenX && screenX < b.pos2.x &&
-        b.pos1.y < h - screenY && h - screenY < b.pos2.y) {
+      if (inBounds(b, screenX, screenY))
         b.setHighlight(true)
-      } else {
+      else
         b.setHighlight(false)
+
+      b match {
+        case m: Menu =>
+          m.buttons.foreach(bt => {
+            if (inBounds(bt, screenX, screenY))
+              bt.setHighlight(true)
+            else
+              bt.setHighlight(false)
+          })
+        case _ =>
       }
     })
   }

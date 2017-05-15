@@ -30,9 +30,6 @@ class GameScreen extends Screen {
   private def drawMenu(): Unit ={
     shapeRenderer.begin(ShapeType.Filled)
 
-    //shapeRenderer.setColor(0.15f,0.15f,0.15f,1)
-    //shapeRenderer.rect(0,0,GameView.menuW, GameView.menuH)
-
     shapeRenderer.setColor(0.9f,0.9f,0.9f,1)
     val start = new Vector2(GameView.paddingW, GameView.menuH + GameView.paddingH)
     val sides = new Vector2(width - 2*GameView.paddingW, height - 2*GameView.paddingH - GameView.menuH)
@@ -61,23 +58,14 @@ class GameScreen extends Screen {
     if(buttons != null){
       shapeRenderer.begin(ShapeType.Filled)
       buttons.foreach(b => {
-        if(b.highlight){
-          shapeRenderer.setColor(b.colorHighlighted)
-        } else {
-          shapeRenderer.setColor(b.color)
-        }
-        shapeRenderer.rect(b.pos1.x, b.pos1.y, b.width, b.height)
-
+        b.drawButton(shapeRenderer)
         b match {
           case p: Image =>
-            if(b.highlight) shapeRenderer.setColor(p.colorFontHighlighted)
-            else shapeRenderer.setColor(p.colorFont)
-            val padW = (p.width - p.widthImage)/2
-            val padH = (p.height - p.heightImage)/2
-            p.generateImage(shapeRenderer, b.pos1.x.toInt + padW, b.pos1.y.toInt + padH)
+            p.drawInside(shapeRenderer)
+          case m: Menu =>
+            m.drawMenu(shapeRenderer)
           case _ =>
         }
-
       })
       shapeRenderer.end()
     }
@@ -87,21 +75,25 @@ class GameScreen extends Screen {
     val buttons = GameView.buttons
     if(buttons != null){
       buttons.foreach(b => {
+        b.drawName(font, fontBatch)
         b match {
-          case _: PlayButton =>
+          case m: Menu =>
+            if(m.activated)
+              m.buttons.foreach(b => b.drawName(font, fontBatch))
           case _ =>
-            if(b.highlight){
-              font.setColor(b.colorFontHighlighted)
-            } else {
-              font.setColor(b.colorFont)
-            }
-            font.draw(fontBatch, b.name, b.pos1.x + b.padW(font), b.pos2.y - b.padH(font))
         }
       })
     }
   }
 
   private var lastChange = Calendar.getInstance().getTimeInMillis
+  private def autoChangeFrame(): Unit = {
+    if (!GameView.paused && Calendar.getInstance().getTimeInMillis >= lastChange + GameView.delay) {
+      GameController.nextGeneration()
+      lastChange = Calendar.getInstance().getTimeInMillis
+    }
+  }
+
   override def render(delta: Float): Unit = {
     Gdx.gl.glClearColor(0.2f,0.2f,0.2f,1)
     Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT)
@@ -109,18 +101,15 @@ class GameScreen extends Screen {
 
     batch.begin()
     drawMenu()
-    renderButtons()
     drawAliveCells()
+    renderButtons()
     batch.end()
 
     fontBatch.begin()
     renderButtonsNames()
     fontBatch.end()
 
-    if(!GameView.paused && Calendar.getInstance().getTimeInMillis >= lastChange + GameView.delay){
-      GameController.nextGeneration()
-      lastChange = Calendar.getInstance().getTimeInMillis
-    }
+    autoChangeFrame()
   }
 
   override def resume(): Unit = {}

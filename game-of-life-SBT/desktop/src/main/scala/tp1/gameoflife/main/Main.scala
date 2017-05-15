@@ -9,7 +9,7 @@ import scala.collection.mutable.MutableList
 
 object Main{
   val stream : InputStream = getClass.getResourceAsStream("/Classes.txt")
-  val classNames = scala.io.Source.fromInputStream( stream ).getLines
+  private val classNames = scala.io.Source.fromInputStream( stream ).getLines
   var classes : MutableList[GameEngine] = _
   private val height : Int = 80
   private val width : Int = 160
@@ -29,7 +29,6 @@ object Main{
 
     for(i <- names){
       val current_class = Class.forName(i).getConstructors()(0).newInstance(height.asInstanceOf[AnyRef],width.asInstanceOf[AnyRef])
-      print(current_class)
       list += current_class.asInstanceOf[GameEngine]
     }
     list

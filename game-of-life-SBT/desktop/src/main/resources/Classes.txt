@@ -19,3 +19,6 @@ tp1.gameoflife.defaultmodes.Stains
 tp1.gameoflife.defaultmodes.Coagulations
 tp1.gameoflife.defaultmodes.Mystery
 tp1.gameoflife.defaultmodes.Fractals
+tp1.gameoflife.defaultmodes.Fireworks
+tp1.gameoflife.defaultmodes.GeometryWars
+tp1.gameoflife.defaultmodes.Medieval
