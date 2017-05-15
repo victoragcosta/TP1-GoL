@@ -29,8 +29,8 @@ class MenuButton(
   override val buttonH: Int = 30
   override val interButtonW: Int = 10
   override val interButtonH: Int = 10
-  override val rows: Int = 3
-  override val columns: Int = 3
+  override val rows: Int = 6
+  override val columns: Int = 4
   override val backgroundColor: Color = _backgroundColor
   override var buttons: List[GameButton] = createButtons();arrangeButtons()
 

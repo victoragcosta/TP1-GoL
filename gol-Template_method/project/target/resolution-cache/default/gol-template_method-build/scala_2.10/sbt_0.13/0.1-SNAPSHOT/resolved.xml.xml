@@ -4,7 +4,7 @@
 		module="gol-template_method-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20170512101023"
+		publication="20170514211401"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>
