@@ -11,8 +11,6 @@ class Replicator (override val height: Int, override val width: Int) extends Gam
     "A cell must be near 1, 3, 5 or 7 cells to stay alive. " +
     "A dead cell revives if there are exactly 1, 3, 5 or 7 cells alive near it."
 
-  override val defaultColor = new Color(0.5f, 0.5f, 0.5f, 1)
-
   override def shouldKeepAlive(cellHeight: Int, cellWidth: Int): Boolean = {
 
     val aliveCount: Int = neighborsAlive(cellHeight, cellWidth)

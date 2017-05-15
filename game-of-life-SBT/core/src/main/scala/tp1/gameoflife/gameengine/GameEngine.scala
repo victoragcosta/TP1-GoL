@@ -16,7 +16,11 @@ abstract class GameEngine {
 
   private var pastGenerations: List[Table] = List()
 
-  val defaultColor: Color
+  val defaultColor: Color = new Color(0.5f, 0.5f, 0.5f, 1)
+  val defaultDeathColor: Color = new Color(0.2f, 0.2f, 1, 1)
+  val defaultAfterLifeColor: Color = new Color(0.3f, 0.3f, 0.3f, 1)
+
+  val defaultAfterLifeCount: Int = 0
 
   def toString: String
 
@@ -36,7 +40,7 @@ abstract class GameEngine {
   def killCell(cellHeight: Int, cellWidth: Int): Unit = {
 
     this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).alive = false
-    this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).color = new Color(0.2f, 0.2f, 0.2f, 1)
+    this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).color = defaultDeathColor
 
   }
 
@@ -124,8 +128,15 @@ abstract class GameEngine {
             Statistics.addRevive()
           }
 
-          else
-            newGeneration.elements(h)(w).color = new Color(0.2f, 0.2f, 0.2f, 1)
+          else {
+
+            if (this.currentGeneration.elements(h)(w).afterLife)
+              newGeneration.elements(h)(w).color = defaultAfterLifeColor
+
+            else
+              newGeneration.elements(h)(w).color = defaultDeathColor
+
+          }
 
         }
 
@@ -137,7 +148,9 @@ abstract class GameEngine {
             newGeneration.elements(h)(w).color = this.currentGeneration.elements(h)(w).color
 
           else {
-            newGeneration.elements(h)(w).color = new Color(0.2f, 0.2f, 0.2f, 1)
+            newGeneration.elements(h)(w).color = defaultAfterLifeColor
+            newGeneration.elements(h)(w).afterLife = true
+            newGeneration.elements(h)(w).afterLifeCount += defaultAfterLifeCount
             Statistics.addDeath()
           }
         }
@@ -147,6 +160,7 @@ abstract class GameEngine {
 
     storeGeneration(this.currentGeneration)
 
+    updateAfterLife(newGeneration)
     updateColors(newGeneration)
 
     this.currentGeneration = newGeneration
@@ -189,6 +203,18 @@ abstract class GameEngine {
 
   }
 
+  def resetColors(generation: Table): Unit = {
+
+    for(h <- 0 until height) {
+      for(w <- 0 until width) {
+
+        this.currentGeneration.elements(h)(w).color = defaultColor
+
+      }
+    }
+
+  }
+
   private def storeGeneration(generation: Table): Unit = {
 
     val length: Int = pastGenerations.length
@@ -216,6 +242,28 @@ abstract class GameEngine {
       this.currentGeneration = pastGenerations.head
       pastGenerations = pastGenerations.drop(1)
 
+    }
+
+  }
+
+  def updateAfterLife (generation: Table): Unit = {
+
+    for (h <- 0 until generation.getHeight) {
+      for (w <- 0 until generation.getWidth) {
+
+        if(generation.elements(h)(w).afterLife) {
+
+          if (generation.elements(h)(w).afterLifeCount > 0)
+            generation.elements(h)(w).afterLifeCount -= 1
+
+          else {
+            generation.elements(h)(w).afterLife = false
+            generation.elements(h)(w).color = defaultDeathColor
+          }
+
+        }
+
+      }
     }
 
   }

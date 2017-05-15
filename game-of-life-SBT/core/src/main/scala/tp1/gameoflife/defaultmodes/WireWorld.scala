@@ -79,7 +79,7 @@ class WireWorld (override val height: Int, override val width: Int) extends Game
     }
 
     else
-      new Color(0.2f, 0.2f, 0.2f, 1)
+      defaultDeathColor
 
   }
 
