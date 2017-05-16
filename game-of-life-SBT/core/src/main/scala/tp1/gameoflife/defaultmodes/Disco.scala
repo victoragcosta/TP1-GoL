@@ -11,7 +11,7 @@ class Disco (override val height: Int, override val width: Int) extends GameEngi
   override def toString: String = "Disco"
 
   override val description: String = "Somebody joked I should implement this mode, so I did. " +
-    "Fell the groove. " +
+    "Feel that 70's groove. " +
     "A cell must be near 2 or 3 cells to stay alive. " +
     "A dead cell revives if there are exactly 3 cells alive near it. " +
     "All cells that are alive get random colors each generation."
