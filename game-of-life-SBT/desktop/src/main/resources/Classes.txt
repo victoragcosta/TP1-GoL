@@ -8,7 +8,6 @@ tp1.gameoflife.defaultmodes.Maze
 tp1.gameoflife.defaultmodes.WireWorld
 tp1.gameoflife.defaultmodes.Fireworks
 tp1.gameoflife.defaultmodes.GeometryWars
-tp1.gameoflife.defaultmodes.Medieval
 tp1.gameoflife.defaultmodes.StarWars
 tp1.gameoflife.defaultmodes.OnTheEdge
 tp1.gameoflife.defaultmodes.Frogs

@@ -1,5 +1,6 @@
 package tp1.gameoflife.defaultmodes
 
+import com.badlogic.gdx.graphics.Color
 import tp1.gameoflife.gameengine.GameEngine
 
 class Replicator (override val height: Int, override val width: Int) extends GameEngine {
@@ -9,6 +10,10 @@ class Replicator (override val height: Int, override val width: Int) extends Gam
   override val description: String = "Fractals, that's why! " +
     "A cell must be near 1, 3, 5 or 7 cells to stay alive. " +
     "A dead cell revives if there are exactly 1, 3, 5 or 7 cells alive near it."
+
+  val limeGreen: Color = new Color(0, 1, 0, 0.9f)
+
+  override val defaultColor: Color = limeGreen
 
   override def shouldKeepAlive(cellHeight: Int, cellWidth: Int): Boolean = {
 

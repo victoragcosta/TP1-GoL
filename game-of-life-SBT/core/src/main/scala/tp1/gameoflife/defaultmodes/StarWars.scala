@@ -13,8 +13,8 @@ class StarWars (override val height: Int, override val width: Int) extends GameE
     "If a cell dies, it goes into a after life state where it cannot be reborn. " +
     "A cell in after life stays in that state for 6 generations."
 
-  val mediumBlue: Color = new Color(0, 0, 0.8f, 0.9f)
   val lightBlue: Color = new Color(0.25f, 0.4f, 0.9f, 0.9f)
+  val mediumBlue: Color = new Color(0, 0, 0.8f, 0.9f)
 
   override val defaultColor: Color = mediumBlue
   override val defaultAfterLifeColor: Color = lightBlue

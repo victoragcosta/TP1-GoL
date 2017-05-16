@@ -13,8 +13,8 @@ class Frogs (override val height: Int, override val width: Int) extends GameEngi
     "If a cell dies, it goes into a after life state where it cannot be reborn. " +
     "A cell in after life stays in that state for 3 generations."
 
-  val green: Color = new Color(0, 0.5f, 0, 0.9f)
   val lawnGreen: Color = new Color(0.5f, 1, 0, 0.9f)
+  val green: Color = new Color(0, 0.5f, 0, 0.9f)
 
   override val defaultColor: Color = green
   override val defaultAfterLifeColor: Color = lawnGreen

@@ -1,5 +1,6 @@
 package tp1.gameoflife.defaultmodes
 
+import com.badlogic.gdx.graphics.Color
 import tp1.gameoflife.gameengine.GameEngine
 
 class GeometryWars (override val height: Int, override val width: Int) extends GameEngine {
@@ -9,6 +10,10 @@ class GeometryWars (override val height: Int, override val width: Int) extends G
   override val description: String = "Sometimes there is beauty in geometric chaos. " +
     "A cell must be near 1, 2 or 5 cells to stay alive. " +
     "A dead cell revives if there are exactly 3 or 6 cells alive near it."
+
+  val dodgerBlue: Color = new Color (0.1f, 0.55f, 1, 0.9f)
+
+  override val defaultColor: Color = dodgerBlue
 
   override def shouldKeepAlive(cellHeight: Int, cellWidth: Int): Boolean = {
 

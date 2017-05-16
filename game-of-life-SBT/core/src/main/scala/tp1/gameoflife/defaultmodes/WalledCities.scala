@@ -1,15 +1,20 @@
 package tp1.gameoflife.defaultmodes
 
+import com.badlogic.gdx.graphics.Color
 import tp1.gameoflife.gameengine.GameEngine
 
 class WalledCities (override val height: Int, override val width: Int) extends GameEngine {
 
   override def toString: String = "Walled Cities"
 
-  override val description: String = "For fans of Medieval times. " +
+  override val description: String = "For fans of medieval times. " +
     "The generated pattern is like a growing city, always surrounded by a wall. " +
     "A cell must be near 4, 5, 6, 7 or 8 cells to stay alive. " +
     "A dead cell revives if there are exactly 2, 3, 4 or 5 cells alive near it."
+
+  val castleGrey: Color = new Color(0.35f, 0.35f, 0.35f, 1)
+
+  override val defaultColor: Color = castleGrey
 
   override def shouldKeepAlive(cellHeight: Int, cellWidth: Int): Boolean = {
 
