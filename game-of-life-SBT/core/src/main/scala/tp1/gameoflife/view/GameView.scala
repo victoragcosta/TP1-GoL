@@ -7,7 +7,7 @@ import tp1.gameoflife.gameengine.GameEngine
 
 object GameView{
 
-  final val minSquareSide: Float = 10
+  final val minSquareSide: Float = 4
   var squareSide: Float = 10
   var vivas: List[LiveCell] = _
   val screen = new GameScreen
@@ -25,9 +25,10 @@ object GameView{
   val buttons: List[GameButton] = createButtons;arrangeButtons()
 
   var paused = false
-  val delay = 100
+  val defaultSpeed = 100
+  var delay = defaultSpeed
 
-  var lockedTable = false
+  var menuOpen = false
 
   def update(gameEngine: GameEngine): Unit = {
     calculatePadding(gameEngine)
@@ -39,6 +40,22 @@ object GameView{
     list = new GameButton("Exit", _ => GameController.endGame())::list
     list = new MenuButton(GameController.getGameModeName)::list
     list = new GameButton("Clear", _ => GameController.killAll())::list
+    val speedDisplay = new GameButton("Speed: 1.0", b => {
+      GameController.speedReset()
+      val speed = GameView.defaultSpeed/GameView.delay.toDouble
+      b.setName(f"Speed: $speed%.2f")
+    })
+    list = new GameButton("Speed Up", _ => {
+      GameController.speedUp(10)
+      val speed = GameView.defaultSpeed/GameView.delay.toDouble
+      speedDisplay.setName(f"Speed: $speed%.2f")
+    })::list
+    list = speedDisplay::list
+    list = new GameButton("Speed Down", _ => {
+      GameController.speedDown(10)
+      val speed = GameView.defaultSpeed/GameView.delay.toDouble
+      speedDisplay.setName(f"Speed: $speed%.2f")
+    })::list
     list = new GameButton("Next Gen", _ => GameController.nextGeneration())::list
     list = new PlayButton("Start/Pause", b => {
       GameController.changeAutoGenState()
@@ -70,7 +87,7 @@ object GameView{
     val h = gameEngine.height
     val sqrSideW = scrW / w
     val sqrSideH = (scrH - menuH) / h
-    if (sqrSideW < 10 || sqrSideH < 10)
+    if (sqrSideW < minSquareSide || sqrSideH < minSquareSide)
       throw new Exception("Este tamanho de tabuleiro não cabe na tela")
     if (sqrSideW < sqrSideH) {
       squareSide = sqrSideW
@@ -94,7 +111,7 @@ object GameView{
   }
 
   def changeAutoGenState(): Unit = {
-    if(!lockedTable){
+    if(!menuOpen){
       paused = !paused
       buttons.foreach {
         case p: PlayButton => p.changeState()
@@ -105,6 +122,26 @@ object GameView{
   def pauseGame(): Unit = {
     if(!paused)
       changeAutoGenState()
+  }
+
+  def speedUp(multiplier: Double): Unit ={
+    if(multiplier > 1){
+      if(delay-multiplier >= 10)
+        delay = (delay-multiplier).toInt
+      else
+        delay = 10
+    }
+  }
+  def speedDown(multiplier: Double): Unit ={
+    if(multiplier > 1){
+      if(delay+multiplier <= 2000)
+        delay = (delay+multiplier).toInt
+      else
+        delay = 2000
+    }
+  }
+  def speedReset(): Unit ={
+    delay = defaultSpeed
   }
 
 }

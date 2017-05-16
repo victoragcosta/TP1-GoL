@@ -78,7 +78,7 @@ trait Menu {
 
   def changeState(): Unit = {
     activated = !activated
-    GameView.lockedTable = activated
+    GameView.menuOpen = activated
   }
 
 }

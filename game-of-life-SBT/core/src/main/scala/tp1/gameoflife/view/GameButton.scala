@@ -50,7 +50,7 @@ class GameButton(
 
   private var debounce = false
   private var lastTime = Calendar.getInstance().getTimeInMillis
-  private val delay = 150
+  private val delay = 50
   def action(): Unit = {
     val now = Calendar.getInstance().getTimeInMillis
     if(now > lastTime + delay){

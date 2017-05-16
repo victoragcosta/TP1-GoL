@@ -109,4 +109,14 @@ object GameController extends Game {
 
   private def inBounds(x: Int,y: Int): Boolean = 0 <= x && x < gameMode.width && 0 <= y && y < gameMode.height
 
+  def speedUp(multiplier: Double): Unit ={
+    GameView.speedUp(multiplier)
+  }
+  def speedDown(multiplier: Double): Unit ={
+    GameView.speedDown(multiplier)
+  }
+  def speedReset(): Unit ={
+    GameView.speedReset()
+  }
+
 }

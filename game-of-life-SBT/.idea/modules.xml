@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/core-build.iml" filepath="$PROJECT_DIR$/.idea/modules/core-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/desktop.iml" filepath="$PROJECT_DIR$/.idea/modules/desktop.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/desktop-build.iml" filepath="$PROJECT_DIR$/.idea/modules/desktop-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GameRules/game-rules.iml" filepath="$PROJECT_DIR$/GameRules/game-rules.iml" />
     </modules>
   </component>
 </project>
