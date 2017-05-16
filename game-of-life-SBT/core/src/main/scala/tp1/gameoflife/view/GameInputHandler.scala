@@ -21,14 +21,34 @@ class GameInputHandler extends InputProcessor {
     val but = getButton(screenX, screenY)
     if(but != null)
       but.action()
-    else if(!GameView.lockedTable)
+    else if(!GameView.menuOpen)
       interactCell(screenX, screenY, button)
+    lastClicked = button
     true
   }
 
-  override def keyUp(keycode: Int): Boolean = {false}
+  override def touchDragged(screenX: Int, screenY: Int, pointer: Int): Boolean = {
+    touchDown(screenX, screenY, pointer, lastClicked)
+    overButton(screenX, screenY)
+    true
+  }
+
+  override def mouseMoved(screenX: Int, screenY: Int): Boolean = {
+    overButton(screenX, screenY)
+    true
+  }
 
   override def scrolled(amount: Int): Boolean = {false}
+
+  override def keyUp(keycode: Int): Boolean = {false}
+
+  override def keyDown(keycode: Int): Boolean = {
+    keycode match {
+      case Keys.ESCAPE => GameController.endGame()
+      case _ =>
+    }
+    true
+  }
 
   override def keyTyped(character: Char): Boolean = {
     character match {
@@ -42,26 +62,7 @@ class GameInputHandler extends InputProcessor {
     true
   }
 
-  override def touchDragged(screenX: Int, screenY: Int, pointer: Int): Boolean = {
-    touchDown(screenX, screenY, pointer, lastClicked)
-    overButton(screenX, screenY)
-    true
-  }
 
-  override def keyDown(keycode: Int): Boolean = {
-    keycode match {
-      case Keys.ESCAPE => GameController.endGame()
-      case _ =>
-    }
-    true
-  }
-
-
-
-  override def mouseMoved(screenX: Int, screenY: Int): Boolean = {
-    overButton(screenX, screenY)
-    true
-  }
 
   private def interactCell(screenX: Int, screenY: Int, button: Int) = {
     val deslocX = GameView.paddingW
@@ -80,7 +81,6 @@ class GameInputHandler extends InputProcessor {
       case Buttons.RIGHT => GameController.killCell(pos.x.toInt, pos.y.toInt)
       case _ =>
     }
-    lastClicked = button
   }
 
   private def getButton(screenX: Int, screenY: Int): GameButton = {
@@ -105,13 +105,15 @@ class GameInputHandler extends InputProcessor {
   private def overButton(screenX: Int, screenY: Int) = {
     val buttons = GameView.buttons
     buttons.foreach(b => {
-      if (inBounds(b, screenX, screenY))
+      if (inBounds(b, screenX, screenY) && !GameView.menuOpen)
         b.setHighlight(true)
       else
         b.setHighlight(false)
 
       b match {
         case m: Menu =>
+          if(m.activated)
+            m.setHighlight(true)
           m.buttons.foreach(bt => {
             if (inBounds(bt, screenX, screenY))
               bt.setHighlight(true)

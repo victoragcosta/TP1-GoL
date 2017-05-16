@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Class-Path: ../game_rules_jar/game-rules.jar
+Main-Class: tp1.gameoflife.main.Main
+

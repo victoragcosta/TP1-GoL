@@ -19,7 +19,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="core" exported="" />
+    <orderEntry type="module" module-name="core" />
     <orderEntry type="library" name="SBT: org.scala-lang:scala-library:2.11.2:jar" level="project" />
     <orderEntry type="library" name="SBT: org.lwjgl.lwjgl:lwjgl_util:2.9.1:jar" level="project" />
     <orderEntry type="library" name="SBT: org.lwjgl.lwjgl:lwjgl-platform:2.9.1:natives-windows:jar" level="project" />
@@ -37,5 +37,6 @@
     <orderEntry type="library" name="SBT: com.badlogicgames.gdx:gdx-platform:1.4.1:natives-desktop:jar" level="project" />
     <orderEntry type="library" name="SBT: com.badlogicgames.gdx:gdx-backend-lwjgl:1.4.1:jar" level="project" />
     <orderEntry type="library" name="SBT: com.badlogicgames.gdx:gdx:1.4.1:jar" level="project" />
+    <orderEntry type="module" module-name="game-rules" />
   </component>
 </module>
