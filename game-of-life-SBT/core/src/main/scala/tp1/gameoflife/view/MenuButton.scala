@@ -1,8 +1,7 @@
 package tp1.gameoflife.view
 
 import com.badlogic.gdx.graphics.Color
-import tp1.gameoflife.controller.GameController
-import tp1.gameoflife.main.Main
+import tp1.gameoflife.controller.{DependencyInjector, GameController}
 
 class MenuButton(
                   _name: String,
@@ -35,7 +34,7 @@ class MenuButton(
   override var buttons: List[GameButton] = createButtons();arrangeButtons()
 
   private def createButtons(): List[GameButton] =
-    Main.classes.map(r => new GameButton(r.toString, _ => {
+    DependencyInjector.classes.map(r => new GameButton(r.toString, _ => {
       GameController.changeRule(r)
       this.setName(GameController.getGameModeName)
     })).toList
