@@ -1,11 +1,11 @@
-package tp1.gameoflife.view
+package tp1.gameoflife.controller
 
 import java.util.Calendar
 
 import com.badlogic.gdx.Input.{Buttons, Keys}
-import com.badlogic.gdx.{Gdx, InputProcessor}
 import com.badlogic.gdx.math.Vector2
-import tp1.gameoflife.controller.GameController
+import com.badlogic.gdx.{Gdx, InputProcessor}
+import tp1.gameoflife.view.{GameButton, GameView, Menu}
 
 class GameInputHandler extends InputProcessor {
   private var lastClicked: Int = _

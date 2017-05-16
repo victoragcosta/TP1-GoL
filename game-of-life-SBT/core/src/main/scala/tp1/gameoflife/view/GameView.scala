@@ -1,9 +1,9 @@
 package tp1.gameoflife.view
 
 import com.badlogic.gdx.Gdx
-import com.badlogic.gdx.math.Vector3
+import com.badlogic.gdx.math.{Vector2, Vector3}
 import tp1.gameoflife.controller.GameController
-import tp1.gameoflife.gameengine.GameEngine
+import tp1.gameoflife.gameengine.{GameEngine, Table}
 
 object GameView{
 
@@ -11,6 +11,9 @@ object GameView{
   var squareSide: Float = 10
   var vivas: List[LiveCell] = _
   val screen = new GameScreen
+
+  var oldW: Int = 0
+  var oldH: Int = 0
 
   val scrW: Int = Gdx.graphics.getWidth
   val scrH: Int = Gdx.graphics.getHeight
@@ -30,9 +33,16 @@ object GameView{
 
   var menuOpen = false
 
-  def update(gameEngine: GameEngine): Unit = {
-    calculatePadding(gameEngine)
-    updateLiveCells(gameEngine)
+  def update(cells: Table, w: Int, h: Int): Unit = {
+    if(w != oldW){
+      oldW = w
+      calculatePadding(w,h)
+    }
+    if(h != oldH){
+      oldH = h
+      calculatePadding(w, h)
+    }
+    updateLiveCells(cells, w, h)
   }
 
   private def createButtons: List[GameButton] = {
@@ -82,9 +92,7 @@ object GameView{
 
   def highlight(button: Int, on: Boolean): Unit = buttons(button).setHighlight(on)
 
-  private def calculatePadding(gameEngine: GameEngine) = {
-    val w = gameEngine.width
-    val h = gameEngine.height
+  def calculatePadding(w: Int, h: Int) = {
     val sqrSideW = scrW / w
     val sqrSideH = (scrH - menuH) / h
     if (sqrSideW < minSquareSide || sqrSideH < minSquareSide)
@@ -99,13 +107,13 @@ object GameView{
     paddingH = ((scrH - menuH - squareSide * h) / 2).toInt
   }
 
-  private def updateLiveCells(gameEngine: GameEngine) = {
+  private def updateLiveCells(cells: Table, w: Int, h: Int) = {
     vivas = Nil
-    for(h <- 0 until gameEngine.height){
-      for(w <- 0 until gameEngine.width){
-        val cell = gameEngine.currentGeneration.elements(h)(w)
+    for(h <- 0 until h){
+      for(w <- 0 until w){
+        val cell = cells.elements(h)(w)
         if(cell.alive)
-          vivas = new LiveCell(new Vector3(w*squareSide,h*squareSide,0), cell)::vivas
+          vivas = new LiveCell(new Vector2(w*squareSide,h*squareSide), cell)::vivas
       }
     }
   }
