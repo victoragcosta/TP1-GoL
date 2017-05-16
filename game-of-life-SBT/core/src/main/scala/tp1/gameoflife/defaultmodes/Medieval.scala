@@ -1,10 +1,8 @@
 package tp1.gameoflife.defaultmodes
 
-import java.util.Calendar
-
 import com.badlogic.gdx.graphics.Color
 import tp1.gameoflife.gameengine.GameEngine
-
+import java.util.Calendar
 import scala.util.Random
 
 class Medieval (override val height: Int, override val width: Int) extends GameEngine {
@@ -17,9 +15,18 @@ class Medieval (override val height: Int, override val width: Int) extends GameE
     "A dead cell revives if there are exactly 3 cells alive near it. " +
     "The color of the revived cell is determined by the color of the majority of cells around it. " +
     "If there is a tie, the color is determined randomly. " +
-    "Knights kill Assassins, Assassins kill Archers and Archers kill Knights."
+    "Knights kill Assassins, Assassins kill Archers and Archers kill Knights. " +
+    "If a cell dies, it goes into a after life state where it cannot be reborn. " +
+    "A cell in after life stays in that state for 1 generations."
 
-  override val defaultColor = new Color(0.4f, 0.4f, 0.4f, 1)
+  val brown: Color = new Color(0.6f, 0.3f, 0, 0.9f)
+  val darkenedGrey: Color = new Color(0.4f, 0.4f, 0.4f, 1)
+  val darkGreen: Color = new Color(0, 0.4f, 0, 0.9f)
+  val red: Color = new Color(1, 0, 0, 0.9f)
+
+  override val defaultColor: Color = darkenedGrey
+  override val defaultAfterLifeColor: Color = red
+  override val defaultAfterLifeCount: Int = 1
 
   override def shouldKeepAlive(cellHeight: Int, cellWidth: Int): Boolean = {
 
@@ -27,7 +34,7 @@ class Medieval (override val height: Int, override val width: Int) extends GameE
 
     if (aliveCount == 2 || aliveCount == 3) {
 
-      if (this.currentGeneration.elements(cellHeight)(cellWidth).color == defaultColor) {
+      if (this.currentGeneration.elements(cellHeight)(cellWidth).color == darkenedGrey) {
 
         if (archerCount(cellHeight, cellWidth) == 0)
           true
@@ -37,7 +44,7 @@ class Medieval (override val height: Int, override val width: Int) extends GameE
 
       }
 
-      else if (this.currentGeneration.elements(cellHeight)(cellWidth).color == new Color(0.6f, 0.3f, 0, 0.9f)) {
+      else if (this.currentGeneration.elements(cellHeight)(cellWidth).color == brown) {
 
         if (knightCount(cellHeight, cellWidth) == 0)
           true
@@ -90,26 +97,26 @@ class Medieval (override val height: Int, override val width: Int) extends GameE
     if (knights == assassins && knights == archers) {
 
       if (tieBreaker == 0)
-        new Color(0, 0.4f, 0, 0.9f)
+        darkGreen
 
       else if (tieBreaker == 1)
-        new Color(0.6f, 0.3f, 0, 0.9f)
+        brown
 
       else
-        defaultColor
+        darkenedGrey
 
     }
 
     else {
 
       if (majority == knights)
-        defaultColor
+        darkenedGrey
 
       else if (majority == assassins)
-        new Color(0.6f, 0.3f, 0, 0.9f)
+        brown
 
       else
-        new Color(0, 0.4f, 0, 0.9f)
+        darkGreen
 
     }
 
@@ -119,14 +126,14 @@ class Medieval (override val height: Int, override val width: Int) extends GameE
 
     if (this.currentGeneration.elements(cellHeight)(cellWidth).alive) {
 
-      if (this.currentGeneration.elements(cellHeight)(cellWidth).color == defaultColor)
-        this.currentGeneration.elements(cellHeight)(cellWidth).color = new Color(0.6f, 0.3f, 0, 0.9f)
+      if (this.currentGeneration.elements(cellHeight)(cellWidth).color == darkenedGrey)
+        this.currentGeneration.elements(cellHeight)(cellWidth).color = brown
 
-      else if (this.currentGeneration.elements(cellHeight)(cellWidth).color == new Color(0.6f, 0.3f, 0, 0.9f))
-        this.currentGeneration.elements(cellHeight)(cellWidth).color = new Color(0, 0.4f, 0, 0.9f)
+      else if (this.currentGeneration.elements(cellHeight)(cellWidth).color == brown)
+        this.currentGeneration.elements(cellHeight)(cellWidth).color = darkGreen
 
       else
-        this.currentGeneration.elements(cellHeight)(cellWidth).color = defaultColor
+        this.currentGeneration.elements(cellHeight)(cellWidth).color = darkenedGrey
 
     }
 
@@ -140,14 +147,14 @@ class Medieval (override val height: Int, override val width: Int) extends GameE
       for (j <- -1 to 1) {
 
         if (this.currentGeneration.elements(adjustHeight(cellHeight + i))(adjustWidth(cellWidth + j)).color ==
-          defaultColor)
+          darkenedGrey)
           knightCount += 1
 
       }
     }
 
     if (this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).color ==
-      defaultColor)
+      darkenedGrey)
       knightCount -= 1
 
     knightCount
@@ -161,15 +168,13 @@ class Medieval (override val height: Int, override val width: Int) extends GameE
     for (i <- -1 to 1) {
       for (j <- -1 to 1) {
 
-        if (this.currentGeneration.elements(adjustHeight(cellHeight + i))(adjustWidth(cellWidth + j)).color ==
-          new Color(0.6f, 0.3f, 0, 0.9f))
+        if (this.currentGeneration.elements(adjustHeight(cellHeight + i))(adjustWidth(cellWidth + j)).color == brown)
           assassinCount += 1
 
       }
     }
 
-    if (this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).color ==
-      new Color(0.6f, 0.3f, 0, 0.9f))
+    if (this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).color == brown)
       assassinCount -= 1
 
     assassinCount
@@ -184,14 +189,13 @@ class Medieval (override val height: Int, override val width: Int) extends GameE
       for (j <- -1 to 1) {
 
         if (this.currentGeneration.elements(adjustHeight(cellHeight + i))(adjustWidth(cellWidth + j)).color ==
-          new Color(0, 0.4f, 0, 0.9f))
+          darkGreen)
           archerCount += 1
 
       }
     }
 
-    if (this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).color ==
-      new Color(0, 0.4f, 0, 0.9f))
+    if (this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).color == darkGreen)
       archerCount -= 1
 
     archerCount
