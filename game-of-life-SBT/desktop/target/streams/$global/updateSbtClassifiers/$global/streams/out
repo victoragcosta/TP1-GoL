@@ -1,6 +1,6 @@
 [debug] Other repositories:
 [debug] Default repositories:
-[debug] 	Raw(ProjectResolver(inter-project, mapped: ))
+[debug] 	Raw(ProjectResolver(inter-project, mapped: default#global-plugins;0.0))
 [debug] 	URLRepository(typesafe-ivy-releases,Patterns(ivyPatterns=List(http://repo.typesafe.com/typesafe/ivy-releases/[organisation]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]), artifactPatterns=List(http://repo.typesafe.com/typesafe/ivy-releases/[organisation]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]), isMavenCompatible=false, descriptorOptional=false, skipConsistencyCheck=false))
 [debug] 	URLRepository(sbt-plugin-releases,Patterns(ivyPatterns=List(http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/[organisation]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]), artifactPatterns=List(http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/[organisation]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]), isMavenCompatible=false, descriptorOptional=false, skipConsistencyCheck=false))
 [debug] 	FileRepository(local,FileConfiguration(true,None),Patterns(ivyPatterns=List(${ivy.home}/local/[organisation]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]), artifactPatterns=List(${ivy.home}/local/[organisation]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]), isMavenCompatible=false, descriptorOptional=false, skipConsistencyCheck=false))
@@ -70,6 +70,7 @@
 [debug] == resolving dependencies org.scala-lang#scala-compiler;2.10.4->org.scala-lang#scala-reflect;2.10.4 [compile->master(*)]
 [info] Resolving org.scala-lang#scala-reflect;2.10.4 ...
 [debug] sbt-chain: Checking cache for: dependency: org.scala-lang#scala-reflect;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
+[debug] no default cache defined: set to C:\Users\victo\.ivy2\cache
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-reflect;2.10.4
 [debug] 	typesafe-ivy-releases: revision in cache: org.scala-lang#scala-reflect;2.10.4
 [debug] 	found org.scala-lang#scala-reflect;2.10.4 in sbt-chain
@@ -155,9 +156,27 @@
 [debug] == resolving dependencies org.scala-sbt#completion;0.13.5->jline#jline;2.11 [compile->default(compile)]
 [info] Resolving jline#jline;2.11 ...
 [debug] sbt-chain: Checking cache for: dependency: jline#jline;2.11 {compile=[default(compile)]}
-[debug] sbt-chain: module revision found in cache: jline#jline;2.11
-[debug] 	typesafe-ivy-releases: revision in cache: jline#jline;2.11
-[debug] 	found jline#jline;2.11 in sbt-chain
+[debug] 		tried http://repo.typesafe.com/typesafe/ivy-releases/jline/jline/2.11/ivys/ivy.xml
+[debug] CLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/jline/jline/2.11/ivys/ivy.xml
+[debug] 	typesafe-ivy-releases: no ivy file found for jline#jline;2.11
+[debug] 		tried http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/jline/jline/2.11/ivys/ivy.xml
+[debug] CLIENT ERROR: Not Found url=http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/jline/jline/2.11/ivys/ivy.xml
+[debug] 	sbt-plugin-releases: no ivy file found for jline#jline;2.11
+[debug] 		tried C:\Users\victo\.ivy2\local\jline\jline\2.11\ivys\ivy.xml
+[debug] 	local: no ivy file found for jline#jline;2.11
+[debug] 		tried http://repo1.maven.org/maven2/jline/jline/2.11/jline-2.11.pom
+[debug] 	public: found md file for jline#jline;2.11
+[debug] 		=> http://repo1.maven.org/maven2/jline/jline/2.11/jline-2.11.pom (2.11)
+[debug] downloading http://repo1.maven.org/maven2/jline/jline/2.11/jline-2.11.pom ...
+[debug] 	public: downloading http://repo1.maven.org/maven2/jline/jline/2.11/jline-2.11.pom
+[debug] 	public: downloading http://repo1.maven.org/maven2/jline/jline/2.11/jline-2.11.pom.sha1
+[debug] sha1 OK for http://repo1.maven.org/maven2/jline/jline/2.11/jline-2.11.pom
+[debug] 	[SUCCESSFUL ] jline#jline;2.11!jline.pom(pom.original) (802ms)
+[info] Resolving org.sonatype.oss#oss-parent;7 ...
+[debug] sbt-chain: Checking cache for: dependency: org.sonatype.oss#oss-parent;7 {}
+[debug] sbt-chain: module revision found in cache: org.sonatype.oss#oss-parent;7
+[debug] 	typesafe-ivy-releases: revision in cache: org.sonatype.oss#oss-parent;7
+[debug] 	found jline#jline;2.11 in public
 [debug] == resolving dependencies org.scala-sbt#completion;0.13.5->jline#jline;2.11 [compile->runtime]
 [debug] == resolving dependencies org.scala-sbt#completion;0.13.5->jline#jline;2.11 [compile->compile]
 [debug] == resolving dependencies org.scala-sbt#completion;0.13.5->jline#jline;2.11 [compile->master]
@@ -327,7 +346,7 @@
 [debug] 		tried http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.apache.ivy/ivy/2.3.0/ivys/ivy.xml
 [debug] CLIENT ERROR: Not Found url=http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.apache.ivy/ivy/2.3.0/ivys/ivy.xml
 [debug] 	sbt-plugin-releases: no ivy file found for org.apache.ivy#ivy;2.3.0
-[debug] 		tried C:\Users\hugon\.ivy2\local\org.apache.ivy\ivy\2.3.0\ivys\ivy.xml
+[debug] 		tried C:\Users\victo\.ivy2\local\org.apache.ivy\ivy\2.3.0\ivys\ivy.xml
 [debug] 	local: no ivy file found for org.apache.ivy#ivy;2.3.0
 [debug] 		tried http://repo1.maven.org/maven2/org/apache/ivy/ivy/2.3.0/ivy-2.3.0.pom
 [debug] 	public: found md file for org.apache.ivy#ivy;2.3.0
@@ -336,7 +355,7 @@
 [debug] 	public: downloading http://repo1.maven.org/maven2/org/apache/ivy/ivy/2.3.0/ivy-2.3.0.pom
 [debug] 	public: downloading http://repo1.maven.org/maven2/org/apache/ivy/ivy/2.3.0/ivy-2.3.0.pom.sha1
 [debug] sha1 OK for http://repo1.maven.org/maven2/org/apache/ivy/ivy/2.3.0/ivy-2.3.0.pom
-[debug] 	[SUCCESSFUL ] org.apache.ivy#ivy;2.3.0!ivy.pom(pom.original) (1968ms)
+[debug] 	[SUCCESSFUL ] org.apache.ivy#ivy;2.3.0!ivy.pom(pom.original) (1240ms)
 [info] Resolving org.apache#apache;7 ...
 [debug] sbt-chain: Checking cache for: dependency: org.apache#apache;7 {}
 [debug] sbt-chain: module revision found in cache: org.apache#apache;7
@@ -630,9 +649,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-agent;0.13.5!test-agent.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.5!apply-macro.jar
-[debug] :: resolution report :: resolve 4342ms :: artifacts dl 25ms
-[debug] 	report for desktop#desktop$sbt_2.11;0.1 default produced in C:\Users\hugon\IdeaProjects\GoL_TP1\TP1-GoL\game-of-life-SBT\desktop\target\resolution-cache\reports\desktop-desktop$sbt_2.11-default.xml
-[debug] 	resolve done (4342ms resolve - 25ms download)
+[debug] :: resolution report :: resolve 6281ms :: artifacts dl 30ms
+[debug] 	report for desktop#desktop$sbt_2.11;0.1 default produced in C:\Users\victo\Desktop\Trabsons\TP1-GoL\game-of-life-SBT\desktop\target\resolution-cache\reports\desktop-desktop$sbt_2.11-default.xml
+[debug] 	resolve done (6281ms resolve - 30ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: desktop#desktop$sources_2.11;0.1
 [debug] 	confs: [default]
@@ -974,6 +993,6 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_8_2;0.13.5!precompiled-2_8_2.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_2;0.13.5!precompiled-2_9_2.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_3;0.13.5!precompiled-2_9_3.jar(src)
-[debug] :: resolution report :: resolve 208ms :: artifacts dl 78ms
-[debug] 	report for desktop#desktop$sources_2.11;0.1 default produced in C:\Users\hugon\IdeaProjects\GoL_TP1\TP1-GoL\game-of-life-SBT\desktop\target\resolution-cache\reports\desktop-desktop$sources_2.11-default.xml
-[debug] 	resolve done (208ms resolve - 78ms download)
+[debug] :: resolution report :: resolve 110ms :: artifacts dl 24ms
+[debug] 	report for desktop#desktop$sources_2.11;0.1 default produced in C:\Users\victo\Desktop\Trabsons\TP1-GoL\game-of-life-SBT\desktop\target\resolution-cache\reports\desktop-desktop$sources_2.11-default.xml
+[debug] 	resolve done (110ms resolve - 24ms download)

@@ -4,7 +4,7 @@
 		module="all-platforms$sbt_2.11"
 		revision="0.1"
 		status="integration"
-		publication="20170511233538"
+		publication="20170516111125"
 	/>
 	<configurations>
 		<conf name="default" visibility="public"/>
