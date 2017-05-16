@@ -7,4 +7,5 @@ trait Image {
   def heightImage: Int
   def widthImage: Int
   def generateImage(shapeRenderer: ShapeRenderer, x: Int, y: Int)
+  def drawInside(shapeRenderer: ShapeRenderer)
 }

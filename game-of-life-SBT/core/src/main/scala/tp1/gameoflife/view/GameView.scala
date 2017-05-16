@@ -27,6 +27,8 @@ object GameView{
   var paused = false
   val delay = 100
 
+  var lockedTable = false
+
   def update(gameEngine: GameEngine): Unit = {
     calculatePadding(gameEngine)
     updateLiveCells(gameEngine)
@@ -35,13 +37,12 @@ object GameView{
   private def createButtons: List[GameButton] = {
     var list: List[GameButton] = Nil
     list = new GameButton("Exit", _ => GameController.endGame())::list
-    list = new GameButton(GameController.getGameModeName, b => {
-      GameController.changeRule()
-      b.setName(GameController.getGameModeName)
-    })::list
+    list = new MenuButton(GameController.getGameModeName)::list
     list = new GameButton("Clear", _ => GameController.killAll())::list
     list = new GameButton("Next Gen", _ => GameController.nextGeneration())::list
-    list = new PlayButton("Start/Pause", _ => {GameController.changeState()})::list
+    list = new PlayButton("Start/Pause", b => {
+      GameController.changeAutoGenState()
+    })::list
     list = new GameButton("Prev Gen", _ => GameController.previousGeneration())::list
     list
   }
@@ -53,12 +54,16 @@ object GameView{
       val gameButton = buttons(i)
       gameButton.setPosition1(buttonPadSides + i*(buttonW+buttonPad), buttonPadTopBot)
       gameButton.setPosition2(buttonPadSides + i*(buttonW+buttonPad)+buttonW, buttonPadTopBot+buttonH)
+      gameButton match{
+        case m: MenuButton =>
+          m.setBLCorner(10, menuH+10)
+          m.setTRCorner(scrW-10, scrH-10)
+        case _ =>
+      }
     }
   }
 
-  def highlight(button: Int, on: Boolean): Unit ={
-    buttons(button).setHighlight(on)
-  }
+  def highlight(button: Int, on: Boolean): Unit = buttons(button).setHighlight(on)
 
   private def calculatePadding(gameEngine: GameEngine) = {
     val w = gameEngine.width
@@ -88,9 +93,18 @@ object GameView{
     }
   }
 
-  def changeState(): Unit ={
-    paused = !paused
-    buttons.foreach(b => b match {case p: PlayButton => p.changeState();case _ =>})
+  def changeAutoGenState(): Unit = {
+    if(!lockedTable){
+      paused = !paused
+      buttons.foreach {
+        case p: PlayButton => p.changeState()
+        case _ =>
+      }
+    }
+  }
+  def pauseGame(): Unit = {
+    if(!paused)
+      changeAutoGenState()
   }
 
 }

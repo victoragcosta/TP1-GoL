@@ -11,7 +11,7 @@ object GameController extends Game {
   private var ruleNumber: Int = 0
   private var gameMode: GameEngine = Main.getRule(0)
 
-  def getGameModeName = gameMode.toString
+  def getGameModeName: String = gameMode.toString
 
   override def create() {
     this.setScreen(GameView.screen)
@@ -28,19 +28,17 @@ object GameController extends Game {
       gameMode.undo()
       GameView.update(gameMode)
     } catch {
-      case e: Exception => println(e.getLocalizedMessage)
+      case _: Exception =>
     }
   }
 
   def makeAlive(x: Int, y: Int): Unit ={
     try{
-      if(inBounds(x,y)){
+      if(inBounds(x,y))
         gameMode.reviveCell(y,x)
-
-      }
       GameView.update(gameMode)
     } catch {
-      case e: Exception => println(e.getLocalizedMessage)
+      case _: Exception =>
     }
   }
 
@@ -52,7 +50,7 @@ object GameController extends Game {
       }
       GameView.update(gameMode)
     } catch {
-      case e: Exception => println(e.getLocalizedMessage)
+      case _: Exception =>
     }
   }
 
@@ -63,12 +61,14 @@ object GameController extends Game {
   }
 
   def endGame(): Unit ={
+    Statistics.displayStatistics()
     Gdx.app.exit()
   }
 
-  def changeState(): Unit = {
-    GameView.changeState()
+  def changeAutoGenState(): Unit = {
+    GameView.changeAutoGenState()
   }
+  def pauseGame(): Unit = GameView.pauseGame()
 
   def changeRule(): Unit = {
     ruleNumber+=1
@@ -77,7 +77,14 @@ object GameController extends Game {
     }
     Main.getRule(ruleNumber).currentGeneration = gameMode.currentGeneration
     gameMode = Main.getRule(ruleNumber)
-    println(gameMode)
+  }
+  def changeRule(gameRule: GameEngine): Unit = {
+    try{
+      gameRule.currentGeneration = gameMode.currentGeneration
+      gameMode = gameRule
+    } catch {
+      case e: Exception => println(e.getMessage)
+    }
   }
 
   def switchColor(x: Int, y: Int): Color = {
@@ -86,8 +93,7 @@ object GameController extends Game {
         gameMode.switchColor(y,x)
       gameMode.defaultColor
     } catch {
-      case e: Exception =>
-        println(e.getMessage)
+      case _: Exception =>
         gameMode.defaultColor
     }
   }
@@ -96,8 +102,7 @@ object GameController extends Game {
     try {
       inBounds(x,y) && gameMode.isCellAlive(y,x)
     } catch {
-      case e: Exception =>
-        println(e.getMessage)
+      case _: Exception =>
         false
     }
   }
