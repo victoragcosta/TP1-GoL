@@ -1,13 +1,12 @@
 package tp1.gameoflife.defaultmodes
 
-import com.badlogic.gdx.graphics.Color
 import tp1.gameoflife.gameengine.GameEngine
 
 class Maze (override val height: Int, override val width: Int) extends GameEngine {
 
   override def toString: String = "Maze"
 
-  override val description: String = "More durable cells, perfect for mazes. " +
+  override val description: String = "Can anyone see the exit? " +
     "A cell must be near 1, 2, 3, 4 or 5 cells to stay alive. " +
     "A dead cell revives if there are exactly 3 cells alive near it. "
 

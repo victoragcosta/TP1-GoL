@@ -1,6 +1,5 @@
 package tp1.gameoflife.defaultmodes
 
-import com.badlogic.gdx.graphics.Color
 import tp1.gameoflife.gameengine.GameEngine
 
 class GeometryWars (override val height: Int, override val width: Int) extends GameEngine {

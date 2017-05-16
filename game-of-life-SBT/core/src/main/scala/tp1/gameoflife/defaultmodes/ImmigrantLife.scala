@@ -1,10 +1,8 @@
 package tp1.gameoflife.defaultmodes
 
-import java.util.Calendar
-
 import com.badlogic.gdx.graphics.Color
 import tp1.gameoflife.gameengine.GameEngine
-
+import java.util.Calendar
 import scala.util.Random
 
 class ImmigrantLife (override val height: Int, override val width: Int) extends GameEngine {
@@ -17,7 +15,10 @@ class ImmigrantLife (override val height: Int, override val width: Int) extends 
     "The color of the revived cell is determined by the color of the majority of cells around it. " +
     "If there is a tie, the color is determined randomly."
 
-  override val defaultColor = new Color(1, 0, 0, 0.9f)
+  val blue: Color = new Color(0, 0, 1, 0.9f)
+  val red: Color = new Color(1, 0, 0, 0.9f)
+
+  override val defaultColor: Color = red
 
   override def shouldKeepAlive(cellHeight: Int, cellWidth: Int): Boolean = {
 
@@ -55,30 +56,28 @@ class ImmigrantLife (override val height: Int, override val width: Int) extends 
     for (i <- -1 to 1) {
       for (j <- -1 to 1) {
 
-        if(this.currentGeneration.elements(adjustHeight(cellHeight + i))(adjustWidth(cellWidth + j)).color ==
-          new Color(1, 0, 0, 0.9f))
+        if(this.currentGeneration.elements(adjustHeight(cellHeight + i))(adjustWidth(cellWidth + j)).color == red)
           redCount += 1
 
-        if(this.currentGeneration.elements(adjustHeight(cellHeight + i))(adjustWidth(cellWidth + j)).color ==
-          new Color(0, 0, 1, 0.9f))
+        if(this.currentGeneration.elements(adjustHeight(cellHeight + i))(adjustWidth(cellWidth + j)).color == blue)
           blueCount += 1
 
       }
     }
 
     if (redCount > blueCount)
-      new Color(1, 0, 0, 0.9f)
+      red
 
     else if (redCount < blueCount)
-      new Color(0, 0, 1, 0.9f)
+      blue
 
     else {
 
       if (tieBreaker)
-        new Color(1, 0, 0, 0.9f)
+        red
 
       else
-        new Color(0, 0, 1, 0.9f)
+        blue
 
     }
 
@@ -88,11 +87,11 @@ class ImmigrantLife (override val height: Int, override val width: Int) extends 
 
     if (this.currentGeneration.elements(cellHeight)(cellWidth).alive) {
 
-     if (this.currentGeneration.elements(cellHeight)(cellWidth).color == new Color(1, 0, 0, 0.9f))
-       this.currentGeneration.elements(cellHeight)(cellWidth).color = new Color(0, 0, 1, 0.9f)
+     if (this.currentGeneration.elements(cellHeight)(cellWidth).color == red)
+       this.currentGeneration.elements(cellHeight)(cellWidth).color = blue
 
      else
-       this.currentGeneration.elements(cellHeight)(cellWidth).color = defaultColor
+       this.currentGeneration.elements(cellHeight)(cellWidth).color = red
 
     }
 

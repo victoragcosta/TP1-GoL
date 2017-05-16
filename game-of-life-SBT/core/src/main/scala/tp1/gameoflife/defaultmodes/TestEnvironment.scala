@@ -11,7 +11,7 @@ object TestEnvironment extends App{
 
   print(Board.description)
 
-  Board.reviveCell(1, 1)
+  /*Board.reviveCell(1, 1)
   Board.reviveCell(2, 0)
   Board.reviveCell(3, 1)
   Board.reviveCell(3, 2)
@@ -35,6 +35,6 @@ object TestEnvironment extends App{
 
   }
 
-  Statistics.displayStatistics()
+  Statistics.displayStatistics()*/
 
 }

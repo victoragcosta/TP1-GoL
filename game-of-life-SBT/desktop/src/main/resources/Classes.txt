@@ -10,3 +10,7 @@ tp1.gameoflife.defaultmodes.Fireworks
 tp1.gameoflife.defaultmodes.GeometryWars
 tp1.gameoflife.defaultmodes.Medieval
 tp1.gameoflife.defaultmodes.StarWars
+tp1.gameoflife.defaultmodes.OnTheEdge
+tp1.gameoflife.defaultmodes.Frogs
+tp1.gameoflife.defaultmodes.ExplosiveFrogs
+tp1.gameoflife.defaultmodes.Gliders
