@@ -13,6 +13,8 @@ class Table (height: Int, width: Int) {
     for (column <- this.elements) {
       for (cell <- column) {
         cell.alive = false
+        cell.afterLife = false
+        cell.afterLifeCount = 0
       }
     }
 
