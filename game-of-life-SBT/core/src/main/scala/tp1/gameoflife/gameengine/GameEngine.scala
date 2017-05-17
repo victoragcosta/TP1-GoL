@@ -11,7 +11,7 @@ abstract class GameEngine {
   val width: Int
 
   val mementoNumber: Int = 10
-  val defaultAfterLifeCount: Int = 0
+  val defaultAfterLifeCount: Int = -1
 
   var currentGeneration = new Table(height, width)
   this.currentGeneration.create()
@@ -126,8 +126,11 @@ abstract class GameEngine {
 
           else {
 
-            if (this.currentGeneration.elements(h)(w).afterLife)
+            if (this.currentGeneration.elements(h)(w).afterLife) {
+              newGeneration.elements(h)(w).afterLife = true
+              newGeneration.elements(h)(w).afterLifeCount = this.currentGeneration.elements(h)(w).afterLifeCount
               newGeneration.elements(h)(w).color = defaultAfterLifeColor
+            }
 
             else
               newGeneration.elements(h)(w).color = defaultDeathColor
@@ -145,7 +148,7 @@ abstract class GameEngine {
 
           else {
             newGeneration.elements(h)(w).afterLife = true
-            newGeneration.elements(h)(w).afterLifeCount += defaultAfterLifeCount
+            newGeneration.elements(h)(w).afterLifeCount += (defaultAfterLifeCount + 1)
             newGeneration.elements(h)(w).color = defaultAfterLifeColor
             Statistics.addDeath()
           }
