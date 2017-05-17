@@ -1,13 +1,169 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="all-platforms:jar" />
+      <artifact name="game-rules:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="54c5801b-cef6-4aa6-8e93-62a803189b50" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../gol-Template_Method/src/main/scala/gol/template/Classic.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../gol-Template_Method/src/main/scala/gol/template/HighLife.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../gol-Template_Method/target/scala-2.12/classes/gol/template/Classic.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../gol-Template_Method/target/scala-2.12/classes/gol/template/HighLife.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core$sources_2.11-compile-internal.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core$sources_2.11-compile.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core$sources_2.11-docs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core$sources_2.11-optional.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core$sources_2.11-plugin.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core$sources_2.11-pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core$sources_2.11-provided.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core$sources_2.11-runtime-internal.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core$sources_2.11-runtime.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core$sources_2.11-scala-tool.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core$sources_2.11-sources.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core$sources_2.11-test-internal.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core$sources_2.11-test.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/controller/GameController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/Cell.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/GameEngine$$anonfun$cellsAlive$1$$anonfun$apply$mcVI$sp$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/GameEngine$$anonfun$cellsAlive$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/GameEngine$$anonfun$neighborsAlive$1$$anonfun$apply$mcVI$sp$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/GameEngine$$anonfun$neighborsAlive$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/GameEngine$$anonfun$nextGeneration$1$$anonfun$apply$mcVI$sp$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/GameEngine$$anonfun$nextGeneration$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/GameEngine$$anonfun$printBoard$1$$anonfun$apply$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/GameEngine$$anonfun$printBoard$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/GameEngine.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/Statistics$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/Statistics.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/Table$$anonfun$clean$1$$anonfun$apply$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/Table$$anonfun$clean$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/Table$$anonfun$create$1$$anonfun$apply$mcVI$sp$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/Table$$anonfun$create$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/Table.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/view/DemoScreen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/view/GameButton$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/view/GameButton.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/view/GameView$$anonfun$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/view/GameView$$anonfun$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/view/GameView$$anonfun$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/view/GameView$$anonfun$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/view/GameView$$anonfun$5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/view/GameView$$anonfun$arrangeButtons$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/view/GameView$$anonfun$updateLiveCells$1$$anonfun$apply$mcVI$sp$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/view/GameView$$anonfun$updateLiveCells$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/view/GameView$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/view/GameView.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/view/Image.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/view/LiveCell.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/view/PlayButton$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/view/PlayButton.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/desktop/target/scala-2.11/classes/Classes.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/desktop/target/scala-2.11/classes/tp1/gameoflife/main/Main$$anonfun$loadRules$1.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/Amoeba.scala" afterPath="$PROJECT_DIR$/GameRules/src/main/tp1/gameoflife/defaultmodes/Amoeba.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/Assimilation.scala" afterPath="$PROJECT_DIR$/GameRules/src/main/tp1/gameoflife/defaultmodes/Assimilation.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/Classic.scala" afterPath="$PROJECT_DIR$/GameRules/src/main/tp1/gameoflife/defaultmodes/Classic.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/Coagulations.scala" afterPath="$PROJECT_DIR$/GameRules/src/main/tp1/gameoflife/defaultmodes/Coagulations.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/DayNight.scala" afterPath="$PROJECT_DIR$/GameRules/src/main/tp1/gameoflife/defaultmodes/DayNight.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/Diamoeba.scala" afterPath="$PROJECT_DIR$/GameRules/src/main/tp1/gameoflife/defaultmodes/Diamoeba.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/Disco.scala" afterPath="$PROJECT_DIR$/GameRules/src/main/tp1/gameoflife/defaultmodes/Disco.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/Fireworks.scala" afterPath="$PROJECT_DIR$/GameRules/src/main/tp1/gameoflife/defaultmodes/Fireworks.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/Fractals.scala" afterPath="$PROJECT_DIR$/GameRules/src/main/tp1/gameoflife/defaultmodes/Fractals.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/GeometryWars.scala" afterPath="$PROJECT_DIR$/GameRules/src/main/tp1/gameoflife/defaultmodes/GeometryWars.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/HighLife.scala" afterPath="$PROJECT_DIR$/GameRules/src/main/tp1/gameoflife/defaultmodes/HighLife.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/ImmigrantLife.scala" afterPath="$PROJECT_DIR$/GameRules/src/main/tp1/gameoflife/defaultmodes/ImmigrantLife.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/Life34.scala" afterPath="$PROJECT_DIR$/GameRules/src/main/tp1/gameoflife/defaultmodes/Life34.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/LongLife.scala" afterPath="$PROJECT_DIR$/GameRules/src/main/tp1/gameoflife/defaultmodes/LongLife.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/Maze.scala" afterPath="$PROJECT_DIR$/GameRules/src/main/tp1/gameoflife/defaultmodes/Maze.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/Move.scala" afterPath="$PROJECT_DIR$/GameRules/src/main/tp1/gameoflife/defaultmodes/Move.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/Mystery.scala" afterPath="$PROJECT_DIR$/GameRules/src/main/tp1/gameoflife/defaultmodes/Mystery.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/PseudoLife.scala" afterPath="$PROJECT_DIR$/GameRules/src/main/tp1/gameoflife/defaultmodes/PseudoLife.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/Replicator.scala" afterPath="$PROJECT_DIR$/GameRules/src/main/tp1/gameoflife/defaultmodes/Replicator.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/Seeds.scala" afterPath="$PROJECT_DIR$/GameRules/src/main/tp1/gameoflife/defaultmodes/Seeds.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/Stains.scala" afterPath="$PROJECT_DIR$/GameRules/src/main/tp1/gameoflife/defaultmodes/Stains.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/TestEnvironment.scala" afterPath="$PROJECT_DIR$/GameRules/src/main/tp1/gameoflife/defaultmodes/TestEnvironment.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/WalledCities.scala" afterPath="$PROJECT_DIR$/GameRules/src/main/tp1/gameoflife/defaultmodes/WalledCities.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/WireWorld.scala" afterPath="$PROJECT_DIR$/GameRules/src/main/tp1/gameoflife/defaultmodes/WireWorld.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/desktop/src/main/resources/Classes.txt" afterPath="$PROJECT_DIR$/GameRules/src/resources/Classes.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/streams/$global/update/$global/streams/output" afterPath="$PROJECT_DIR$/core/target/streams/$global/update/$global/streams/output" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop/target/scala-2.11/classes/tp1/gameoflife/main/Main$.class" afterPath="$PROJECT_DIR$/desktop/target/scala-2.11/classes/tp1/gameoflife/main/Main$.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop/target/scala-2.11/classes/tp1/gameoflife/main/Main.class" afterPath="$PROJECT_DIR$/desktop/target/scala-2.11/classes/tp1/gameoflife/main/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop/target/streams/$global/update/$global/streams/output" afterPath="$PROJECT_DIR$/desktop/target/streams/$global/update/$global/streams/output" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/output" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/output" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/all-platforms.iml" afterPath="$PROJECT_DIR$/.idea/modules/all-platforms.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/core.iml" afterPath="$PROJECT_DIR$/.idea/modules/core.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/desktop.iml" afterPath="$PROJECT_DIR$/.idea/modules/desktop.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Disco.scala" afterPath="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Disco.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GameRules/game-rules.iml" afterPath="$PROJECT_DIR$/GameRules/game-rules.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/resolution-cache/core/core$sbt_2.11/0.1/resolved.xml.properties" afterPath="$PROJECT_DIR$/core/target/resolution-cache/core/core$sbt_2.11/0.1/resolved.xml.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/resolution-cache/core/core$sbt_2.11/0.1/resolved.xml.xml" afterPath="$PROJECT_DIR$/core/target/resolution-cache/core/core$sbt_2.11/0.1/resolved.xml.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/resolution-cache/core/core$sources_2.11/0.1/resolved.xml.properties" afterPath="$PROJECT_DIR$/core/target/resolution-cache/core/core$sources_2.11/0.1/resolved.xml.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/resolution-cache/core/core$sources_2.11/0.1/resolved.xml.xml" afterPath="$PROJECT_DIR$/core/target/resolution-cache/core/core$sources_2.11/0.1/resolved.xml.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/resolution-cache/core/core_2.11/0.1/resolved.xml.properties" afterPath="$PROJECT_DIR$/core/target/resolution-cache/core/core_2.11/0.1/resolved.xml.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/resolution-cache/core/core_2.11/0.1/resolved.xml.xml" afterPath="$PROJECT_DIR$/core/target/resolution-cache/core/core_2.11/0.1/resolved.xml.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core$sbt_2.11-default.xml" afterPath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core$sbt_2.11-default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core_2.11-compile-internal.xml" afterPath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core_2.11-compile-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core_2.11-compile.xml" afterPath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core_2.11-compile.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core_2.11-docs.xml" afterPath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core_2.11-docs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core_2.11-optional.xml" afterPath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core_2.11-optional.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core_2.11-plugin.xml" afterPath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core_2.11-plugin.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core_2.11-pom.xml" afterPath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core_2.11-pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core_2.11-provided.xml" afterPath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core_2.11-provided.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core_2.11-runtime-internal.xml" afterPath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core_2.11-runtime-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core_2.11-runtime.xml" afterPath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core_2.11-runtime.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core_2.11-scala-tool.xml" afterPath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core_2.11-scala-tool.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core_2.11-sources.xml" afterPath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core_2.11-sources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core_2.11-test-internal.xml" afterPath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core_2.11-test-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core_2.11-test.xml" afterPath="$PROJECT_DIR$/core/target/resolution-cache/reports/core-core_2.11-test.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/core/target/streams/$global/update/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/streams/$global/updateClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/core/target/streams/$global/updateClassifiers/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/streams/$global/updateSbtClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/core/target/streams/$global/updateSbtClassifiers/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop/target/resolution-cache/desktop/desktop$sbt_2.11/0.1/resolved.xml.properties" afterPath="$PROJECT_DIR$/desktop/target/resolution-cache/desktop/desktop$sbt_2.11/0.1/resolved.xml.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop/target/resolution-cache/desktop/desktop$sbt_2.11/0.1/resolved.xml.xml" afterPath="$PROJECT_DIR$/desktop/target/resolution-cache/desktop/desktop$sbt_2.11/0.1/resolved.xml.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop/target/resolution-cache/desktop/desktop$sources_2.11/0.1/resolved.xml.properties" afterPath="$PROJECT_DIR$/desktop/target/resolution-cache/desktop/desktop$sources_2.11/0.1/resolved.xml.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop/target/resolution-cache/desktop/desktop$sources_2.11/0.1/resolved.xml.xml" afterPath="$PROJECT_DIR$/desktop/target/resolution-cache/desktop/desktop$sources_2.11/0.1/resolved.xml.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop/target/resolution-cache/desktop/desktop_2.11/0.1/resolved.xml.properties" afterPath="$PROJECT_DIR$/desktop/target/resolution-cache/desktop/desktop_2.11/0.1/resolved.xml.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop/target/resolution-cache/desktop/desktop_2.11/0.1/resolved.xml.xml" afterPath="$PROJECT_DIR$/desktop/target/resolution-cache/desktop/desktop_2.11/0.1/resolved.xml.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop/target/resolution-cache/reports/desktop-desktop$sbt_2.11-default.xml" afterPath="$PROJECT_DIR$/desktop/target/resolution-cache/reports/desktop-desktop$sbt_2.11-default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop/target/resolution-cache/reports/desktop-desktop_2.11-compile-internal.xml" afterPath="$PROJECT_DIR$/desktop/target/resolution-cache/reports/desktop-desktop_2.11-compile-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop/target/resolution-cache/reports/desktop-desktop_2.11-compile.xml" afterPath="$PROJECT_DIR$/desktop/target/resolution-cache/reports/desktop-desktop_2.11-compile.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop/target/resolution-cache/reports/desktop-desktop_2.11-docs.xml" afterPath="$PROJECT_DIR$/desktop/target/resolution-cache/reports/desktop-desktop_2.11-docs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop/target/resolution-cache/reports/desktop-desktop_2.11-optional.xml" afterPath="$PROJECT_DIR$/desktop/target/resolution-cache/reports/desktop-desktop_2.11-optional.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop/target/resolution-cache/reports/desktop-desktop_2.11-plugin.xml" afterPath="$PROJECT_DIR$/desktop/target/resolution-cache/reports/desktop-desktop_2.11-plugin.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop/target/resolution-cache/reports/desktop-desktop_2.11-pom.xml" afterPath="$PROJECT_DIR$/desktop/target/resolution-cache/reports/desktop-desktop_2.11-pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop/target/resolution-cache/reports/desktop-desktop_2.11-provided.xml" afterPath="$PROJECT_DIR$/desktop/target/resolution-cache/reports/desktop-desktop_2.11-provided.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop/target/resolution-cache/reports/desktop-desktop_2.11-runtime-internal.xml" afterPath="$PROJECT_DIR$/desktop/target/resolution-cache/reports/desktop-desktop_2.11-runtime-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop/target/resolution-cache/reports/desktop-desktop_2.11-runtime.xml" afterPath="$PROJECT_DIR$/desktop/target/resolution-cache/reports/desktop-desktop_2.11-runtime.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop/target/resolution-cache/reports/desktop-desktop_2.11-scala-tool.xml" afterPath="$PROJECT_DIR$/desktop/target/resolution-cache/reports/desktop-desktop_2.11-scala-tool.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop/target/resolution-cache/reports/desktop-desktop_2.11-sources.xml" afterPath="$PROJECT_DIR$/desktop/target/resolution-cache/reports/desktop-desktop_2.11-sources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop/target/resolution-cache/reports/desktop-desktop_2.11-test-internal.xml" afterPath="$PROJECT_DIR$/desktop/target/resolution-cache/reports/desktop-desktop_2.11-test-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop/target/resolution-cache/reports/desktop-desktop_2.11-test.xml" afterPath="$PROJECT_DIR$/desktop/target/resolution-cache/reports/desktop-desktop_2.11-test.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/desktop/target/streams/$global/update/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop/target/streams/$global/updateClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/desktop/target/streams/$global/updateClassifiers/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop/target/streams/$global/updateSbtClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/desktop/target/streams/$global/updateSbtClassifiers/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/compile/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/compile/compile/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/compile/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/compile/compile/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/all-platforms/all-platforms$sbt_2.11/0.1/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/resolution-cache/all-platforms/all-platforms$sbt_2.11/0.1/resolved.xml.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/all-platforms/all-platforms$sbt_2.11/0.1/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/all-platforms/all-platforms$sbt_2.11/0.1/resolved.xml.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/all-platforms/all-platforms$sources_2.11/0.1/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/resolution-cache/all-platforms/all-platforms$sources_2.11/0.1/resolved.xml.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/all-platforms/all-platforms$sources_2.11/0.1/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/all-platforms/all-platforms$sources_2.11/0.1/resolved.xml.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/all-platforms/all-platforms_2.11/0.1/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/resolution-cache/all-platforms/all-platforms_2.11/0.1/resolved.xml.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/all-platforms/all-platforms_2.11/0.1/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/all-platforms/all-platforms_2.11/0.1/resolved.xml.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/all-platforms-all-platforms$sbt_2.11-default.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/all-platforms-all-platforms$sbt_2.11-default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/all-platforms-all-platforms_2.11-compile-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/all-platforms-all-platforms_2.11-compile-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/all-platforms-all-platforms_2.11-compile.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/all-platforms-all-platforms_2.11-compile.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/all-platforms-all-platforms_2.11-docs.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/all-platforms-all-platforms_2.11-docs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/all-platforms-all-platforms_2.11-optional.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/all-platforms-all-platforms_2.11-optional.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/all-platforms-all-platforms_2.11-plugin.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/all-platforms-all-platforms_2.11-plugin.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/all-platforms-all-platforms_2.11-pom.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/all-platforms-all-platforms_2.11-pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/all-platforms-all-platforms_2.11-provided.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/all-platforms-all-platforms_2.11-provided.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/all-platforms-all-platforms_2.11-runtime-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/all-platforms-all-platforms_2.11-runtime-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/all-platforms-all-platforms_2.11-runtime.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/all-platforms-all-platforms_2.11-runtime.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/all-platforms-all-platforms_2.11-scala-tool.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/all-platforms-all-platforms_2.11-scala-tool.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/all-platforms-all-platforms_2.11-sources.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/all-platforms-all-platforms_2.11-sources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/all-platforms-all-platforms_2.11-test-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/all-platforms-all-platforms_2.11-test-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/all-platforms-all-platforms_2.11-test.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/all-platforms-all-platforms_2.11-test.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/updateSbtClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/updateSbtClassifiers/$global/streams/out" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/core/target/" />
@@ -37,7 +193,20 @@
   <component name="ExternalProjectsManager">
     <system id="SBT">
       <state>
-        <projects_view />
+        <projects_view>
+          <tree_state>
+            <PATH>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ExternalProjectsStructure$RootNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="all-platforms" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ProjectNode" />
+              </PATH_ELEMENT>
+            </PATH>
+          </tree_state>
+        </projects_view>
       </state>
     </system>
   </component>
@@ -46,38 +215,78 @@
       <file leaf-file-name="Main.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/desktop/src/main/scala/tp1/gameoflife/main/Main.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="21" column="19" lean-forward="false" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-              <folding />
+            <state relative-caret-position="68">
+              <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+              <folding>
+                <marker date="1494960798830" expanded="true" signature="27:36" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Disco.scala" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Disco.scala">
+      <file leaf-file-name="GameController.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/controller/GameController.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-              <folding />
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding>
+                <element signature="e#35#73#0" expanded="true" />
+                <element signature="e#2203#2419#0" expanded="false" />
+                <element signature="e#2423#2641#0" expanded="false" />
+                <element signature="e#2645#2813#0" expanded="false" />
+                <element signature="e#2929#3006#0" expanded="false" />
+                <element signature="e#3009#3090#0" expanded="false" />
+                <element signature="e#3093#3148#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameEngine.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/GameEngine.scala">
+      <file leaf-file-name="GameScreen.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/GameScreen.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="50" lean-forward="false" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
+            <state relative-caret-position="153">
+              <caret line="9" column="37" lean-forward="false" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Table.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/Table.scala">
+      <file leaf-file-name="GameView.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/GameView.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="544">
-              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <caret line="35" column="46" lean-forward="false" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
+              <folding>
+                <element signature="e#29#56#0" expanded="true" />
+                <element signature="e#3457#3751#0" expanded="false" />
+                <element signature="e#3755#3937#0" expanded="false" />
+                <element signature="e#3940#4012#0" expanded="false" />
+                <element signature="e#4016#4194#0" expanded="false" />
+                <element signature="e#4197#4381#0" expanded="false" />
+                <element signature="e#4384#4438#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LiveCell.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/LiveCell.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+              <folding>
+                <marker date="1494960798140" expanded="true" signature="36:58" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MenuButton.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/MenuButton.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="47" lean-forward="false" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -93,6 +302,9 @@
       <find>\\</find>
       <find>println</find>
       <find>buttons.size</find>
+      <find>Stain</find>
+      <find>format</find>
+      <find>input</find>
     </findStrings>
     <replaceStrings>
       <replace>GameView.paddingH</replace>
@@ -125,34 +337,38 @@
       <list>
         <option value="$PROJECT_DIR$/core/src/main/scala/GameOfLife.scala" />
         <option value="$PROJECT_DIR$/core/src/main/scala/DemoScreen.scala" />
-        <option value="$PROJECT_DIR$/project/plugins.sbt" />
         <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/Cell.scala" />
         <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/Statistics.scala" />
+        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Replicator.scala" />
+        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/WalledCities.scala" />
+        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Maze.scala" />
+        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/HighLife.scala" />
         <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Classic.scala" />
         <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/ImmigrantLife.scala" />
         <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/Table.scala" />
         <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/WireWorld.scala" />
-        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/GameScreen.scala" />
-        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/GameView.scala" />
-        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/GameInputHandler.scala" />
+        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Disco.scala" />
+        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/TestEnvironment.scala" />
         <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/GameEngine.scala" />
         <option value="$PROJECT_DIR$/desktop/src/main/scala/Main.scala" />
         <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/Image.scala" />
+        <option value="$PROJECT_DIR$/desktop/src/main/resources/Classes.txt" />
+        <option value="$PROJECT_DIR$/build.sbt" />
+        <option value="$PROJECT_DIR$/versions.sbt" />
         <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/Menu.scala" />
-        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/MenuButton.scala" />
+        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/PlayButton.scala" />
+        <option value="$PROJECT_DIR$/project/META-INF/MANIFEST.MF" />
+        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/GameInputHandler.scala" />
+        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/GameButton.scala" />
+        <option value="$PROJECT_DIR$/project/plugins.sbt" />
+        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/controller/GameInputHandler.scala" />
         <option value="$PROJECT_DIR$/desktop/src/main/scala/tp1/gameoflife/main/Main.scala" />
-        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Classic.scala" />
-        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Medieval.scala" />
-        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/StarWars.scala" />
-        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/HighLife.scala" />
-        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/GeometryWars.scala" />
-        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Replicator.scala" />
-        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Frogs.scala" />
-        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/ExplosiveFrogs.scala" />
-        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/WalledCities.scala" />
-        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Fireworks.scala" />
-        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Maze.scala" />
-        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Disco.scala" />
+        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/MenuButton.scala" />
+        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/controller/DependencyInjector.scala" />
+        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/LiveCell.scala" />
+        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/GameScreen.scala" />
+        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/GameView.scala" />
+        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/controller/GameController.scala" />
       </list>
     </option>
   </component>
@@ -163,9 +379,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
-    <option name="width" value="1368" />
-    <option name="height" value="741" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -186,7 +403,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -210,7 +426,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="desktop" />
+              <option name="myItemId" value="GameRules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="all-platforms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game-of-life-SBT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GameRules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -225,44 +459,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="desktop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="all-platforms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="game-of-life-SBT" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="desktop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -307,6 +503,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="gameoflife" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -374,7 +574,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="defaultmodes" />
+              <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -403,28 +603,54 @@
               <option name="myItemId" value="scala" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="gameoflife" />
+              <option name="myItemId" value="all-platforms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game-of-life-SBT" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="all-platforms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game-of-life-SBT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artifacts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/oguh" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../gol-Template_Method" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -443,46 +669,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Run App">
-    <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="tp1.gameoflife.pkg.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="tp1.gameoflife.pkg.Main" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+  <component name="RunManager" selected="JAR Application.all-platforms.jar">
+    <configuration default="false" name="all-platforms.jar" type="JarApplication" factoryName="JAR Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="JAR_PATH" value="$PROJECT_DIR$/classes/artifacts/all_platforms_jar/all-platforms.jar" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="desktop" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="TestEnvironment" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="tp1.gameoflife.defaultmodes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="tp1.gameoflife.defaultmodes.TestEnvironment" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="core" />
-      <envs />
-      <method />
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="all-platforms:jar" />
+          <artifact name="game-rules:jar" />
+        </option>
+      </method>
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
@@ -546,6 +744,9 @@
       </Profilers>
       <method />
     </configuration>
+    <configuration default="true" type="AntRunConfiguration" factoryName="Ant Target">
+      <method />
+    </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -569,6 +770,136 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" custom_browser="" web_path="">
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -583,6 +914,15 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="passParentEnv" value="true" />
+      <setting name="launchBrowser" value="true" />
+      <setting name="launchBrowserUrl" value="" />
+      <setting name="depsClasspath" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -625,6 +965,22 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
@@ -698,6 +1054,12 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -724,6 +1086,28 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
     <configuration default="true" type="uTestRunConfiguration" factoryName="utest">
@@ -760,20 +1144,18 @@
       <envs />
       <method />
     </configuration>
-    <list size="3">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Application.Run App" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="2" class="java.lang.String" itemvalue="Application.TestEnvironment" />
+      <item index="1" class="java.lang.String" itemvalue="JAR Application.all-platforms.jar" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.TestEnvironment" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JAR Application.all-platforms.jar" />
       </list>
     </recent_temporary>
   </component>
   <component name="SbtLocalSettings">
-    <option name="lastUpdateTimestamp" value="1494532186194" />
+    <option name="lastUpdateTimestamp" value="1494960852153" />
     <option name="availableProjects">
       <map>
         <entry>
@@ -856,7 +1238,12 @@
       <workItem from="1494614965285" duration="54000" />
       <workItem from="1494616096378" duration="4000" />
       <workItem from="1494616314071" duration="925000" />
-      <workItem from="1494787572700" duration="14118000" />
+      <workItem from="1494787572700" duration="18591000" />
+      <workItem from="1494810388413" duration="2482000" />
+      <workItem from="1494812927118" duration="473000" />
+      <workItem from="1494864325343" duration="11180000" />
+      <workItem from="1494942394642" duration="5726000" />
+      <workItem from="1495026825221" duration="247000" />
     </task>
     <task id="LOCAL-00001" summary="Melhorada a estrutura do MVC do projeto">
       <created>1493840515341</created>
@@ -914,47 +1301,75 @@
       <option name="project" value="LOCAL" />
       <updated>1494533033156</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Implemented Menu to change Rules more easily and added debounce for button&#10;clicks. Refactored some methods.">
+      <created>1494801748453</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1494801748453</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Projeto Integrado, Versão 1 completa">
+      <created>1494811602778</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1494811602778</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Separado Modos de Jogos e criado Artifacts para geração de Jar, falta&#10;separar Classes.txt.&#10;&#10;Fiz no lugar errado, mas implementei velocidade variável.">
+      <created>1494943360610</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1494943360610</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Removida dependencia desnecessária de SBT que gerava erros chatos">
+      <created>1494944149847</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1494944149847</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90938000" />
+    <option name="totallyTimeSpent" value="115878000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1368" height="741" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32298136" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34860885" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27609682" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39905363" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39770868" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7250409" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32763976" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.4969743" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -974,11 +1389,14 @@
     <MESSAGE value="Merge remote-tracking branch 'remotes/origin/Game_modes' into View&#10;&#10;# Conflicts:&#10;#&#9;game-of-life-SBT/.idea/workspace.xml&#10;&#10;Refatorado umas coisas relativas a GameButton" />
     <MESSAGE value="Fixed some bugs related to the Controller isCellAlive" />
     <MESSAGE value="Implemented Menu to change Rules more easily and added debounce for button&#10;clicks. Refactored some methods." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented Menu to change Rules more easily and added debounce for button&#10;clicks. Refactored some methods." />
+    <MESSAGE value="Projeto Integrado, Versão 1 completa" />
+    <MESSAGE value="Separado Modos de Jogos e criado Artifacts para geração de Jar, falta&#10;separar Classes.txt.&#10;&#10;Fiz no lugar errado, mas implementei velocidade variável." />
+    <MESSAGE value="Removida dependencia desnecessária de SBT que gerava erros chatos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removida dependencia desnecessária de SBT que gerava erros chatos" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="18" />
+      <option name="time" value="20" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -987,132 +1405,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/Table.scala">
+    <entry file="jar://$USER_HOME$/.ivy2/cache/com.badlogicgames.gdx/gdx-backend-lwjgl/srcs/gdx-backend-lwjgl-1.4.1-sources.jar!/com/badlogic/gdx/backends/lwjgl/LwjglApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/desktop/proguard-project.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-415">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/proguard-project.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-109">
-          <caret line="67" column="0" lean-forward="true" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.2-sources.jar!/scala/Predef.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3397">
-          <caret line="416" column="0" lean-forward="false" selection-start-line="69" selection-start-column="65" selection-end-line="416" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/com.badlogicgames.gdx/gdx/srcs/gdx-1.4.1-sources.jar!/com/badlogic/gdx/graphics/GL20.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="345" column="16" lean-forward="false" selection-start-line="345" selection-start-column="16" selection-end-line="345" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/DemoScreen.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/com.badlogicgames.gdx/gdx/srcs/gdx-1.4.1-sources.jar!/com/badlogic/gdx/graphics/glutils/ShapeRenderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1601">
-          <caret line="162" column="16" lean-forward="false" selection-start-line="162" selection-start-column="16" selection-end-line="162" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-sbt/tasks/srcs/tasks-0.13.5-sources.jar!/sbt/ConcurrentRestrictions.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/TestEnvironment.scala" />
-    <entry file="jar://$USER_HOME$/.ivy2/cache/com.badlogicgames.gdx/gdx/srcs/gdx-1.4.1-sources.jar!/com/badlogic/gdx/graphics/g2d/BitmapFont.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="162" column="24" lean-forward="true" selection-start-line="162" selection-start-column="23" selection-end-line="165" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/controller/GameRule.scala" />
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/LiveCell.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="69" lean-forward="false" selection-start-line="11" selection-start-column="69" selection-end-line="11" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Maze.scala" />
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/HighLife.scala" />
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Disco.scala" />
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/GameScreen.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/versions.sbt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/desktop/src/main/resources/Classes.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/controller/RulesVault.scala" />
-    <entry file="file://$PROJECT_DIR$/desktop/src/main/scala/tp1/gameoflife/main/Main.scala" />
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/GameEngine.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="223" column="0" lean-forward="false" selection-start-line="223" selection-start-column="0" selection-end-line="223" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/Statistics.scala" />
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/Table.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/Menu.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/MenuButton.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="44" lean-forward="false" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+        <state relative-caret-position="133">
+          <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1123,206 +1419,204 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/desktop/src/main/scala/tp1/gameoflife/main/Main.scala">
+    <entry file="file://$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/Assimilation.scala" />
+    <entry file="file://$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/Classic.scala" />
+    <entry file="file://$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/Coagulations.scala" />
+    <entry file="file://$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/DayNight.scala" />
+    <entry file="file://$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/Diamoeba.scala" />
+    <entry file="file://$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/Disco.scala" />
+    <entry file="file://$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/Fireworks.scala" />
+    <entry file="file://$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/GeometryWars.scala" />
+    <entry file="file://$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/HighLife.scala" />
+    <entry file="file://$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/WalledCities.scala" />
+    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Gnarl.scala" />
+    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/StarWars.scala" />
+    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/X2.scala" />
+    <entry file="file://$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/WireWorld.scala" />
+    <entry file="file://$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/Stains.scala" />
+    <entry file="file://$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/Maze.scala" />
+    <entry file="file://$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/LongLife.scala" />
+    <entry file="file://$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/Life34.scala" />
+    <entry file="file://$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/ImmigrantLife.scala" />
+    <entry file="file://$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/Replicator.scala" />
+    <entry file="file://$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/PseudoLife.scala" />
+    <entry file="file://$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/Mystery.scala" />
+    <entry file="file://$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/Move.scala" />
+    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Medieval.scala" />
+    <entry file="file://$PROJECT_DIR$/desktop/src/main/resources/Classes.txt" />
+    <entry file="file://$PROJECT_DIR$/build.sbt" />
+    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/PlayButton.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="28" column="32" lean-forward="false" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/Image.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/Amoeba.scala" />
+    <entry file="file://$PROJECT_DIR$/GameRules/src/tp1/gameoflife/defaultmodes/Seeds.scala" />
+    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/Menu.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="53" column="30" lean-forward="false" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="2935" column="32" lean-forward="true" selection-start-line="2935" selection-start-column="32" selection-end-line="2935" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/versions.sbt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/versions.sbt">
+    <entry file="file://$PROJECT_DIR$/project/build.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/desktop/proguard-project.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-400">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/desktop/manifest/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/plugins.sbt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/GameButton.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="52" column="24" lean-forward="false" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/controller/GameInputHandler.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/controller/DependencyInjector.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="31" lean-forward="false" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/desktop/src/main/scala/tp1/gameoflife/main/Main.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding>
+            <marker date="1494960798830" expanded="true" signature="27:36" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/MenuButton.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="47" lean-forward="false" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/LiveCell.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+          <folding>
+            <marker date="1494960798140" expanded="true" signature="36:58" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/DemoScreen.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/GameScreen.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="37" lean-forward="false" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/controller/GameController.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="13" column="29" lean-forward="true" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/Cell.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/Statistics.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Medieval.scala" />
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/TestEnvironment.scala">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/HighLife.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="45" lean-forward="false" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
-            <element signature="e#37#75#0" expanded="true" />
+            <element signature="e#35#73#0" expanded="true" />
+            <element signature="e#2203#2419#0" expanded="false" />
+            <element signature="e#2423#2641#0" expanded="false" />
+            <element signature="e#2645#2813#0" expanded="false" />
+            <element signature="e#2929#3006#0" expanded="false" />
+            <element signature="e#3009#3090#0" expanded="false" />
+            <element signature="e#3093#3148#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/GeometryWars.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="e#37#75#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Replicator.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="15" column="46" lean-forward="true" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
-          <folding>
-            <element signature="e#37#75#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Classic.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Frogs.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" column="2" lean-forward="false" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/ExplosiveFrogs.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="2" lean-forward="false" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/StarWars.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="18" column="47" lean-forward="true" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Gliders.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/ImmigrantLife.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/OnTheEdge.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="16" column="46" lean-forward="true" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/WireWorld.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="23" column="2" lean-forward="true" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/WalledCities.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="e#37#75#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Fireworks.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="e#37#75#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Maze.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="47" lean-forward="true" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
-          <folding>
-            <element signature="e#37#75#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/desktop/src/main/scala/tp1/gameoflife/main/Main.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="21" column="19" lean-forward="false" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/GameEngine.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="50" lean-forward="false" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/Table.scala">
+    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/GameView.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/defaultmodes/Disco.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-          <folding />
+          <caret line="35" column="46" lean-forward="false" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
+          <folding>
+            <element signature="e#29#56#0" expanded="true" />
+            <element signature="e#3457#3751#0" expanded="false" />
+            <element signature="e#3755#3937#0" expanded="false" />
+            <element signature="e#3940#4012#0" expanded="false" />
+            <element signature="e#4016#4194#0" expanded="false" />
+            <element signature="e#4197#4381#0" expanded="false" />
+            <element signature="e#4384#4438#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1331,11 +1625,17 @@
     <states>
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
-          <artifact-editor />
+          <artifact-editor>
+            <show-content>
+              <type id="artifact" />
+            </show-content>
+          </artifact-editor>
+          <last-edited>all-platforms:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -1384,6 +1684,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

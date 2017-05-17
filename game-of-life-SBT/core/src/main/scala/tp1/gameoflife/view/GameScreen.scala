@@ -7,7 +7,7 @@ import com.badlogic.gdx.graphics.{GL20, OrthographicCamera}
 import com.badlogic.gdx.graphics.g2d.{BitmapFont, SpriteBatch}
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType
-import com.badlogic.gdx.math.{Vector2, Vector3}
+import com.badlogic.gdx.math.{Vector2}
 import tp1.gameoflife.controller.GameController
 
 class GameScreen extends Screen {
@@ -23,9 +23,6 @@ class GameScreen extends Screen {
   shapeRenderer.setProjectionMatrix(camera.combined)
   private val fontBatch = new SpriteBatch
   private val font = new BitmapFont()
-
-  //Pra coordenar os cliques
-  Gdx.input.setInputProcessor(new GameInputHandler)
 
   private def drawMenu(): Unit ={
     shapeRenderer.begin(ShapeType.Filled)

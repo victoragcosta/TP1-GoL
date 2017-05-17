@@ -26,7 +26,7 @@ class PlayButton(
 
   override def widthImage: Int = if(paused) 12 else 9
 
-  def changeState(): Unit = paused = !paused; print("oi")
+  def changeState(): Unit = paused = !paused
 
   override def drawName(font: BitmapFont, fontBatch: SpriteBatch): Unit = {} //desabilito desenhar a fonte
 

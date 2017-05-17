@@ -1,4 +1,4 @@
-[info] Updating {file:/C:/Users/hugon/IdeaProjects/GoL_TP1/TP1-GoL/gol-Template_method/project/}gol-template_method-build...
+[info] Updating {file:/C:/Users/victo/Desktop/Trabsons/TP1-GoL/gol-Template_Method/project/}gol-template_method-build...
 [debug] :: resolving dependencies :: default#gol-template_method-build;0.1-SNAPSHOT
 [debug] 	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool]
 [debug] 	validate = true
@@ -6009,19 +6009,19 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#template-resolver;0.1!template-resolver.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#jline;2.10.6!jline.jar
 [debug] 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar
-[debug] :: resolution report :: resolve 2701ms :: artifacts dl 56ms
-[debug] 	report for default#gol-template_method-build;0.1-SNAPSHOT compile produced in C:\Users\hugon\IdeaProjects\GoL_TP1\TP1-GoL\gol-Template_method\project\target\resolution-cache\reports\default-gol-template_method-build-compile.xml
-[debug] 	report for default#gol-template_method-build;0.1-SNAPSHOT runtime produced in C:\Users\hugon\IdeaProjects\GoL_TP1\TP1-GoL\gol-Template_method\project\target\resolution-cache\reports\default-gol-template_method-build-runtime.xml
-[debug] 	report for default#gol-template_method-build;0.1-SNAPSHOT test produced in C:\Users\hugon\IdeaProjects\GoL_TP1\TP1-GoL\gol-Template_method\project\target\resolution-cache\reports\default-gol-template_method-build-test.xml
-[debug] 	report for default#gol-template_method-build;0.1-SNAPSHOT provided produced in C:\Users\hugon\IdeaProjects\GoL_TP1\TP1-GoL\gol-Template_method\project\target\resolution-cache\reports\default-gol-template_method-build-provided.xml
-[debug] 	report for default#gol-template_method-build;0.1-SNAPSHOT optional produced in C:\Users\hugon\IdeaProjects\GoL_TP1\TP1-GoL\gol-Template_method\project\target\resolution-cache\reports\default-gol-template_method-build-optional.xml
-[debug] 	report for default#gol-template_method-build;0.1-SNAPSHOT compile-internal produced in C:\Users\hugon\IdeaProjects\GoL_TP1\TP1-GoL\gol-Template_method\project\target\resolution-cache\reports\default-gol-template_method-build-compile-internal.xml
-[debug] 	report for default#gol-template_method-build;0.1-SNAPSHOT runtime-internal produced in C:\Users\hugon\IdeaProjects\GoL_TP1\TP1-GoL\gol-Template_method\project\target\resolution-cache\reports\default-gol-template_method-build-runtime-internal.xml
-[debug] 	report for default#gol-template_method-build;0.1-SNAPSHOT test-internal produced in C:\Users\hugon\IdeaProjects\GoL_TP1\TP1-GoL\gol-Template_method\project\target\resolution-cache\reports\default-gol-template_method-build-test-internal.xml
-[debug] 	report for default#gol-template_method-build;0.1-SNAPSHOT plugin produced in C:\Users\hugon\IdeaProjects\GoL_TP1\TP1-GoL\gol-Template_method\project\target\resolution-cache\reports\default-gol-template_method-build-plugin.xml
-[debug] 	report for default#gol-template_method-build;0.1-SNAPSHOT sources produced in C:\Users\hugon\IdeaProjects\GoL_TP1\TP1-GoL\gol-Template_method\project\target\resolution-cache\reports\default-gol-template_method-build-sources.xml
-[debug] 	report for default#gol-template_method-build;0.1-SNAPSHOT docs produced in C:\Users\hugon\IdeaProjects\GoL_TP1\TP1-GoL\gol-Template_method\project\target\resolution-cache\reports\default-gol-template_method-build-docs.xml
-[debug] 	report for default#gol-template_method-build;0.1-SNAPSHOT pom produced in C:\Users\hugon\IdeaProjects\GoL_TP1\TP1-GoL\gol-Template_method\project\target\resolution-cache\reports\default-gol-template_method-build-pom.xml
-[debug] 	report for default#gol-template_method-build;0.1-SNAPSHOT scala-tool produced in C:\Users\hugon\IdeaProjects\GoL_TP1\TP1-GoL\gol-Template_method\project\target\resolution-cache\reports\default-gol-template_method-build-scala-tool.xml
-[debug] 	resolve done (2701ms resolve - 56ms download)
+[debug] :: resolution report :: resolve 3860ms :: artifacts dl 359ms
+[debug] 	report for default#gol-template_method-build;0.1-SNAPSHOT compile produced in C:\Users\victo\Desktop\Trabsons\TP1-GoL\gol-Template_Method\project\target\resolution-cache\reports\default-gol-template_method-build-compile.xml
+[debug] 	report for default#gol-template_method-build;0.1-SNAPSHOT runtime produced in C:\Users\victo\Desktop\Trabsons\TP1-GoL\gol-Template_Method\project\target\resolution-cache\reports\default-gol-template_method-build-runtime.xml
+[debug] 	report for default#gol-template_method-build;0.1-SNAPSHOT test produced in C:\Users\victo\Desktop\Trabsons\TP1-GoL\gol-Template_Method\project\target\resolution-cache\reports\default-gol-template_method-build-test.xml
+[debug] 	report for default#gol-template_method-build;0.1-SNAPSHOT provided produced in C:\Users\victo\Desktop\Trabsons\TP1-GoL\gol-Template_Method\project\target\resolution-cache\reports\default-gol-template_method-build-provided.xml
+[debug] 	report for default#gol-template_method-build;0.1-SNAPSHOT optional produced in C:\Users\victo\Desktop\Trabsons\TP1-GoL\gol-Template_Method\project\target\resolution-cache\reports\default-gol-template_method-build-optional.xml
+[debug] 	report for default#gol-template_method-build;0.1-SNAPSHOT compile-internal produced in C:\Users\victo\Desktop\Trabsons\TP1-GoL\gol-Template_Method\project\target\resolution-cache\reports\default-gol-template_method-build-compile-internal.xml
+[debug] 	report for default#gol-template_method-build;0.1-SNAPSHOT runtime-internal produced in C:\Users\victo\Desktop\Trabsons\TP1-GoL\gol-Template_Method\project\target\resolution-cache\reports\default-gol-template_method-build-runtime-internal.xml
+[debug] 	report for default#gol-template_method-build;0.1-SNAPSHOT test-internal produced in C:\Users\victo\Desktop\Trabsons\TP1-GoL\gol-Template_Method\project\target\resolution-cache\reports\default-gol-template_method-build-test-internal.xml
+[debug] 	report for default#gol-template_method-build;0.1-SNAPSHOT plugin produced in C:\Users\victo\Desktop\Trabsons\TP1-GoL\gol-Template_Method\project\target\resolution-cache\reports\default-gol-template_method-build-plugin.xml
+[debug] 	report for default#gol-template_method-build;0.1-SNAPSHOT sources produced in C:\Users\victo\Desktop\Trabsons\TP1-GoL\gol-Template_Method\project\target\resolution-cache\reports\default-gol-template_method-build-sources.xml
+[debug] 	report for default#gol-template_method-build;0.1-SNAPSHOT docs produced in C:\Users\victo\Desktop\Trabsons\TP1-GoL\gol-Template_Method\project\target\resolution-cache\reports\default-gol-template_method-build-docs.xml
+[debug] 	report for default#gol-template_method-build;0.1-SNAPSHOT pom produced in C:\Users\victo\Desktop\Trabsons\TP1-GoL\gol-Template_Method\project\target\resolution-cache\reports\default-gol-template_method-build-pom.xml
+[debug] 	report for default#gol-template_method-build;0.1-SNAPSHOT scala-tool produced in C:\Users\victo\Desktop\Trabsons\TP1-GoL\gol-Template_Method\project\target\resolution-cache\reports\default-gol-template_method-build-scala-tool.xml
+[debug] 	resolve done (3860ms resolve - 359ms download)
 [info] Done updating.

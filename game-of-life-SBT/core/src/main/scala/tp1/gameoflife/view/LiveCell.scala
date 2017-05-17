@@ -1,9 +1,9 @@
 package tp1.gameoflife.view
 
-import com.badlogic.gdx.math.Vector3
+import com.badlogic.gdx.math.{Vector2}
 import tp1.gameoflife.gameengine.Cell
 
-class LiveCell(pos: Vector3, cell: Cell) {
+class LiveCell(pos: Vector2, cell: Cell) {
   def x = pos.x
   def y = pos.y
   def alive = cell.alive
