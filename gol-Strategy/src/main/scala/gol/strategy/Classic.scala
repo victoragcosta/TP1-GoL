@@ -1,6 +1,7 @@
 package gol.strategy
 
 import gol.strategy.GameEngine.numberOfNeighborhoodAliveCells
+import gol.template.DerivationStrategy
 
 class Classic extends DerivationStrategy{
 

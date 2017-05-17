@@ -1,5 +1,4 @@
-package gol.strategy
-
+package gol.template
 
 trait DerivationStrategy {
   def shouldKeepAlive(i: Int, j: Int): Boolean

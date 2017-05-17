@@ -112,7 +112,7 @@ object GameView{
     for(h <- 0 until h){
       for(w <- 0 until w){
         val cell = cells.elements(h)(w)
-        if(cell.alive)
+        if(cell.alive || (cell.afterLife && cell.afterLifeCount > 0))
           vivas = new LiveCell(new Vector2(w*squareSide,h*squareSide), cell)::vivas
       }
     }

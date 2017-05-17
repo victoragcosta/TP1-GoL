@@ -14,7 +14,7 @@ abstract class GameEngine {
   val height : Int = Main.height
   val width : Int = Main.width
 
-  val cells = Array.ofDim[Cell](height, width)
+  var cells = Array.ofDim[Cell](height, width)
 
 
   for(i <- (0 until height)) {

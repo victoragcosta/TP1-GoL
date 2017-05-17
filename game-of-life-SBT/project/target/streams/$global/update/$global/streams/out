@@ -22,7 +22,7 @@
 [debug] == resolving dependencies for default#game-of-life-sbt-build;0.1-SNAPSHOT [provided]
 [debug] == resolving dependencies default#game-of-life-sbt-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->default(compile)]
 [info] Resolving org.scala-lang#scala-library;2.10.4 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@580dd12a
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@339e5392
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.4
 [debug] 	typesafe-ivy-releases: revision in cache: org.scala-lang#scala-library;2.10.4
 [debug] 	found org.scala-lang#scala-library;2.10.4 in sbt-chain
@@ -181,7 +181,7 @@
 [debug] 	public: downloading http://repo1.maven.org/maven2/jline/jline/2.11/jline-2.11.pom
 [debug] 	public: downloading http://repo1.maven.org/maven2/jline/jline/2.11/jline-2.11.pom.sha1
 [debug] sha1 OK for http://repo1.maven.org/maven2/jline/jline/2.11/jline-2.11.pom
-[debug] 	[SUCCESSFUL ] jline#jline;2.11!jline.pom(pom.original) (1080ms)
+[debug] 	[SUCCESSFUL ] jline#jline;2.11!jline.pom(pom.original) (981ms)
 [info] Resolving org.sonatype.oss#oss-parent;7 ...
 [debug] sbt-chain: Checking cache for: dependency: org.sonatype.oss#oss-parent;7 {}
 [debug] sbt-chain: module revision found in cache: org.sonatype.oss#oss-parent;7
@@ -365,7 +365,7 @@
 [debug] 	public: downloading http://repo1.maven.org/maven2/org/apache/ivy/ivy/2.3.0/ivy-2.3.0.pom
 [debug] 	public: downloading http://repo1.maven.org/maven2/org/apache/ivy/ivy/2.3.0/ivy-2.3.0.pom.sha1
 [debug] sha1 OK for http://repo1.maven.org/maven2/org/apache/ivy/ivy/2.3.0/ivy-2.3.0.pom
-[debug] 	[SUCCESSFUL ] org.apache.ivy#ivy;2.3.0!ivy.pom(pom.original) (694ms)
+[debug] 	[SUCCESSFUL ] org.apache.ivy#ivy;2.3.0!ivy.pom(pom.original) (711ms)
 [info] Resolving org.apache#apache;7 ...
 [debug] sbt-chain: Checking cache for: dependency: org.apache#apache;7 {}
 [debug] sbt-chain: module revision found in cache: org.apache#apache;7
@@ -1382,7 +1382,7 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.5!apply-macro.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#jline;2.10.4!jline.jar
 [debug] 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar
-[debug] :: resolution report :: resolve 8529ms :: artifacts dl 52ms
+[debug] :: resolution report :: resolve 14141ms :: artifacts dl 1039ms
 [debug] 	report for default#game-of-life-sbt-build;0.1-SNAPSHOT compile produced in C:\Users\victo\Desktop\Trabsons\TP1-GoL\game-of-life-SBT\project\target\resolution-cache\reports\default-game-of-life-sbt-build-compile.xml
 [debug] 	report for default#game-of-life-sbt-build;0.1-SNAPSHOT runtime produced in C:\Users\victo\Desktop\Trabsons\TP1-GoL\game-of-life-SBT\project\target\resolution-cache\reports\default-game-of-life-sbt-build-runtime.xml
 [debug] 	report for default#game-of-life-sbt-build;0.1-SNAPSHOT test produced in C:\Users\victo\Desktop\Trabsons\TP1-GoL\game-of-life-SBT\project\target\resolution-cache\reports\default-game-of-life-sbt-build-test.xml
@@ -1396,5 +1396,5 @@
 [debug] 	report for default#game-of-life-sbt-build;0.1-SNAPSHOT docs produced in C:\Users\victo\Desktop\Trabsons\TP1-GoL\game-of-life-SBT\project\target\resolution-cache\reports\default-game-of-life-sbt-build-docs.xml
 [debug] 	report for default#game-of-life-sbt-build;0.1-SNAPSHOT pom produced in C:\Users\victo\Desktop\Trabsons\TP1-GoL\game-of-life-SBT\project\target\resolution-cache\reports\default-game-of-life-sbt-build-pom.xml
 [debug] 	report for default#game-of-life-sbt-build;0.1-SNAPSHOT scala-tool produced in C:\Users\victo\Desktop\Trabsons\TP1-GoL\game-of-life-SBT\project\target\resolution-cache\reports\default-game-of-life-sbt-build-scala-tool.xml
-[debug] 	resolve done (8529ms resolve - 52ms download)
+[debug] 	resolve done (14141ms resolve - 1039ms download)
 [info] Done updating.

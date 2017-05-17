@@ -10,13 +10,10 @@ import scala.collection.mutable.MutableList
 
 object GameController {
 
-  private final val CLASSIC = 0
-  private final val HIGHLIFE = 1
-
   private var allModes : MutableList[GameEngine] = new MutableList[GameEngine]
   loadRules(allModes)
 
-  var currentMode : Int = CLASSIC
+  var currentMode : Int = 0
 
   def loadRules (all_modes: MutableList[GameEngine]) : Unit = {
 
@@ -30,11 +27,13 @@ object GameController {
   }
 
   def changeRules() : Unit = {
-    if(currentMode != HIGHLIFE) {
+    val lastMode = currentMode
+    if(currentMode < allModes.length-1) {
       currentMode += 1
     }
     else
-      currentMode = CLASSIC
+      currentMode = 0
+    getRules(currentMode).cells = getRules(lastMode).cells
     print("New Mode: "+getRules(currentMode).toString)
     GameView.update()
   }

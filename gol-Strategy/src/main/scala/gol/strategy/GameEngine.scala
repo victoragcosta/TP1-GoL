@@ -2,6 +2,7 @@ package gol.strategy
 
 import java.security.InvalidParameterException
 
+import gol.template.DerivationStrategy
 
 import scala.collection.mutable.MutableList
 import scala.collection.mutable.ListBuffer

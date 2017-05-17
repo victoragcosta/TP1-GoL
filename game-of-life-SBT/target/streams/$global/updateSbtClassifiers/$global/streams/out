@@ -16,7 +16,6 @@
 [debug] == resolving dependencies all-platforms#all-platforms$sbt_2.11;0.1->org.scala-sbt#sbt;0.13.5 [default->default(compile)]
 [info] Resolving org.scala-sbt#sbt;0.13.5 ...
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#sbt;0.13.5 {default=[default(compile)]}
-[debug] no default cache defined: set to C:\Users\victo\.ivy2\cache
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#sbt;0.13.5
 [debug] 	typesafe-ivy-releases: revision in cache: org.scala-sbt#sbt;0.13.5
 [debug] 	found org.scala-sbt#sbt;0.13.5 in sbt-chain
@@ -171,7 +170,7 @@
 [debug] 	public: downloading http://repo1.maven.org/maven2/jline/jline/2.11/jline-2.11.pom
 [debug] 	public: downloading http://repo1.maven.org/maven2/jline/jline/2.11/jline-2.11.pom.sha1
 [debug] sha1 OK for http://repo1.maven.org/maven2/jline/jline/2.11/jline-2.11.pom
-[debug] 	[SUCCESSFUL ] jline#jline;2.11!jline.pom(pom.original) (505ms)
+[debug] 	[SUCCESSFUL ] jline#jline;2.11!jline.pom(pom.original) (766ms)
 [info] Resolving org.sonatype.oss#oss-parent;7 ...
 [debug] sbt-chain: Checking cache for: dependency: org.sonatype.oss#oss-parent;7 {}
 [debug] sbt-chain: module revision found in cache: org.sonatype.oss#oss-parent;7
@@ -355,7 +354,7 @@
 [debug] 	public: downloading http://repo1.maven.org/maven2/org/apache/ivy/ivy/2.3.0/ivy-2.3.0.pom
 [debug] 	public: downloading http://repo1.maven.org/maven2/org/apache/ivy/ivy/2.3.0/ivy-2.3.0.pom.sha1
 [debug] sha1 OK for http://repo1.maven.org/maven2/org/apache/ivy/ivy/2.3.0/ivy-2.3.0.pom
-[debug] 	[SUCCESSFUL ] org.apache.ivy#ivy;2.3.0!ivy.pom(pom.original) (477ms)
+[debug] 	[SUCCESSFUL ] org.apache.ivy#ivy;2.3.0!ivy.pom(pom.original) (688ms)
 [info] Resolving org.apache#apache;7 ...
 [debug] sbt-chain: Checking cache for: dependency: org.apache#apache;7 {}
 [debug] sbt-chain: module revision found in cache: org.apache#apache;7
@@ -649,9 +648,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-agent;0.13.5!test-agent.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.5!apply-macro.jar
-[debug] :: resolution report :: resolve 4451ms :: artifacts dl 17ms
+[debug] :: resolution report :: resolve 4772ms :: artifacts dl 44ms
 [debug] 	report for all-platforms#all-platforms$sbt_2.11;0.1 default produced in C:\Users\victo\Desktop\Trabsons\TP1-GoL\game-of-life-SBT\target\resolution-cache\reports\all-platforms-all-platforms$sbt_2.11-default.xml
-[debug] 	resolve done (4451ms resolve - 17ms download)
+[debug] 	resolve done (4772ms resolve - 44ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: all-platforms#all-platforms$sources_2.11;0.1
 [debug] 	confs: [default]
@@ -993,6 +992,6 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_8_2;0.13.5!precompiled-2_8_2.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_2;0.13.5!precompiled-2_9_2.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_3;0.13.5!precompiled-2_9_3.jar(src)
-[debug] :: resolution report :: resolve 123ms :: artifacts dl 28ms
+[debug] :: resolution report :: resolve 146ms :: artifacts dl 22ms
 [debug] 	report for all-platforms#all-platforms$sources_2.11;0.1 default produced in C:\Users\victo\Desktop\Trabsons\TP1-GoL\game-of-life-SBT\target\resolution-cache\reports\all-platforms-all-platforms$sources_2.11-default.xml
-[debug] 	resolve done (123ms resolve - 28ms download)
+[debug] 	resolve done (146ms resolve - 22ms download)

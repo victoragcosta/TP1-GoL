@@ -4,7 +4,7 @@
 		module="desktop$sources_2.11"
 		revision="0.1"
 		status="integration"
-		publication="20170516155411"
+		publication="20170517103944"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>
