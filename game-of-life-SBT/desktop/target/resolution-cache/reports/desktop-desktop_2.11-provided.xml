@@ -7,7 +7,7 @@
 		revision="0.1"
 		conf="provided"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20170516111119"/>
+		date="20170516155404"/>
 	<dependencies>
 		<module organisation="net.sf.proguard" name="proguard-base">
 			<revision name="4.11" status="release" pubdate="20131226124142" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="0">

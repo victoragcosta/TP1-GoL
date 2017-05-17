@@ -42,7 +42,6 @@
 [debug] == resolving dependencies org.scala-sbt#main;0.13.5->org.scala-sbt#actions;0.13.5 [compile->default(compile)]
 [info] Resolving org.scala-sbt#actions;0.13.5 ...
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#actions;0.13.5 {compile=[default(compile)]}
-[debug] no default cache defined: set to C:\Users\victo\.ivy2\cache
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#actions;0.13.5
 [debug] 	typesafe-ivy-releases: revision in cache: org.scala-sbt#actions;0.13.5
 [debug] 	found org.scala-sbt#actions;0.13.5 in sbt-chain
@@ -171,7 +170,7 @@
 [debug] 	public: downloading http://repo1.maven.org/maven2/jline/jline/2.11/jline-2.11.pom
 [debug] 	public: downloading http://repo1.maven.org/maven2/jline/jline/2.11/jline-2.11.pom.sha1
 [debug] sha1 OK for http://repo1.maven.org/maven2/jline/jline/2.11/jline-2.11.pom
-[debug] 	[SUCCESSFUL ] jline#jline;2.11!jline.pom(pom.original) (873ms)
+[debug] 	[SUCCESSFUL ] jline#jline;2.11!jline.pom(pom.original) (510ms)
 [info] Resolving org.sonatype.oss#oss-parent;7 ...
 [debug] sbt-chain: Checking cache for: dependency: org.sonatype.oss#oss-parent;7 {}
 [debug] sbt-chain: module revision found in cache: org.sonatype.oss#oss-parent;7
@@ -355,7 +354,7 @@
 [debug] 	public: downloading http://repo1.maven.org/maven2/org/apache/ivy/ivy/2.3.0/ivy-2.3.0.pom
 [debug] 	public: downloading http://repo1.maven.org/maven2/org/apache/ivy/ivy/2.3.0/ivy-2.3.0.pom.sha1
 [debug] sha1 OK for http://repo1.maven.org/maven2/org/apache/ivy/ivy/2.3.0/ivy-2.3.0.pom
-[debug] 	[SUCCESSFUL ] org.apache.ivy#ivy;2.3.0!ivy.pom(pom.original) (591ms)
+[debug] 	[SUCCESSFUL ] org.apache.ivy#ivy;2.3.0!ivy.pom(pom.original) (476ms)
 [info] Resolving org.apache#apache;7 ...
 [debug] sbt-chain: Checking cache for: dependency: org.apache#apache;7 {}
 [debug] sbt-chain: module revision found in cache: org.apache#apache;7
@@ -649,9 +648,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-agent;0.13.5!test-agent.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.5!apply-macro.jar
-[debug] :: resolution report :: resolve 5691ms :: artifacts dl 28ms
+[debug] :: resolution report :: resolve 3394ms :: artifacts dl 23ms
 [debug] 	report for core#core$sbt_2.11;0.1 default produced in C:\Users\victo\Desktop\Trabsons\TP1-GoL\game-of-life-SBT\core\target\resolution-cache\reports\core-core$sbt_2.11-default.xml
-[debug] 	resolve done (5691ms resolve - 28ms download)
+[debug] 	resolve done (3394ms resolve - 23ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: core#core$sources_2.11;0.1
 [debug] 	confs: [default]
@@ -879,7 +878,6 @@
 [debug] 	typesafe-ivy-releases: revision in cache: org.scala-sbt#tracking;0.13.5
 [debug] 	found org.scala-sbt#tracking;0.13.5 in sbt-chain
 [debug] == resolving dependencies core#core$sources_2.11;0.1->org.scala-sbt#cache;0.13.5 [default->default(compile)]
-[debug] no default cache defined: set to C:\Users\victo\.ivy2\cache
 [info] Resolving org.scala-sbt#cache;0.13.5 ...
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#cache;0.13.5 {default=[default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#cache;0.13.5
@@ -994,6 +992,6 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_8_2;0.13.5!precompiled-2_8_2.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_2;0.13.5!precompiled-2_9_2.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_3;0.13.5!precompiled-2_9_3.jar(src)
-[debug] :: resolution report :: resolve 245ms :: artifacts dl 33ms
+[debug] :: resolution report :: resolve 91ms :: artifacts dl 15ms
 [debug] 	report for core#core$sources_2.11;0.1 default produced in C:\Users\victo\Desktop\Trabsons\TP1-GoL\game-of-life-SBT\core\target\resolution-cache\reports\core-core$sources_2.11-default.xml
-[debug] 	resolve done (245ms resolve - 33ms download)
+[debug] 	resolve done (91ms resolve - 15ms download)

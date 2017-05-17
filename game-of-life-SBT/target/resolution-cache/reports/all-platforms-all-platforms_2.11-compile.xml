@@ -7,7 +7,7 @@
 		revision="0.1"
 		conf="compile"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20170516111109"/>
+		date="20170516155359"/>
 	<dependencies>
 		<module organisation="com.badlogicgames.gdx" name="gdx">
 			<revision name="1.4.1" status="release" pubdate="20141010135115" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="1">
