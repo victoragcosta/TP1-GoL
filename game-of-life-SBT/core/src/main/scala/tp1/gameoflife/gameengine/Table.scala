@@ -4,7 +4,9 @@ import com.badlogic.gdx.graphics.Color
 
 class Table (height: Int, width: Int) {
 
-  var elements:Array[Array[Cell]] = Array.ofDim[Cell](height, width)
+  var elements: Array[Array[Cell]] = Array.ofDim[Cell](height, width)
+
+  val darkGrey: Color = new Color(0.2f, 0.2f, 0.2f, 1)
 
   def clean(): Unit = {
 
@@ -20,7 +22,7 @@ class Table (height: Int, width: Int) {
 
     for (h <- 0 until height) {
       for (w <- 0 until width) {
-        this.elements(h)(w) = new Cell(false, new Color(0.2f, 0.2f, 0.2f, 1))
+        this.elements(h)(w) = new Cell(false, darkGrey)
       }
     }
 

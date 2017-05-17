@@ -19,7 +19,11 @@ class WireWorld (override val height: Int, override val width: Int) extends Game
     "Electron tails (Red) always become Conduits (Yellow). " +
     "Dead cells always remain dead."
 
-  override val defaultColor = new Color(1, 1, 0, 0.9f)
+  val blue: Color = new Color(0, 0, 1, 0.9f)
+  val red: Color = new Color(1, 0, 0, 0.9f)
+  val yellow: Color = new Color(1, 1, 0, 0.9f)
+
+  override val defaultColor: Color = yellow
 
   override def shouldKeepAlive(cellHeight: Int, cellWidth: Int): Boolean = true
 
@@ -29,14 +33,14 @@ class WireWorld (override val height: Int, override val width: Int) extends Game
 
     if (this.currentGeneration.elements(cellHeight)(cellWidth).alive) {
 
-      if (this.currentGeneration.elements(cellHeight)(cellWidth).color == defaultColor)
-        this.currentGeneration.elements(cellHeight)(cellWidth).color = new Color(0, 0, 1, 0.9f)
+      if (this.currentGeneration.elements(cellHeight)(cellWidth).color == yellow)
+        this.currentGeneration.elements(cellHeight)(cellWidth).color = blue
 
-      else if (this.currentGeneration.elements(cellHeight)(cellWidth).color == new Color(0, 0, 1, 0.9f))
-        this.currentGeneration.elements(cellHeight)(cellWidth).color = new Color(1, 0, 0, 0.9f)
+      else if (this.currentGeneration.elements(cellHeight)(cellWidth).color == blue)
+        this.currentGeneration.elements(cellHeight)(cellWidth).color = red
 
       else
-        this.currentGeneration.elements(cellHeight)(cellWidth).color = defaultColor
+        this.currentGeneration.elements(cellHeight)(cellWidth).color = yellow
 
     }
 
@@ -58,28 +62,28 @@ class WireWorld (override val height: Int, override val width: Int) extends Game
 
     if (this.currentGeneration.elements(cellHeight)(cellWidth).alive) {
 
-      if (this.currentGeneration.elements(cellHeight)(cellWidth).color == new Color(1, 1, 0, 0.9f)) {
+      if (this.currentGeneration.elements(cellHeight)(cellWidth).color == yellow) {
 
         val chargeCount = surroundingCharges(cellHeight, cellWidth)
 
         if (chargeCount == 1 || chargeCount == 2)
-          new Color(0, 0, 1, 0.9f)
+          blue
 
         else
-          new Color(1, 1, 0, 0.9f)
+          yellow
 
       }
 
-      else if (this.currentGeneration.elements(cellHeight)(cellWidth).color == new Color(0, 0, 1, 0.9f))
-        new Color(1, 0, 0, 0.9f)
+      else if (this.currentGeneration.elements(cellHeight)(cellWidth).color == blue)
+        red
 
       else
-        defaultColor
+        yellow
 
     }
 
     else
-      new Color(0.2f, 0.2f, 0.2f, 1)
+      defaultDeathColor
 
   }
 
@@ -90,8 +94,7 @@ class WireWorld (override val height: Int, override val width: Int) extends Game
     for (i <- -1 to 1) {
       for (j <- -1 to 1) {
 
-        if (this.currentGeneration.elements(adjustHeight(cellHeight + i))(adjustWidth(cellWidth + j)).color ==
-          new Color(0, 0, 1, 0.9f))
+        if (this.currentGeneration.elements(adjustHeight(cellHeight + i))(adjustWidth(cellWidth + j)).color == blue)
           chargeCount += 1
 
       }

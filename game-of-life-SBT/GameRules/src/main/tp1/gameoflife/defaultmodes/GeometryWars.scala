@@ -11,7 +11,9 @@ class GeometryWars (override val height: Int, override val width: Int) extends G
     "A cell must be near 1, 2 or 5 cells to stay alive. " +
     "A dead cell revives if there are exactly 3 or 6 cells alive near it."
 
-  override val defaultColor = new Color(0.5f, 0.5f, 0.5f, 1)
+  val dodgerBlue: Color = new Color (0.1f, 0.55f, 1, 0.9f)
+
+  override val defaultColor: Color = dodgerBlue
 
   override def shouldKeepAlive(cellHeight: Int, cellWidth: Int): Boolean = {
 

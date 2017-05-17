@@ -11,7 +11,9 @@ class Fireworks (override val height: Int, override val width: Int) extends Game
     "A cell must be near 1 cell to stay alive. " +
     "A dead cell revives if there is exactly 1 cell alive near it."
 
-  override val defaultColor = new Color(0.5f, 0.5f, 0.5f, 1)
+  val darkOrange: Color = new Color(1, 0.55f, 0, 0.9f)
+
+  override val defaultColor: Color = darkOrange
 
   override def shouldKeepAlive(cellHeight: Int, cellWidth: Int): Boolean = {
 

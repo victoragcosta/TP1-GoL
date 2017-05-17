@@ -6,11 +6,9 @@ object Statistics {
   private var numberOfDeaths = 0
 
   def showRevives(): Int = numberOfRevives
-
   def addRevive(): Unit = numberOfRevives += 1
 
   def showDeaths(): Int = numberOfDeaths
-
   def addDeath(): Unit = numberOfDeaths += 1
 
   def displayStatistics(): Unit = {
