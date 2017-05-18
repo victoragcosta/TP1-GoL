@@ -126,8 +126,11 @@ abstract class GameEngine {
 
           else {
 
-            if (this.currentGeneration.elements(h)(w).afterLife)
+            if (this.currentGeneration.elements(h)(w).afterLife){
+              newGeneration.elements(h)(w).afterLife = true
+              newGeneration.elements(h)(w).afterLifeCount = this.currentGeneration.elements(h)(w).afterLifeCount
               newGeneration.elements(h)(w).color = defaultAfterLifeColor
+            }
 
             else
               newGeneration.elements(h)(w).color = defaultDeathColor

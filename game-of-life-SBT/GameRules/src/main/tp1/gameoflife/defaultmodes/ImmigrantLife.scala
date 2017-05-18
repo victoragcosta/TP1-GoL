@@ -53,16 +53,19 @@ class ImmigrantLife (override val height: Int, override val width: Int) extends 
 
     val tieBreaker = Random.nextBoolean()
 
-    for (i <- -1 to 1) {
-      for (j <- -1 to 1) {
+    var i = -1
+    while(i <= 1) {
+      var j = -1
+      while(j <= 1) {
 
         if(this.currentGeneration.elements(adjustHeight(cellHeight + i))(adjustWidth(cellWidth + j)).color == red)
           redCount += 1
 
         if(this.currentGeneration.elements(adjustHeight(cellHeight + i))(adjustWidth(cellWidth + j)).color == blue)
           blueCount += 1
-
+        j+=1
       }
+      i+=1
     }
 
     if (redCount > blueCount)

@@ -23,6 +23,8 @@ object DependencyInjector {
     list
   }
 
+  var classes : MutableList[GameEngine] = loadRules(DependencyInjector.classNames)
+
   def getRule(pos: Int) : GameEngine = {
     try{
       classes(pos)
@@ -31,7 +33,5 @@ object DependencyInjector {
       case e: Exception => println(e.getMessage);null
     }
   }
-
-  var classes : MutableList[GameEngine] = loadRules(DependencyInjector.classNames)
 
 }

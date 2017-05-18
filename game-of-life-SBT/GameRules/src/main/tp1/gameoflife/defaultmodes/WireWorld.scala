@@ -1,11 +1,7 @@
 package tp1.gameoflife.defaultmodes
 
-import java.util.Calendar
-
 import com.badlogic.gdx.graphics.Color
 import tp1.gameoflife.gameengine.{GameEngine, Table}
-
-import scala.util.Random
 
 class WireWorld (override val height: Int, override val width: Int) extends GameEngine {
 
@@ -19,9 +15,9 @@ class WireWorld (override val height: Int, override val width: Int) extends Game
     "Electron tails (Red) always become Conduits (Yellow). " +
     "Dead cells always remain dead."
 
-  val blue: Color = new Color(0, 0, 1, 0.9f)
-  val red: Color = new Color(1, 0, 0, 0.9f)
-  val yellow: Color = new Color(1, 1, 0, 0.9f)
+  val blue: Color = new Color(0, 0, 1, 1)
+  val red: Color = new Color(1, 0, 0, 1)
+  val yellow: Color = new Color(1, 1, 0, 1)
 
   override val defaultColor: Color = yellow
 
@@ -47,13 +43,16 @@ class WireWorld (override val height: Int, override val width: Int) extends Game
   }
 
   override def updateColors(board: Table): Unit = {
-
-    for (h <- 0 until board.getHeight) {
-      for (w <- 0 until board.getWidth) {
+    var h = 0
+    while(h < board.getHeight){
+      var w = 0
+      while(w < board.getWidth){
 
         board.elements(h)(w).color = circuitUpdate(h, w)
-
+        w+=1
       }
+
+      h+=1
     }
 
   }
@@ -61,14 +60,12 @@ class WireWorld (override val height: Int, override val width: Int) extends Game
   private def circuitUpdate (cellHeight: Int, cellWidth: Int): Color = {
 
     if (this.currentGeneration.elements(cellHeight)(cellWidth).alive) {
-
       if (this.currentGeneration.elements(cellHeight)(cellWidth).color == yellow) {
 
         val chargeCount = surroundingCharges(cellHeight, cellWidth)
 
         if (chargeCount == 1 || chargeCount == 2)
           blue
-
         else
           yellow
 
@@ -91,13 +88,15 @@ class WireWorld (override val height: Int, override val width: Int) extends Game
 
     var chargeCount = 0
 
-    for (i <- -1 to 1) {
-      for (j <- -1 to 1) {
-
+    var i = -1
+    while(i <= 1){
+      var j = -1
+      while(j <= 1){
         if (this.currentGeneration.elements(adjustHeight(cellHeight + i))(adjustWidth(cellWidth + j)).color == blue)
           chargeCount += 1
-
+        j+=1
       }
+      i+=1
     }
 
     chargeCount
