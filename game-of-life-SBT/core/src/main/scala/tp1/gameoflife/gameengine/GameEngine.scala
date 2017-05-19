@@ -4,30 +4,42 @@ import com.badlogic.gdx.graphics.Color
 
 abstract class GameEngine {
 
-  /*
-
-    Identificação dos modos.
-
-      Os itens abaixo estão relacionadas à identificação dos diferentes modo que herdam de GameEngine.
-
-      (Função) toString: Permite que a impressão do modo seja o nome do modo.
-      (Valor) description: Descrição do modo.
-
-  */
+  // Identificação dos modos
 
   def toString: String
   val description: String
 
+  //==//
+
+  // Valores das dimensões do tabuleiro.
+
   val height: Int
   val width: Int
+
+  //==//
+
+  // Valores do sistema de undo/redo e do número de gerações de afterLife.
+
   val mementoNumber: Int = 10
   val defaultAfterLifeCount: Int = 0
+
+  //==//
+
+  // Declaração e inicialização da geração atual.
 
   var currentGeneration = new Table(height, width)
   this.currentGeneration.create()
 
+  //==//
+
+  // Armazenamento de gerações para o sistema undo/redo.
+
   private var pastGenerations: List[Table] = List()
   private var redoGenerations: List[Table] = List()
+
+  //==//
+
+  // Definição de cores padrão.
 
   val darkGrey: Color = new Color(0.2f, 0.2f, 0.2f, 1)
   val grey: Color = new Color(0.5f, 0.5f, 0.5f, 1)
@@ -37,85 +49,24 @@ abstract class GameEngine {
   val defaultDeathColor: Color = darkGrey
   val defaultAfterLifeColor: Color = silver
 
+  //==//
+
+  // Métodos a serem sobrescritos pelas subclasses responsáveis pelas regras do modo de jogo.
+
   def shouldRevive(cellHeight: Int, cellWidth: Int): Boolean
   def shouldKeepAlive(cellHeight: Int, cellWidth: Int): Boolean
+
+  //==//
+
+  // Métodos relacionados a cor. Podem ou não ser sobrescritos pelas subclasses.
+
   def determineCellColor(cellHeight: Int, cellWidth: Int): Color = this.defaultColor
   def switchColor (cellHeight: Int, cellWidth: Int): Unit = {}
   def updateColors (generation: Table): Unit = {}
 
-  def adjustHeight (value: Int): Int = {
+  //==//
 
-    var newValue = value
-
-    while (newValue < 0)
-      newValue += this.height
-
-    while (newValue >= this.height)
-      newValue -= this.height
-
-    newValue
-
-  }
-
-  def adjustWidth (value: Int): Int = {
-
-    var newValue = value
-
-    while (newValue < 0)
-      newValue += this.width
-
-    while (newValue >= this.width)
-      newValue -= this.width
-
-    newValue
-
-  }
-
-  def cellsAlive(): Int = {
-
-    var cellsAlive = 0
-
-    for(h <- 0 until height) {
-      for(w <- 0 until width) {
-
-        if(this.currentGeneration.elements(h)(w).alive)
-          cellsAlive += 1
-
-      }
-    }
-
-    cellsAlive
-
-  }
-
-  def isCellAlive(cellHeight: Int, cellWidth: Int): Boolean = this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).alive
-
-  def killCell(cellHeight: Int, cellWidth: Int): Unit = {
-
-    this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).alive = false
-    this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).color = defaultDeathColor
-
-  }
-
-  def neighborsAlive(cellHeight: Int, cellWidth: Int): Int = {
-
-    var aliveCount = 0
-
-    for (i <- -1 to 1) {
-      for (j <- -1 to 1) {
-
-        if (this.currentGeneration.elements(adjustHeight(cellHeight + i))(adjustWidth(cellWidth + j)).alive)
-          aliveCount += 1
-
-      }
-    }
-
-    if (this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).alive)
-      aliveCount -= 1
-
-    aliveCount
-
-  }
+  // Método para passar o tabuleiro para a próxima geração.
 
   def nextGeneration(): Unit = {
 
@@ -177,6 +128,24 @@ abstract class GameEngine {
 
   }
 
+  //==//
+
+  // Métodos relacionados a mudar o estado de uma célula.
+
+  def reviveCell(cellHeight: Int, cellWidth: Int): Unit = {
+
+    this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).alive = true
+    this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).color = defaultColor
+
+  }
+
+  def killCell(cellHeight: Int, cellWidth: Int): Unit = {
+
+    this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).alive = false
+    this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).color = defaultDeathColor
+
+  }
+
   def putInAfterLife(generation: Table, cellHeight: Int, cellWidth: Int, count: Int = defaultAfterLifeCount): Unit = {
 
     generation.elements(cellHeight)(cellWidth).afterLife = true
@@ -185,42 +154,80 @@ abstract class GameEngine {
 
   }
 
-  def redo(): Unit = {
+  //==//
 
-    if (redoGenerations.isEmpty) {
+  // Métodos relacionados a verificar se uma ou mais células estão vivas, bem como seu número.
 
-      throw new RuntimeException
+  def isCellAlive(cellHeight: Int, cellWidth: Int): Boolean =
+    this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).alive
 
+  def neighborsAlive(cellHeight: Int, cellWidth: Int): Int = {
+
+    var aliveCount = 0
+
+    for (i <- -1 to 1) {
+      for (j <- -1 to 1) {
+
+        if (this.currentGeneration.elements(adjustHeight(cellHeight + i))(adjustWidth(cellWidth + j)).alive)
+          aliveCount += 1
+
+      }
     }
 
-    else {
+    if (this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).alive)
+      aliveCount -= 1
 
-      pastGenerations = this.currentGeneration :: pastGenerations
-      this.currentGeneration = redoGenerations.head
-      redoGenerations = redoGenerations.drop(1)
-
-    }
+    aliveCount
 
   }
 
-  def resetColors(generation: Table): Unit = {
+  def cellsAlive(): Int = {
+
+    var cellsAlive = 0
 
     for(h <- 0 until height) {
       for(w <- 0 until width) {
 
-        this.currentGeneration.elements(h)(w).color = defaultColor
+        if(this.currentGeneration.elements(h)(w).alive)
+          cellsAlive += 1
+
+      }
+    }
+
+    cellsAlive
+
+  }
+
+  //==//
+
+  // Método para gerenciar as gerações restantes de uma célula em afterlife.
+
+  def updateAfterLife (generation: Table): Unit = {
+
+    for (h <- 0 until generation.getHeight) {
+      for (w <- 0 until generation.getWidth) {
+
+        if(generation.elements(h)(w).afterLife) {
+
+          if (generation.elements(h)(w).afterLifeCount > 0)
+            generation.elements(h)(w).afterLifeCount -= 1
+
+          else {
+            generation.elements(h)(w).afterLife = false
+            generation.elements(h)(w).afterLifeCount = 0
+            generation.elements(h)(w).color = defaultDeathColor
+          }
+
+        }
 
       }
     }
 
   }
 
-  def reviveCell(cellHeight: Int, cellWidth: Int): Unit = {
+  //==//
 
-    this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).alive = true
-    this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).color = defaultColor
-
-  }
+  // Métodos relacionados ao sistema de undo/redo.
 
   private def storeGeneration(generation: Table): Unit = {
 
@@ -251,27 +258,72 @@ abstract class GameEngine {
 
   }
 
-  def updateAfterLife (generation: Table): Unit = {
+  def redo(): Unit = {
 
-    for (h <- 0 until generation.getHeight) {
-      for (w <- 0 until generation.getWidth) {
+    if (redoGenerations.isEmpty) {
 
-        if(generation.elements(h)(w).afterLife) {
+      throw new RuntimeException
 
-          if (generation.elements(h)(w).afterLifeCount > 0)
-            generation.elements(h)(w).afterLifeCount -= 1
+    }
 
-          else {
-            generation.elements(h)(w).afterLife = false
-            generation.elements(h)(w).afterLifeCount = 0
-            generation.elements(h)(w).color = defaultDeathColor
-          }
+    else {
 
-        }
+      pastGenerations = this.currentGeneration :: pastGenerations
+      this.currentGeneration = redoGenerations.head
+      redoGenerations = redoGenerations.drop(1)
+
+    }
+
+  }
+
+  //==//
+
+  // Método para resetar as cores do tabuleiro.
+
+  def resetColors(generation: Table): Unit = {
+
+    for(h <- 0 until height) {
+      for(w <- 0 until width) {
+
+        this.currentGeneration.elements(h)(w).color = defaultColor
 
       }
     }
 
   }
+
+  //==//
+
+  // Métodos para tornar o tabuleiro infinito.
+
+  def adjustHeight (value: Int): Int = {
+
+    var newValue = value
+
+    while (newValue < 0)
+      newValue += this.height
+
+    while (newValue >= this.height)
+      newValue -= this.height
+
+    newValue
+
+  }
+
+  def adjustWidth (value: Int): Int = {
+
+    var newValue = value
+
+    while (newValue < 0)
+      newValue += this.width
+
+    while (newValue >= this.width)
+      newValue -= this.width
+
+    newValue
+
+  }
+
+  //==//
 
 }
