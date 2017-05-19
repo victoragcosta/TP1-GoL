@@ -4,14 +4,24 @@ import com.badlogic.gdx.graphics.Color
 
 abstract class GameEngine {
 
+  /*
+
+    Identificação dos modos.
+
+      Os itens abaixo estão relacionadas à identificação dos diferentes modo que herdam de GameEngine.
+
+      (Função) toString: Permite que a impressão do modo seja o nome do modo.
+      (Valor) description: Descrição do modo.
+
+  */
+
   def toString: String
   val description: String
 
   val height: Int
   val width: Int
-
   val mementoNumber: Int = 10
-  val defaultAfterLifeCount: Int = -1
+  val defaultAfterLifeCount: Int = 0
 
   var currentGeneration = new Table(height, width)
   this.currentGeneration.create()
@@ -127,9 +137,11 @@ abstract class GameEngine {
           else {
 
             if (this.currentGeneration.elements(h)(w).afterLife) {
-              newGeneration.elements(h)(w).afterLife = true
-              newGeneration.elements(h)(w).afterLifeCount = this.currentGeneration.elements(h)(w).afterLifeCount
-              newGeneration.elements(h)(w).color = defaultAfterLifeColor
+
+              val currentAfterLife = this.currentGeneration.elements(h)(w).afterLifeCount
+
+              putInAfterLife(newGeneration, h, w, currentAfterLife)
+
             }
 
             else
@@ -147,11 +159,10 @@ abstract class GameEngine {
             newGeneration.elements(h)(w).color = this.currentGeneration.elements(h)(w).color
 
           else {
-            newGeneration.elements(h)(w).afterLife = true
-            newGeneration.elements(h)(w).afterLifeCount += (defaultAfterLifeCount + 1)
-            newGeneration.elements(h)(w).color = defaultAfterLifeColor
+            putInAfterLife(newGeneration, h, w)
             Statistics.addDeath()
           }
+
         }
 
       }
@@ -163,6 +174,14 @@ abstract class GameEngine {
     updateColors(newGeneration)
 
     this.currentGeneration = newGeneration
+
+  }
+
+  def putInAfterLife(generation: Table, cellHeight: Int, cellWidth: Int, count: Int = defaultAfterLifeCount): Unit = {
+
+    generation.elements(cellHeight)(cellWidth).afterLife = true
+    generation.elements(cellHeight)(cellWidth).afterLifeCount = count
+    generation.elements(cellHeight)(cellWidth).color = defaultAfterLifeColor
 
   }
 
