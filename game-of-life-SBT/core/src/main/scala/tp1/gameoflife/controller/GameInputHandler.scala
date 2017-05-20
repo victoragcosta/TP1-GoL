@@ -15,8 +15,17 @@ class GameInputHandler extends InputProcessor {
 
   private val h = Gdx.graphics.getHeight
 
+
   override def touchUp(screenX: Int, screenY: Int, pointer: Int, button: Int): Boolean = {false}
 
+  /**
+    * Trata o clique na tela, tanto no tabuleiro quanto nos botões
+    * @param screenX posição x na tela da esquerda pra direita
+    * @param screenY posição y na tela do topo para baixo
+    * @param pointer indice do ponteiro (multitouch)
+    * @param button valor do botão apertado
+    * @return se foi processado ou não
+    */
   override def touchDown(screenX: Int, screenY: Int, pointer: Int, button: Int): Boolean = {
     val but = getButton(screenX, screenY)
     if(but != null)
@@ -27,12 +36,25 @@ class GameInputHandler extends InputProcessor {
     true
   }
 
+  /**
+    * Trata a entrada de mouse quando arrasta, em geral só gera vários cliques
+    * @param screenX posição x na tela da esquerda pra direita
+    * @param screenY posição y na tela do topo para baixo
+    * @param pointer indice do ponteiro (multitouch)
+    * @return se foi processado ou não
+    */
   override def touchDragged(screenX: Int, screenY: Int, pointer: Int): Boolean = {
     touchDown(screenX, screenY, pointer, lastClicked)
     overButton(screenX, screenY)
     true
   }
 
+  /**
+    * Trata o movimento do mouse para dar highlight em botões
+    * @param screenX posição x na tela da esquerda pra direita
+    * @param screenY posição y na tela do topo para baixo
+    * @return se foi processado ou não
+    */
   override def mouseMoved(screenX: Int, screenY: Int): Boolean = {
     overButton(screenX, screenY)
     true
@@ -42,6 +64,11 @@ class GameInputHandler extends InputProcessor {
 
   override def keyUp(keycode: Int): Boolean = {false}
 
+  /**
+    * Trata o clique de teclas no teclado
+    * @param keycode código da tecla pressionada
+    * @return se foi processado ou não
+    */
   override def keyDown(keycode: Int): Boolean = {
     keycode match {
       case Keys.ESCAPE => GameController.endGame()
@@ -55,6 +82,10 @@ class GameInputHandler extends InputProcessor {
       case ' ' => GameController.changeAutoGenState()
       case 'b' => GameController.previousGeneration()
       case 'n' => GameController.nextGeneration()
+      case 'm' => GameController.redoGeneration()
+      case '+' => GameController.speedUp(10)
+      case '0' => GameController.speedReset()
+      case '-' => GameController.speedDown(10)
       case 'c' => GameController.killAll()
       case 'r' => GameController.changeRule()
       case _ =>

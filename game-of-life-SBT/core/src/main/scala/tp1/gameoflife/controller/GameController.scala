@@ -19,6 +19,7 @@ object GameController extends Game {
     * Gera o primeiro tabuleiro na View.
     */
   override def create() {
+    while(GameView == null || GameView.screen == null){}
     this.setScreen(GameView.screen)
     Gdx.input.setInputProcessor(new GameInputHandler)
     GameView.calculatePadding(gameMode.width, gameMode.height)
@@ -37,25 +38,38 @@ object GameController extends Game {
   //Controle de Gerações
   /**
     * Próxima Geração
-    * Tenta refazer gerações já calculadas, caso contrário calcula a próxima geração.
+    * Calcula a próxima geração.
     * Gera o novo tabuleiro na View.
     */
   def nextGeneration(): Unit = {
     try{
-      gameMode.redo()
+      gameMode.nextGeneration()
+      GameView.update(gameMode.currentGeneration, gameMode.width, gameMode.height)
     } catch {
-      case _: Exception => gameMode.nextGeneration()
+      case _: Exception =>
     }
-    GameView.update(gameMode.currentGeneration, gameMode.width, gameMode.height)
   }
 
   /**
     * Geração Anterior
-    * Tenta mudar a geração atual para uma grava e dá update no no tabuleiro da View.
+    * Tenta mudar a geração atual para uma gravada e dá update no no tabuleiro da View.
     */
   def previousGeneration(): Unit = {
     try{
       gameMode.undo()
+      GameView.update(gameMode.currentGeneration, gameMode.width, gameMode.height)
+    } catch {
+      case _: Exception =>
+    }
+  }
+
+  /**
+    * Refazer Geração
+    * Tenta mudar a geração atual para uma gravada a frente e dá update no no tabuleiro da View.
+    */
+  def redoGeneration(): Unit = {
+    try{
+      gameMode.redo()
       GameView.update(gameMode.currentGeneration, gameMode.width, gameMode.height)
     } catch {
       case _: Exception =>
