@@ -8,13 +8,19 @@ import com.badlogic.gdx.math.Vector2
 
 import scala.io.StdIn
 
+/**
+  * Trait que permite associação de um menu popup
+  */
 trait Menu {
 
+  //Se o menu está ativado ou não
   var activated: Boolean = false
 
+  //Canto inferior esquerdo e superior direito
   var pos1Menu: Vector2 = new Vector2(0,GameView.menuH)
   var pos2Menu: Vector2 = new Vector2(Gdx.graphics.getWidth, Gdx.graphics.getHeight)
 
+  //propriedades dos botões e do menu
   val buttonW: Int
   val buttonH: Int
   val interButtonW: Int
@@ -23,14 +29,21 @@ trait Menu {
   val rows: Int
   val columns: Int
 
+  //Cor de background
   val backgroundColor: Color
 
+  //Atualiza os cantos do menu
   def setBLCorner(x: Int, y: Int): Unit = pos1Menu = new Vector2(x, y)
   def setTRCorner(x: Int, y: Int): Unit = pos2Menu = new Vector2(x, y)
 
+  //Dimensões do menu
   def menuW: Int = (pos2Menu.x - pos1Menu.x).toInt
   def menuH: Int = (pos2Menu.y - pos1Menu.y).toInt
 
+  /**
+    * Gera o background do menu popup
+    * @param shapeRenderer para gerar os desenhos
+    */
   def drawBackground(shapeRenderer: ShapeRenderer): Unit ={
     shapeRenderer.setColor(backgroundColor)
     shapeRenderer.rect(pos1Menu.x, pos1Menu.y, menuW, menuH)
@@ -44,6 +57,10 @@ trait Menu {
 
   }
 
+  /**
+    * Desenha todos os botões do menu
+    * @param shapeRenderer para gerar os desenhos
+    */
   def drawMenu(shapeRenderer: ShapeRenderer): Unit = {
     if(activated){
       drawBackground(shapeRenderer)
@@ -51,6 +68,9 @@ trait Menu {
     }
   }
 
+  /**
+    * Organiza os botões em colunas e linhas
+    */
   def arrangeButtons(): Unit ={
     val buttonPadSides = (menuW - (columns*buttonW + (columns-1)*interButtonW))/2
     val buttonPadTopBot = (menuH - (rows*buttonH + (rows-1)*interButtonH))/2
@@ -76,6 +96,9 @@ trait Menu {
     }
   }
 
+  /**
+    * ativa e desativa o menu
+    */
   def changeState(): Unit = {
     activated = !activated
     GameView.menuOpen = activated

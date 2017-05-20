@@ -9,7 +9,7 @@ object Main{
     val cfg = new LwjglApplicationConfiguration
     cfg.title = "Game Of Life"
     cfg.height = 650
-    cfg.width = 1000
+    cfg.width = 1100
     cfg.forceExit = false
     new LwjglApplication(GameController, cfg)
   }

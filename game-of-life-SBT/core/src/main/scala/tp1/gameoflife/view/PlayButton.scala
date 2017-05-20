@@ -4,6 +4,16 @@ import com.badlogic.gdx.graphics.g2d.{BitmapFont, SpriteBatch}
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer
 import com.badlogic.gdx.math.Vector2
 
+
+/**
+  * Implementa um botão de play que mostra os simbolos universais de play e pause
+  * @param _name Nome que aparecerá no botão
+  * @param _action Acão a ser realizada ao ser ativado
+  * @param _color Cor normal do botão
+  * @param _colorHighlighted Cor a exibir quando com o mouse por cima
+  * @param _colorFont Cor normal da fonte do botão
+  * @param _colorFontHighlighted Cor a exibir a fonte quando com o mouse por cima
+  */
 class PlayButton(
                   _name: String,
                   _action: (GameButton) => Unit,
