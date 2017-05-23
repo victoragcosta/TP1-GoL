@@ -8,36 +8,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54c5801b-cef6-4aa6-8e93-62a803189b50" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/controller/GameController$$anonfun$killAll$1$$anonfun$apply$mcVI$sp$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/controller/GameController$$anonfun$killAll$1.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/all_platforms_jar/all-platforms.jar" afterPath="$PROJECT_DIR$/classes/artifacts/all_platforms_jar/all-platforms.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/game_rules_jar/game-rules.jar" afterPath="$PROJECT_DIR$/classes/artifacts/game_rules_jar/game-rules.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/controller/GameController$.class" afterPath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/controller/GameController$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/controller/GameController.class" afterPath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/controller/GameController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/Cell.class" afterPath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/Cell.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/GameEngine$$anonfun$nextGeneration$1$$anonfun$apply$mcVI$sp$3.class" afterPath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/GameEngine$$anonfun$nextGeneration$1$$anonfun$apply$mcVI$sp$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/GameEngine$$anonfun$cellsAlive$1.class" afterPath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/GameEngine$$anonfun$cellsAlive$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/GameEngine$$anonfun$neighborsAlive$1.class" afterPath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/GameEngine$$anonfun$neighborsAlive$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/GameEngine$$anonfun$nextGeneration$1.class" afterPath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/GameEngine$$anonfun$nextGeneration$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/GameEngine.class" afterPath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/GameEngine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/Table$$anonfun$clean$1$$anonfun$apply$1.class" afterPath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/Table$$anonfun$clean$1$$anonfun$apply$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/Table$$anonfun$clean$1.class" afterPath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/Table$$anonfun$clean$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/Table$$anonfun$create$1$$anonfun$apply$mcVI$sp$1.class" afterPath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/Table$$anonfun$create$1$$anonfun$apply$mcVI$sp$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/Table$$anonfun$create$1.class" afterPath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/Table$$anonfun$create$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/Table.class" afterPath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/gameengine/Table.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/view/GameButton$.class" afterPath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/view/GameButton$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/view/GameButton.class" afterPath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/view/GameButton.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/view/GameScreen$$anonfun$drawAliveCells$1.class" afterPath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/view/GameScreen$$anonfun$drawAliveCells$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/view/GameScreen$$anonfun$renderButtons$1.class" afterPath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/view/GameScreen$$anonfun$renderButtons$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/view/GameScreen$$anonfun$renderButtonsNames$1.class" afterPath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/view/GameScreen$$anonfun$renderButtonsNames$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/view/GameScreen.class" afterPath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/view/GameScreen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/view/GameView$$anonfun$updateLiveCells$1$$anonfun$apply$mcVI$sp$1.class" afterPath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/view/GameView$$anonfun$updateLiveCells$1$$anonfun$apply$mcVI$sp$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/view/LiveCell.class" afterPath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/view/LiveCell.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/view/PlayButton$.class" afterPath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/view/PlayButton$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/view/PlayButton.class" afterPath="$PROJECT_DIR$/core/target/scala-2.11/classes/tp1/gameoflife/view/PlayButton.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/controller/GameController.scala" afterPath="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/controller/GameController.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/Cell.scala" afterPath="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/Cell.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/controller/GameInputHandler.scala" afterPath="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/controller/GameInputHandler.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/GameEngine.scala" afterPath="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/GameEngine.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/GameView.scala" afterPath="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/GameView.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/LiveCell.scala" afterPath="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/LiveCell.scala" />
     </list>
     <list id="12eaece4-b0b7-4850-87c5-61f85bc5b55d" name="Revert: " comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -90,28 +71,10 @@
       <file leaf-file-name="GameInputHandler.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/controller/GameInputHandler.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="884">
-              <caret line="88" column="42" lean-forward="false" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
+            <state relative-caret-position="279">
+              <caret line="183" column="12" lean-forward="true" selection-start-line="183" selection-start-column="12" selection-end-line="183" selection-end-column="12" />
               <folding>
-                <marker date="1495547696627" expanded="true" signature="294:5165" ph="{...}" />
-                <marker date="1495547696627" expanded="true" signature="2913:3025" ph="{...}" />
-                <marker date="1495547696627" expanded="true" signature="2913:3038" ph="{...}" />
-                <marker date="1495547696627" expanded="true" signature="3112:3822" ph="{...}" />
-                <marker date="1495547696627" expanded="true" signature="3313:3818" ph="{...}" />
-                <marker date="1495547696627" expanded="true" signature="3350:3718" ph="..." />
-                <marker date="1495547696627" expanded="true" signature="3516:3640" ph="{...}" />
-                <marker date="1495547696627" expanded="true" signature="3646:3718" ph="{...}" />
-                <marker date="1495547696627" expanded="true" signature="3890:4198" ph="{...}" />
-                <marker date="1495547696627" expanded="true" signature="3946:4185" ph="(...)" />
-                <marker date="1495547696627" expanded="true" signature="4018:4178" ph="{...}" />
-                <marker date="1495547696627" expanded="true" signature="4054:4152" ph="..." />
-                <marker date="1495547696627" expanded="true" signature="4269:4375" ph="{...}" />
-                <marker date="1495547696627" expanded="true" signature="4432:4952" ph="{...}" />
-                <marker date="1495547696627" expanded="true" signature="4488:4948" ph="(...)" />
-                <marker date="1495547696627" expanded="true" signature="4644:4941" ph="{...}" />
-                <marker date="1495547696627" expanded="true" signature="4680:4915" ph="..." />
-                <marker date="1495547696627" expanded="true" signature="4756:4915" ph="(...)" />
-                <marker date="1495547696627" expanded="true" signature="5018:5162" ph="{...}" />
+                <element signature="e#2425#2721#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -120,11 +83,9 @@
       <file leaf-file-name="LiveCell.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/LiveCell.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
+            <state relative-caret-position="255">
               <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-              <folding>
-                <element signature="e#29#67#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -132,8 +93,8 @@
       <file leaf-file-name="GameController.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/controller/GameController.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="194" column="82" lean-forward="false" selection-start-line="194" selection-start-column="82" selection-end-line="194" selection-end-column="82" />
+            <state relative-caret-position="120">
+              <caret line="91" column="17" lean-forward="false" selection-start-line="91" selection-start-column="17" selection-end-line="91" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -142,14 +103,16 @@
       <file leaf-file-name="ExplosiveFrogs.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GameRules/src/main/tp1/gameoflife/defaultmodes/ExplosiveFrogs.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
+            <state relative-caret-position="170">
               <caret line="11" column="47" lean-forward="false" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="47" />
-              <folding />
+              <folding>
+                <element signature="e#37#75#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Frogs.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Frogs.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GameRules/src/main/tp1/gameoflife/defaultmodes/Frogs.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
@@ -159,11 +122,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameEngine.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GameEngine.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/GameEngine.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="188" column="29" lean-forward="true" selection-start-line="188" selection-start-column="29" selection-end-line="188" selection-end-column="29" />
+            <state relative-caret-position="177">
+              <caret line="250" column="14" lean-forward="true" selection-start-line="250" selection-start-column="14" selection-end-line="250" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -172,8 +135,8 @@
       <file leaf-file-name="Cell.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/Cell.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="39" column="8" lean-forward="true" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
+            <state relative-caret-position="663">
+              <caret line="39" column="8" lean-forward="false" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -182,10 +145,9 @@
       <file leaf-file-name="GameView.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/GameView.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
+            <state relative-caret-position="1156">
               <caret line="78" column="84" lean-forward="false" selection-start-line="78" selection-start-column="84" selection-end-line="78" selection-end-column="84" />
               <folding>
-                <element signature="e#29#56#0" expanded="true" />
                 <element signature="e#1893#2400#0" expanded="false" />
               </folding>
             </state>
@@ -195,8 +157,8 @@
       <file leaf-file-name="Table.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/Table.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-630">
-              <caret line="30" column="18" lean-forward="true" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+            <state relative-caret-position="510">
+              <caret line="30" column="18" lean-forward="false" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -205,11 +167,9 @@
       <file leaf-file-name="DependencyInjector.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/controller/DependencyInjector.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
-              <caret line="38" column="18" lean-forward="true" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
-              <folding>
-                <element signature="e#35#61#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="646">
+              <caret line="38" column="18" lean-forward="false" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -229,8 +189,16 @@
       <find>input</find>
       <find>determine</find>
       <find>redo</find>
-      <find>kill</find>
       <find>reset</find>
+      <find>shoul</find>
+      <find>store</find>
+      <find>kill</find>
+      <find>isCell</find>
+      <find>revive</find>
+      <find>reviveCell</find>
+      <find>killCell</find>
+      <find>storeGeneration</find>
+      <find>isCellAlive</find>
     </findStrings>
     <replaceStrings>
       <replace>GameView.paddingH</replace>
@@ -244,7 +212,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="master" />
+        <entry key="$PROJECT_DIR$/.." value="Refactoring" />
       </map>
     </option>
   </component>
@@ -293,13 +261,13 @@
         <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/Menu.scala" />
         <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/MenuButton.scala" />
         <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/PlayButton.scala" />
-        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/controller/GameInputHandler.scala" />
         <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/LiveCell.scala" />
         <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/controller/DependencyInjector.scala" />
-        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/GameEngine.scala" />
         <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/GameView.scala" />
         <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/Cell.scala" />
         <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/controller/GameController.scala" />
+        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/controller/GameInputHandler.scala" />
+        <option value="$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/GameEngine.scala" />
       </list>
     </option>
   </component>
@@ -334,6 +302,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -620,9 +591,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -639,6 +607,119 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\victo\Desktop\Trabsons\TP1-GoL\game-of-life-SBT\desktop\src\main\resources" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/modules/all-platforms-build.iml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/modules/core-build.iml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/modules/desktop-build.iml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/GameEngine.scala</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -1236,6 +1317,7 @@
       <workItem from="1495136393000" duration="401000" />
       <workItem from="1495209647832" duration="688000" />
       <workItem from="1495284827487" duration="15438000" />
+      <workItem from="1495550590113" duration="2096000" />
     </task>
     <task id="LOCAL-00001" summary="Melhorada a estrutura do MVC do projeto">
       <created>1493840515341</created>
@@ -1342,11 +1424,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495548567257</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Merge branch 'master' into Refactoring&#10;&#10;# Conflicts:&#10;#&#9;game-of-life-SBT/.idea/workspace.xml&#10;#&#9;game-of-life-SBT/core/src/main/scala/tp1/gameoflife/gameengine/GameEngine.scala&#10;Adicionado uns comentários que esqueci e consertado mecanismo de drag">
+      <created>1495551968288</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1495551968288</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159343000" />
+    <option name="totallyTimeSpent" value="161439000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1355,12 +1444,12 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.49394855" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6628478" sideWeight="0.4969743" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5060514" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34860885" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1377,38 +1466,14 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.66939443" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7250409" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.66939443" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.4969743" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34860885" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31694403" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1434,7 +1499,8 @@
     <MESSAGE value="Minor Corrections and Controller Commenting." />
     <MESSAGE value="Comentado o código e melhorado funcionalidade do botão velocidade.&#10;Velocidade agora pode ser mudada pelo teclado." />
     <MESSAGE value="Merge branch 'master' into Game_modes&#10;&#10;# Conflicts:&#10;#&#9;game-of-life-SBT/core/src/main/scala/tp1/gameoflife/gameengine/GameEngine.scala" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' into Game_modes&#10;&#10;# Conflicts:&#10;#&#9;game-of-life-SBT/core/src/main/scala/tp1/gameoflife/gameengine/GameEngine.scala" />
+    <MESSAGE value="Merge branch 'master' into Refactoring&#10;&#10;# Conflicts:&#10;#&#9;game-of-life-SBT/.idea/workspace.xml&#10;#&#9;game-of-life-SBT/core/src/main/scala/tp1/gameoflife/gameengine/GameEngine.scala&#10;Adicionado uns comentários que esqueci e consertado mecanismo de drag" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' into Refactoring&#10;&#10;# Conflicts:&#10;#&#9;game-of-life-SBT/.idea/workspace.xml&#10;#&#9;game-of-life-SBT/core/src/main/scala/tp1/gameoflife/gameengine/GameEngine.scala&#10;Adicionado uns comentários que esqueci e consertado mecanismo de drag" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1642,9 +1708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1088">
           <caret line="67" column="10" lean-forward="false" selection-start-line="67" selection-start-column="10" selection-end-line="67" selection-end-column="10" />
-          <folding>
-            <element signature="e#37#75#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1652,9 +1715,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
           <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding>
-            <element signature="e#37#75#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1662,13 +1722,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-          <folding>
-            <element signature="e#37#75#0" expanded="false" />
-            <element signature="e#1070#1633#0" expanded="false" />
-            <element signature="e#1637#1883#0" expanded="false" />
-            <element signature="e#1887#2459#0" expanded="false" />
-            <element signature="e#2463#2838#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1696,9 +1749,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1360">
           <caret line="85" column="37" lean-forward="false" selection-start-line="85" selection-start-column="37" selection-end-line="85" selection-end-column="37" />
-          <folding>
-            <marker date="1495547696658" expanded="true" signature="3899:4114" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1706,9 +1757,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="12" column="46" lean-forward="false" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
-          <folding>
-            <marker date="1495547696711" expanded="true" signature="216:377" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1716,9 +1765,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1326">
           <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-          <folding>
-            <marker date="1495547696711" expanded="true" signature="2880:2978" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1726,11 +1773,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
           <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding>
-            <marker date="1495547696727" expanded="true" signature="1822:2050" ph="{...}" />
-            <marker date="1495547696727" expanded="true" signature="1907:2040" ph="(...)" />
-            <marker date="1495547696727" expanded="true" signature="1927:2039" ph="(...)" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1738,87 +1781,39 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-          <folding>
-            <marker date="1495547696743" expanded="true" signature="1029:1233" ph="(...)" />
-            <marker date="1495547696743" expanded="true" signature="1245:2413" ph="{...}" />
-            <marker date="1495547696743" expanded="true" signature="1580:1844" ph="{...}" />
-            <marker date="1495547696743" expanded="true" signature="1929:2307" ph="{...}" />
-            <marker date="1495547696743" expanded="true" signature="1948:2134" ph="{...}" />
-            <marker date="1495547696743" expanded="true" signature="2140:2302" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/controller/GameInputHandler.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="88" column="42" lean-forward="false" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
-          <folding>
-            <marker date="1495547696627" expanded="true" signature="294:5165" ph="{...}" />
-            <marker date="1495547696627" expanded="true" signature="2913:3025" ph="{...}" />
-            <marker date="1495547696627" expanded="true" signature="2913:3038" ph="{...}" />
-            <marker date="1495547696627" expanded="true" signature="3112:3822" ph="{...}" />
-            <marker date="1495547696627" expanded="true" signature="3313:3818" ph="{...}" />
-            <marker date="1495547696627" expanded="true" signature="3350:3718" ph="..." />
-            <marker date="1495547696627" expanded="true" signature="3516:3640" ph="{...}" />
-            <marker date="1495547696627" expanded="true" signature="3646:3718" ph="{...}" />
-            <marker date="1495547696627" expanded="true" signature="3890:4198" ph="{...}" />
-            <marker date="1495547696627" expanded="true" signature="3946:4185" ph="(...)" />
-            <marker date="1495547696627" expanded="true" signature="4018:4178" ph="{...}" />
-            <marker date="1495547696627" expanded="true" signature="4054:4152" ph="..." />
-            <marker date="1495547696627" expanded="true" signature="4269:4375" ph="{...}" />
-            <marker date="1495547696627" expanded="true" signature="4432:4952" ph="{...}" />
-            <marker date="1495547696627" expanded="true" signature="4488:4948" ph="(...)" />
-            <marker date="1495547696627" expanded="true" signature="4644:4941" ph="{...}" />
-            <marker date="1495547696627" expanded="true" signature="4680:4915" ph="..." />
-            <marker date="1495547696627" expanded="true" signature="4756:4915" ph="(...)" />
-            <marker date="1495547696627" expanded="true" signature="5018:5162" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/LiveCell.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
+        <state relative-caret-position="255">
           <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-          <folding>
-            <element signature="e#29#67#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/Table.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-630">
-          <caret line="30" column="18" lean-forward="true" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+        <state relative-caret-position="510">
+          <caret line="30" column="18" lean-forward="false" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/controller/DependencyInjector.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="38" column="18" lean-forward="true" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
-          <folding>
-            <element signature="e#35#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/GameEngine.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="188" column="29" lean-forward="true" selection-start-line="188" selection-start-column="29" selection-end-line="188" selection-end-column="29" />
+        <state relative-caret-position="646">
+          <caret line="38" column="18" lean-forward="false" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/view/GameView.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
+        <state relative-caret-position="1156">
           <caret line="78" column="84" lean-forward="false" selection-start-line="78" selection-start-column="84" selection-end-line="78" selection-end-column="84" />
           <folding>
-            <element signature="e#29#56#0" expanded="true" />
             <element signature="e#1893#2400#0" expanded="false" />
           </folding>
         </state>
@@ -1826,25 +1821,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/Cell.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="39" column="8" lean-forward="true" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/controller/GameController.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="194" column="82" lean-forward="false" selection-start-line="194" selection-start-column="82" selection-end-line="194" selection-end-column="82" />
+        <state relative-caret-position="663">
+          <caret line="39" column="8" lean-forward="false" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GameRules/src/main/tp1/gameoflife/defaultmodes/ExplosiveFrogs.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="170">
           <caret line="11" column="47" lean-forward="false" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="47" />
-          <folding />
+          <folding>
+            <element signature="e#37#75#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1852,6 +1841,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/controller/GameInputHandler.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="183" column="12" lean-forward="true" selection-start-line="183" selection-start-column="12" selection-end-line="183" selection-end-column="12" />
+          <folding>
+            <element signature="e#2425#2721#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/controller/GameController.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="91" column="17" lean-forward="false" selection-start-line="91" selection-start-column="17" selection-end-line="91" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/scala/tp1/gameoflife/gameengine/GameEngine.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="250" column="14" lean-forward="true" selection-start-line="250" selection-start-column="14" selection-end-line="250" selection-end-column="14" />
           <folding />
         </state>
       </provider>

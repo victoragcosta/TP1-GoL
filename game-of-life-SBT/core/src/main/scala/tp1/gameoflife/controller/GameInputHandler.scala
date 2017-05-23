@@ -44,7 +44,13 @@ class GameInputHandler extends InputProcessor {
     * @return se foi processado ou não
     */
   override def touchDragged(screenX: Int, screenY: Int, pointer: Int): Boolean = {
-    touchDown(screenX, screenY, pointer, lastClicked)
+    val deslocX = GameView.paddingW
+    val deslocY = GameView.paddingH + GameView.menuH
+    val pos = calculateCell(screenX - deslocX, Gdx.graphics.getHeight - (screenY + deslocY))
+    if(pos != lastCell){
+      interactCell(screenX, screenY, lastClicked)
+      lastCell = pos
+    }
     overButton(screenX, screenY)
     true
   }
@@ -77,6 +83,11 @@ class GameInputHandler extends InputProcessor {
     true
   }
 
+  /**
+    * Trata o clique de teclas no teclado
+    * @param character caracter pressionado
+    * @return se foi processado ou não
+    */
   override def keyTyped(character: Char): Boolean = {
     character match {
       case ' ' => GameController.changeAutoGenState()
@@ -94,18 +105,20 @@ class GameInputHandler extends InputProcessor {
   }
 
 
-
-  private def interactCell(screenX: Int, screenY: Int, button: Int) = {
+  /**
+    * Calcula e decide o que fazer ao clicar no tabuleiro
+    * @param screenX Posição horizontal a partir da esquerda
+    * @param screenY Posição vertical a partir do topo
+    * @param button código do botão pressionado
+    */
+  private def interactCell(screenX: Int, screenY: Int, button: Int): Unit = {
     val deslocX = GameView.paddingW
     val deslocY = GameView.paddingH + GameView.menuH
     val pos = calculateCell(screenX - deslocX, Gdx.graphics.getHeight - (screenY + deslocY))
     button match {
       case Buttons.LEFT =>
-        val now = Calendar.getInstance().getTimeInMillis
-        if((pos != lastCell || now >= lastTime + clickDelay) && GameController.cellIsAlive(pos.x.toInt, pos.y.toInt)){
+        if(GameController.cellIsAlive(pos.x.toInt, pos.y.toInt)){
           GameController.switchColor(pos.x.toInt, pos.y.toInt)
-          lastTime = now
-          lastCell = pos
         } else {
           GameController.makeAlive(pos.x.toInt, pos.y.toInt)
         }
@@ -114,6 +127,12 @@ class GameInputHandler extends InputProcessor {
     }
   }
 
+  /**
+    * Calcula o botão onde o cursor está
+    * @param screenX Posição horizontal a partir da esquerda
+    * @param screenY Posição vertical a partir do topo
+    * @return Botão pressionado
+    */
   private def getButton(screenX: Int, screenY: Int): GameButton = {
     val buttons = GameView.buttons
     buttons.foreach(b => {
@@ -129,10 +148,22 @@ class GameInputHandler extends InputProcessor {
     null
   }
 
-  private def inBounds(bt: GameButton, screenX: Int, screenY: Int) = {
+  /**
+    * Calcula se está dentro do botão
+    * @param bt Botão
+    * @param screenX Posição horizontal a partir da esquerda
+    * @param screenY Posição vertical a partir do topo
+    * @return Se está sobre (true) ou não o Botão
+    */
+  private def inBounds(bt: GameButton, screenX: Int, screenY: Int):Boolean = {
     bt.pos1.x < screenX && screenX < bt.pos2.x && bt.pos1.y < h - screenY && h - screenY < bt.pos2.y
   }
 
+  /**
+    * Decide sobre o highlight dos botões
+    * @param screenX Posição horizontal a partir da esquerda
+    * @param screenY Posição vertical a partir do topo
+    */
   private def overButton(screenX: Int, screenY: Int) = {
     val buttons = GameView.buttons
     buttons.foreach(b => {
@@ -156,6 +187,12 @@ class GameInputHandler extends InputProcessor {
     })
   }
 
+  /**
+    * Calcula as coordenadas da célula segundo o tabuleiro virtual
+    * @param mouseX Posição horizontal na tela da esquerda para direita
+    * @param mouseY Posição veritical na tela de baixo para cima
+    * @return Posição no tabuleiro virtual
+    */
   private def calculateCell(mouseX: Int, mouseY: Int): Vector2 ={
     val x = Math.floor(mouseX/GameView.squareSide)
     val y = Math.floor(mouseY/GameView.squareSide)

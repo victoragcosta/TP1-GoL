@@ -122,17 +122,6 @@ abstract class GameEngine {
 
   }
 
-  def isCellAlive(cellHeight: Int, cellWidth: Int): Boolean = this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).alive
-
-  def killCell(cellHeight: Int, cellWidth: Int): Unit = {
-
-    this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).alive = false
-    this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).afterLife = false
-    this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).afterLifeCount = 0
-    this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).color = defaultDeathColor
-
-  }
-
   /**
     * Dada um célula atráves de suas coordenadas, essa função computa a quantidade de vizinhos vivos em relação aquela célula
     * @param cellHeight : coordenada de altura da célula
@@ -175,6 +164,8 @@ abstract class GameEngine {
   def killCell(cellHeight: Int, cellWidth: Int): Unit = {
 
     this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).alive = false
+    this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).afterLife = false
+    this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).afterLifeCount = 0
     this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).color = defaultDeathColor
 
   }
@@ -257,7 +248,7 @@ abstract class GameEngine {
     * As operações de undo e redo recuperam gerações da pilha (padrão memento) e colocam como a geração atual
     *
     * Ambas as funções possuem o
-    * @throws : RuntimeException caso a pilha esteja vazia
+    * @throws RuntimeException caso a pilha esteja vazia
     */
   def redo(): Unit = {
 
@@ -286,24 +277,6 @@ abstract class GameEngine {
 
       }
     }
-
-  }
-
-  def reviveCell(cellHeight: Int, cellWidth: Int): Unit = {
-
-    this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).alive = true
-    this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).color = defaultColor
-
-  }
-
-  private def storeGeneration(generation: Table): Unit = {
-
-    val length: Int = pastGenerations.length
-
-    if (length >= mementoNumber)
-      pastGenerations = pastGenerations.dropRight(length + 1 - mementoNumber)
-
-    pastGenerations = generation :: pastGenerations
 
   }
 

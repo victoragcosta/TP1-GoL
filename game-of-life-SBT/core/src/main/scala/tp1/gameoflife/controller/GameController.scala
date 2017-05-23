@@ -138,6 +138,7 @@ object GameController extends Game {
     try{
       if(inBounds(x,y))
         gameMode.switchColor(y,x)
+      GameView.update(gameMode.currentGeneration, gameMode.width, gameMode.height)
       gameMode.defaultColor
     } catch {
       case _: Exception =>
