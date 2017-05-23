@@ -86,4 +86,8 @@ class Table (height: Int, width: Int) {
 
   //==//
 
+  def foreach(f:(Cell) => (Unit)): Unit ={
+    elements.foreach(a => a.foreach(f))
+  }
+
 }

@@ -49,12 +49,15 @@ class Disco (override val height: Int, override val width: Int) extends GameEngi
 
   override def updateColors(board: Table): Unit = {
 
-    for (h <- 0 until board.getHeight) {
-      for (w <- 0 until board.getWidth) {
+    var h = 0
+    while (h < board.getHeight) {
+      var w = 0
+      while (w < board.getWidth) {
 
         board.elements(h)(w).color = randomColor()
-
+        w+=1
       }
+      h+=1
     }
 
   }
