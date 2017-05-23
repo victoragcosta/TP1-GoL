@@ -3,7 +3,7 @@ package tp1.gameoflife.view
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.math.{Vector2, Vector3}
 import tp1.gameoflife.controller.GameController
-import tp1.gameoflife.gameengine.{GameEngine, Table}
+import tp1.gameoflife.gameengine.{Cell, GameEngine, Table}
 
 object GameView{
 
@@ -39,7 +39,7 @@ object GameView{
   //Variáveis relacionadas ao fluxo das gerações automático
   var paused = false  //Controla se deve avançar automático
   val defaultDelay = 100  //Espera padrão antes de mudar de geração
-  var delay = defaultDelay  //Tempo de espera atual antes de mudar de geração
+  var delay: Int = defaultDelay  //Tempo de espera atual antes de mudar de geração
 
   //Cuida do estado do menu
   var menuOpen = false  //quando verdadeiro, bloqueia os outros botões
@@ -76,7 +76,7 @@ object GameView{
       for(w <- 0 until w){
         val cell = cells.elements(h)(w)
         if(cell.alive || cell.afterLife)
-        vivas = new LiveCell(new Vector2(w*squareSide,h*squareSide), cell)::vivas
+        vivas = new LiveCell(new Vector2(w * squareSide, h * squareSide), cell.copy)::vivas
       }
     }
   }
@@ -86,7 +86,7 @@ object GameView{
     * @param w Largura do tabuleiro.
     * @param h Altura do tabuleiro.
     */
-  def calculatePadding(w: Int, h: Int) = {
+  def calculatePadding(w: Int, h: Int): Unit = {
     val sqrSideW = scrW / w
     val sqrSideH = (scrH - menuH) / h
     if (sqrSideW < minSquareSide || sqrSideH < minSquareSide)

@@ -83,6 +83,8 @@ abstract class GameEngine {
   def killCell(cellHeight: Int, cellWidth: Int): Unit = {
 
     this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).alive = false
+    this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).afterLife = false
+    this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).afterLifeCount = 0
     this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).color = defaultDeathColor
 
   }
@@ -184,7 +186,7 @@ abstract class GameEngine {
 
   }
 
-  def resetColors(generation: Table): Unit = {
+  def resetColors(): Unit = {
 
     for(h <- 0 until height) {
       for(w <- 0 until width) {
