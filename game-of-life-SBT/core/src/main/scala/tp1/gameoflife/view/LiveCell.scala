@@ -1,6 +1,7 @@
 package tp1.gameoflife.view
 
-import com.badlogic.gdx.math.{Vector2}
+import com.badlogic.gdx.graphics.Color
+import com.badlogic.gdx.math.Vector2
 import tp1.gameoflife.gameengine.Cell
 
 /**
@@ -9,8 +10,8 @@ import tp1.gameoflife.gameengine.Cell
   * @param cell célula que se deve desenhar
   */
 class LiveCell(pos: Vector2, cell: Cell) {
-  def x = pos.x
-  def y = pos.y
-  def alive = cell.alive
-  def color = cell.color
+  def x: Float = pos.x
+  def y: Float = pos.y
+  def alive: Boolean = cell.alive
+  def color: Color= cell.color
 }

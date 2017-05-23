@@ -121,10 +121,9 @@ object GameController extends Game {
     *
     * Muda ou mantém o estado de todas as células para mortas.
     */
-  def killAll(): Unit ={
-    for(i <- gameMode.currentGeneration.elements.indices)
-      for(j <- gameMode.currentGeneration.elements(i).indices)
-        killCell(j,i)
+  def killAll(): Unit = {
+    gameMode.currentGeneration.clean()
+    GameView.update(gameMode.currentGeneration, gameMode.width, gameMode.height)
   }
 
   /**
@@ -178,6 +177,8 @@ object GameController extends Game {
     }
     DependencyInjector.getRule(ruleNumber).currentGeneration = gameMode.currentGeneration
     gameMode = DependencyInjector.getRule(ruleNumber)
+    gameMode.resetColors()
+    GameView.update(gameMode.currentGeneration, gameMode.width, gameMode.height)
   }
 
   /**
@@ -190,6 +191,8 @@ object GameController extends Game {
     try{
       gameRule.currentGeneration = gameMode.currentGeneration
       gameMode = gameRule
+      gameMode.resetColors()
+      GameView.update(gameMode.currentGeneration, gameMode.width, gameMode.height)
     } catch {
       case e: Exception => println(e.getMessage)
     }

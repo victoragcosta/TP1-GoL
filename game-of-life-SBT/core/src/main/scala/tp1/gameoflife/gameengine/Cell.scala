@@ -29,4 +29,15 @@ class Cell (var alive: Boolean, var color: Color) {
 
   //==//
 
+  /**
+    * Gera cópia da célula
+    * @return Cópia desta célula
+    */
+  def copy: Cell = {
+    val cell = new Cell(this.alive, this.color)
+    cell.afterLife = this.afterLife
+    cell.afterLifeCount = this.afterLifeCount
+    cell
+  }
+
 }
