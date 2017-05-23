@@ -122,6 +122,17 @@ abstract class GameEngine {
 
   }
 
+  def isCellAlive(cellHeight: Int, cellWidth: Int): Boolean = this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).alive
+
+  def killCell(cellHeight: Int, cellWidth: Int): Unit = {
+
+    this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).alive = false
+    this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).afterLife = false
+    this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).afterLifeCount = 0
+    this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).color = defaultDeathColor
+
+  }
+
   /**
     * Dada um célula atráves de suas coordenadas, essa função computa a quantidade de vizinhos vivos em relação aquela célula
     * @param cellHeight : coordenada de altura da célula
@@ -263,6 +274,36 @@ abstract class GameEngine {
       redoGenerations = redoGenerations.drop(1)
 
     }
+
+  }
+
+  def resetColors(): Unit = {
+
+    for(h <- 0 until height) {
+      for(w <- 0 until width) {
+
+        this.currentGeneration.elements(h)(w).color = defaultColor
+
+      }
+    }
+
+  }
+
+  def reviveCell(cellHeight: Int, cellWidth: Int): Unit = {
+
+    this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).alive = true
+    this.currentGeneration.elements(adjustHeight(cellHeight))(adjustWidth(cellWidth)).color = defaultColor
+
+  }
+
+  private def storeGeneration(generation: Table): Unit = {
+
+    val length: Int = pastGenerations.length
+
+    if (length >= mementoNumber)
+      pastGenerations = pastGenerations.dropRight(length + 1 - mementoNumber)
+
+    pastGenerations = generation :: pastGenerations
 
   }
 
