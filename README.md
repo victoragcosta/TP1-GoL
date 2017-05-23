@@ -12,9 +12,6 @@ André Filipe Caldas Laranjeira | @AndreLaranjeira | 16/0023777
 
 ### Uso do Programa
 * Existem basicamente 3 projetos: Template Method, Strategy e a implementação com a interface gráfica e afins.
-  * O projeto de Template Method está na pasta gol-Template_method
-  * O projeto de Strategy está na pasta gol-Strategy
-  * O projeto com interface gráfica está na pasta game-of-life-SBT
 * Instruções para o uso da implementação com LibGDX:
   * Funciona melhor com IntelliJ IDEA
   * Gere um jar contendo todos os módulos exceto GameRules e outro jar que contém a implementação de várias regras e contendo o arquivo Classes.txt. Coloque esse segundo jar na ClassPath do primeiro jar. (Já deixamos isso pronto na pasta classes na root do projeto gráfico)
